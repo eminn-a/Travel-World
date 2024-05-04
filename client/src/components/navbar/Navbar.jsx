@@ -6,7 +6,7 @@ const Navbar = () => {
   const [navBarStat, setnavBarStat] = useState("true");
 
   const navStatClickHandler = () => {
-    setnavBarStat(!navBarStat);
+    setnavBarStat((navBarStat) => !navBarStat);
   };
 
   return (
