@@ -14,16 +14,19 @@
   left: 50%;
   transform: translate(-50%);
 }
-.logo {
+
+.logo a {
   color: #fff;
   justify-self: center;
   cursor: pointer;
   white-space: nowrap;
 }
+
 .fa-react {
   margin-left: -0.2rem;
   font-size: 1.7rem;
 }
+
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -33,6 +36,7 @@
   text-align: center;
   justify-content: end;
 }
+
 .nav-links {
   text-decoration: none;
   color: #fff;
@@ -54,6 +58,7 @@
 .fa-times {
   color: #fff;
 }
+
 .menu-icon {
   display: none;
 }
@@ -73,6 +78,7 @@
   .NavbarItems {
     z-index: 99;
   }
+
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -92,19 +98,23 @@
     z-index: -1;
     transition: all 0.3s ease-in-out;
   }
+
   .nav-menu.active {
     left: 0%;
   }
+
   .nav-links {
     display: block;
     widows: 100%;
     padding: 2rem 0;
     color: #222;
   }
+
   .nav-links:hover {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(20px);
   }
+
   .menu-icon {
     display: block;
   }
