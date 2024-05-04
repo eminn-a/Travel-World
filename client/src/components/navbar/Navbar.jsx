@@ -3,7 +3,7 @@ import { MenuData } from "./MenuData";
 import "./NavbarStyles.css";
 
 const Navbar = () => {
-  const [navBarStat, setnavBarStat] = useState("true");
+  const [navBarStat, setnavBarStat] = useState(false);
 
   const navStatClickHandler = () => {
     setnavBarStat((navBarStat) => !navBarStat);
@@ -12,9 +12,7 @@ const Navbar = () => {
   return (
     <nav className="NavbarItems">
       <h1 className="logo">
-        <a>
-          EminApp <i className="fab fa-react"></i>
-        </a>
+        EminApp <i className="fab fa-react"></i>
       </h1>
       <div className="menu-icon" onClick={navStatClickHandler}>
         <i className={navBarStat ? "fas fa-times" : "fas fa-bars"}></i>

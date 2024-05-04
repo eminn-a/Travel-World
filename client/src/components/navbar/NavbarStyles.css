@@ -15,7 +15,7 @@
   transform: translate(-50%);
 }
 
-.logo a {
+.logo {
   color: #fff;
   justify-self: center;
   cursor: pointer;
