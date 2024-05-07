@@ -10,3 +10,18 @@
 .App {
     text-align: center;
 }
+
+
+/* Colors */
+:root {
+    --primary-color: #FFEAE3;
+    --btn-color: #121481;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
