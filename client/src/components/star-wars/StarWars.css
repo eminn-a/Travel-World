@@ -1,3 +1,13 @@
 .container {
     margin: 150px;
 }
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+li {
+    margin-top: 1em;
+}

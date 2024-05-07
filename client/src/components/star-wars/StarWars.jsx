@@ -3,7 +3,7 @@ import "./StarWars.css";
 
 export default function StarWars(props) {
   const [characters, setCharacters] = useState([]);
-
+  console.log(characters);
   useEffect(() => {
     fetch("https://swapi.dev/api/people")
       .then((res) => res.json())

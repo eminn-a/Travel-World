@@ -24,7 +24,7 @@
 
 .fa-react {
   margin-left: -0.2rem;
-  font-size: 1.7rem;
+  font-size: 1.1rem;
 }
 
 .nav-menu {
@@ -74,7 +74,7 @@
   color: #222;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .NavbarItems {
     z-index: 99;
   }
