@@ -7,9 +7,9 @@
     font-family: "Poppins", sans-serif;
 }
 
-.App {
+/* .App {
     text-align: center;
-}
+} */
 
 
 /* Colors */
@@ -21,6 +21,7 @@
 a {
     text-decoration: none;
 }
+
 
 li {
     list-style: none;

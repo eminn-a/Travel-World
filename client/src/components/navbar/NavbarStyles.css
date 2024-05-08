@@ -20,6 +20,14 @@
 .navMenu {
     display: flex;
     gap: 1em;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+.navMenu li i {
+    padding-right: 0.2em;
+}
+
+.navMenu li a {
+    color: black;
 }
