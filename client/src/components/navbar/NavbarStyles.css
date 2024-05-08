@@ -12,21 +12,42 @@
     transform: translate(-50%);
     width: 95%;
     height: 80px;
-    background-color: white;
+    background-color: transparent;
 
 }
 
 .navMenu {
-    display: flex;
-    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 20px;
     align-items: center;
-    justify-content: center;
+    white-space: nowrap;
 }
 
-.navMenu li i {
+.navLinks {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.7rem 0.3rem;
+}
+
+
+.navLinks i {
     padding-right: 0.2em;
 }
 
-.navMenu li a {
-    color: black;
+
+.navLinks:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 20px var(--main-color);
+}
+
+.navLinksMobile {
+    display: none;
+}
+
+.navbarBtn {
+    padding: 0.5rem 1rem;
 }

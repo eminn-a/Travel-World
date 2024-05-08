@@ -6,22 +6,20 @@ const Navbar = () => {
       <nav className="navbarItems">
         <h1 className="navbarLogo">Travel-World</h1>
         <ul className="navMenu">
-          <li>
-            <a href="">
-              <i className="fa-solid fa-house"></i>Home
-            </a>
+          <li className="navLinks">
+            <i className="fa-solid fa-house"></i>Home
           </li>
-          <li>
-            <a href="">
-              <i className="fa-solid fa-circle-info"></i>About
-            </a>
+          <li className="navLinks">
+            <i class="fa-solid fa-map-location-dot"></i>Destinations
           </li>
-          <li>
-            <a href="">
-              <i className="fa-solid fa-address-book"></i>Contacts
-            </a>
+          <li className="navLinks">
+            <i className="fa-solid fa-circle-info"></i>About
           </li>
-          <li>Sign Up</li>
+          <li className="navLinks">
+            <i className="fa-solid fa-address-book"></i>Contacts
+          </li>
+          <li className="navLinksMobile">mobile</li>
+          <button className="navbarBtn">Sign Up</button>
         </ul>
       </nav>
     </>
