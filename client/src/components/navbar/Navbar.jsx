@@ -4,7 +4,12 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbarItems">
-        <h1 className="navbarLogo">Travel-World</h1>
+        <div className="logo">
+          <h1 className="navbarLogo">
+            Travel-World
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </h1>
+        </div>
         <ul className="navMenu">
           <li className="navLinks">
             <i className="fa-solid fa-house"></i>Home

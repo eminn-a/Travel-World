@@ -1,65 +1,77 @@
 .navbarItems {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    border-radius: 13px;
-    position: sticky;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translate(-50%);
-    width: 95%;
-    height: 80px;
-    background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 13px;
+  position: sticky;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 95%;
+  height: 80px;
+  background-color: transparent;
+}
 
+.logo {
+  display: flex;
+  /* justify-content: end; */
+  /* align-items: end; */
+  text-align: end;
+}
+.logo i {
+  font-size: 0.8em;
+  padding-left: 0.3em;
+}
+.logo h1 {
+  font-size: 20px;
 }
 
 .navMenu {
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    gap: 20px;
-    align-items: center;
-    white-space: nowrap;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 20px;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .navLinks {
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.7rem 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.7rem 0.3rem;
+  cursor: pointer;
 }
-
 
 .navLinks i {
-    padding-right: 0.2em;
+  padding-right: 0.2em;
 }
 
-
 .navLinks:hover {
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    border-radius: 8px;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 5px 20px var(--main-color);
+  background-color: var(--test-cugu);
+  color: var(--bg-color);
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 5px 20px var(--test-cugu);
 }
 
 .navLinksMobile {
-    display: none;
+  display: none;
 }
 
 .navbarBtn {
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .navbarBtn:hover {
-    background-color: var(--black);
-    color: var(--bg-color);
+  background-color: var(--black);
+  color: var(--bg-color);
 }
