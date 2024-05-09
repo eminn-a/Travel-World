@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "./NavbarStyles.css";
 
 const Navbar = () => {
+  const [mobileMenu, setMobileMenu] = useState(true);
+
+  const activeMenu = () => {
+    setMobileMenu((state) => (state = !mobileMenu));
+  };
+
   return (
     <>
       <nav className="navbarItems">
@@ -10,7 +17,15 @@ const Navbar = () => {
             <i class="fa-solid fa-umbrella-beach"></i>
           </h1>
         </div>
-        <ul className="navMenu">
+
+        <div className="menuIcons">
+          <i
+            className={mobileMenu ? "fas fa-bars" : "fas fa-times"}
+            onClick={activeMenu}
+          ></i>
+        </div>
+
+        <ul className={mobileMenu ? "navMenu" : "navMenu active"}>
           <li className="navLinks">
             <i className="fa-solid fa-house"></i>Home
           </li>
@@ -23,7 +38,7 @@ const Navbar = () => {
           <li className="navLinks">
             <i className="fa-solid fa-address-book"></i>Contacts
           </li>
-          <li className="navLinksMobile">mobile</li>
+          <li className="navLinksMobile">Sign Up</li>
           <button className="navbarBtn">Sign Up</button>
         </ul>
       </nav>

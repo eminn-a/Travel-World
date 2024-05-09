@@ -12,7 +12,8 @@
   transform: translate(-50%);
   width: 95%;
   height: 80px;
-  background-color: transparent;
+  background-color: var(--bg-white);
+  z-index: 9999;
 }
 
 .logo {
@@ -42,6 +43,7 @@
   font-weight: 600;
   padding: 0.7rem 0.3rem;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .navLinks i {
@@ -49,11 +51,10 @@
 }
 
 .navLinks:hover {
-  background-color: var(--test-cugu);
-  color: var(--bg-color);
+  background-color: var(--main-color);
+  color: var(--bg-white);
   border-radius: 8px;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 5px 20px var(--test-cugu);
+  box-shadow: 0 5px 20px var(--main-color);
 }
 
 .navLinksMobile {
@@ -72,6 +73,76 @@
 }
 
 .navbarBtn:hover {
-  background-color: var(--black);
-  color: var(--bg-color);
+  background-color: var(--second-color);
+  color: var(--bg-white);
+}
+
+.menuIcons {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .navbarItems {
+    z-index: 99;
+  }
+  .menuIcons {
+    display: block;
+    font-size: 1.7rem;
+    color: var(--text-color);
+  }
+
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 13px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navMenu.active {
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+  }
+
+  .navLinks {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    text-align: center;
+    font-weight: 700;
+  }
+  .navLinks:hover {
+    background: var(--main-color);
+  }
+
+  .navbarBtn {
+    display: none;
+  }
+
+  .navLinksMobile {
+    display: block;
+    text-align: center;
+    padding: 1.2rem;
+    margin: auto;
+    border-radius: 4px;
+    width: 80%;
+    background-color: var(--second-color);
+    color: var(--bg-white);
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
 }
