@@ -68,12 +68,13 @@ img {
     .heroText h1 {
         font-size: 4rem;
         font-weight: 800;
-
+        padding: 10px 20px;
     }
 }
 
 @media (max-width: 850px) {
     .heroText h1 {
+        padding: 10px 20px;
         font-size: 2.3rem;
         font-weight: 800;
 
@@ -85,9 +86,6 @@ img {
 
     }
 
-    .heroText a {
-        font-size: 1.2rem;
-        font-weight: 300;
-    }
+    .heroText .show {}
 
 }

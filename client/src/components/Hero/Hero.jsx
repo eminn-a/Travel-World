@@ -1,14 +1,16 @@
 import "./HeroStyles.css";
 
-const Hero = (x) => {
+const Hero = ({ img, title, text, btnClass, url }) => {
+  console.log();
+
   return (
     <div className="hero">
-      <img src={x.img} alt="Hero img" />
+      <img src={img} alt="Hero img" />
       <div className="heroText">
-        <h1>{x.title}</h1>
+        <h1>{title}</h1>
         <ul></ul>
-        <p>{x.text}</p>
-        <a href={x.url} className={x.btnClass}>
+        <p>{text}</p>
+        <a href={url} className={btnClass}>
           Travel Plan
         </a>
       </div>

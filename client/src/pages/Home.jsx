@@ -1,14 +1,11 @@
 import Hero from "../components/Hero/Hero";
 import { data } from "../data/heroData";
+import hero from "../assets/hero.jpg";
+
 const Home = () => {
   return (
     <>
-      <Hero
-        title={data.home.title}
-        img={data.home.img}
-        text={data.home.text}
-        btnClass={data.home.btnClass}
-      />
+      <Hero img={hero} {...data.home} />
     </>
   );
 };
