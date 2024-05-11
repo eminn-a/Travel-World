@@ -1,16 +1,18 @@
-import "./HeroStyles.css";
+import styles from "./HeroStyles.module.css";
 
-const Hero = ({ title, text, url, btnClass, image }) => {
+const Hero = ({ image, title, text, url, name }) => {
   return (
-    <div className="hero">
+    <div className={styles.hero}>
       <img src={image} alt="Hero img" />
-      <div className="heroText">
+      <div className={styles.heroText}>
         <h1>{title}</h1>
         <ul></ul>
         <p>{text}</p>
-        <a href={url} className={btnClass}>
-          Travel Plan
-        </a>
+        {name && (
+          <a href={url} className={styles.show}>
+            {name}
+          </a>
+        )}
       </div>
     </div>
   );

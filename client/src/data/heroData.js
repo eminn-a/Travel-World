@@ -4,7 +4,7 @@ export const data = {
     title: "Your journey, your story!",
     text: "Chose your favorite destination!",
     url: "/",
-    btnClass: "show",
+    name: "Travel Plan",
   },
   about: {
     img: "https://images.pexels.com/photos/1313814/pexels-photo-1313814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

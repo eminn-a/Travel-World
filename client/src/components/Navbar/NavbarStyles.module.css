@@ -21,6 +21,7 @@
   /* justify-content: end; */
   /* align-items: end; */
   text-align: end;
+  cursor: pointer;
 }
 
 .logo i {

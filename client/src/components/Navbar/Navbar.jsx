@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./NavbarStyles.css";
+import styles from "./NavbarStyles.module.css";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
@@ -10,36 +10,40 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbarItems">
-        <div className="logo">
-          <h1 className="navbarLogo">
+      <nav className={styles.navbarItems}>
+        <div className={styles.logo}>
+          <h1 className={styles.navbarLogo}>
             Travel-World
             <i className="fa-solid fa-umbrella-beach"></i>
           </h1>
         </div>
 
-        <div className="menuIcons">
+        <div className={styles.menuIcons}>
           <i
             className={mobileMenu ? "fas fa-bars" : "fas fa-times"}
             onClick={activeMenu}
           ></i>
         </div>
 
-        <ul className={mobileMenu ? "navMenu" : "navMenu active"}>
-          <li className="navLinks">
+        <ul
+          className={
+            mobileMenu ? styles.navMenu : `${styles.navMenu} ${styles.active}`
+          }
+        >
+          <li className={styles.navLinks}>
             <i className="fa-solid fa-house"></i>Home
           </li>
-          <li className="navLinks">
+          <li className={styles.navLinks}>
             <i className="fa-solid fa-map-location-dot"></i>Destinations
           </li>
-          <li className="navLinks">
+          <li className={styles.navLinks}>
             <i className="fa-solid fa-circle-info"></i>About
           </li>
-          <li className="navLinks">
+          <li className={styles.navLinks}>
             <i className="fa-solid fa-address-book"></i>Contacts
           </li>
-          <li className="navLinksMobile">Sign Up</li>
-          <button className="navbarBtn">Sign Up</button>
+          <li className={styles.navLinksMobile}>Sign Up</li>
+          <button className={styles.navbarBtn}>Sign Up</button>
         </ul>
       </nav>
     </>
