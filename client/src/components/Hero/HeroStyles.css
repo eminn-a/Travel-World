@@ -53,3 +53,35 @@ img {
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+@media (max-width: 1110px) {
+    .hero {
+        margin-top: 0;
+    }
+
+    .heroText h1 {
+        font-size: 4rem;
+        font-weight: 800;
+
+    }
+}
+
+@media (max-width: 850px) {
+    .heroText h1 {
+        font-size: 2.3rem;
+        font-weight: 800;
+
+    }
+
+    .heroText p {
+        font-size: 1.4rem;
+        font-weight: 400;
+
+    }
+
+    .heroText a {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+}

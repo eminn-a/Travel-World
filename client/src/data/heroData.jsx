@@ -7,13 +7,13 @@ export const data = {
     btnClass: "show",
   },
   about: {
-    img: "https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/1313814/pexels-photo-1313814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Hero title",
     text: "Hero text",
     url: "/",
   },
   contacts: {
-    img: "https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/1851481/pexels-photo-1851481.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Hero title",
     text: "Hero text",
     url: "/",
