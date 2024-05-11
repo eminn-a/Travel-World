@@ -1,11 +1,9 @@
 import "./HeroStyles.css";
 
-const Hero = ({ img, title, text, btnClass, url }) => {
-  console.log();
-
+const Hero = ({ title, text, url, btnClass, image }) => {
   return (
     <div className="hero">
-      <img src={img} alt="Hero img" />
+      <img src={image} alt="Hero img" />
       <div className="heroText">
         <h1>{title}</h1>
         <ul></ul>

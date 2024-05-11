@@ -5,7 +5,7 @@ import hero from "../assets/hero.jpg";
 const Home = () => {
   return (
     <>
-      <Hero img={hero} {...data.home} />
+      <Hero {...data.home} image={hero} />
     </>
   );
 };

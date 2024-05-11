@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="logo">
           <h1 className="navbarLogo">
             Travel-World
-            <i class="fa-solid fa-umbrella-beach"></i>
+            <i className="fa-solid fa-umbrella-beach"></i>
           </h1>
         </div>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
             <i className="fa-solid fa-house"></i>Home
           </li>
           <li className="navLinks">
-            <i class="fa-solid fa-map-location-dot"></i>Destinations
+            <i className="fa-solid fa-map-location-dot"></i>Destinations
           </li>
           <li className="navLinks">
             <i className="fa-solid fa-circle-info"></i>About
