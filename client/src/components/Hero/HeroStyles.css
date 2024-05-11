@@ -52,6 +52,12 @@ img {
     font-size: 1.1rem;
     font-weight: bold;
     letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.show:hover {
+    box-shadow: 0 5px 20px var(--bg-white);
 }
 
 @media (max-width: 1110px) {
