@@ -11,6 +11,7 @@ img {
     height: auto;
     object-fit: cover;
     display: block;
+    filter: brightness(85%)
 }
 
 
@@ -25,9 +26,10 @@ img {
 .heroText h1 {
     font-size: 6rem;
     font-weight: 800;
-    background: var(--bg-white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--bg-white);
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    text-shadow: black 0.3px 0 5px;
 }
 
 .heroText p {
@@ -35,6 +37,9 @@ img {
     font-weight: 700;
     color: var(--bg-white);
     padding: 0.5rem 0 4rem 0;
+    text-shadow: black 1px 0 10px;
+
+
 }
 
 .heroText a {
