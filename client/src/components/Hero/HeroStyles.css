@@ -1,0 +1,55 @@
+.hero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    margin-top: -90px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.heroText {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.heroText h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    background: var(--bg-white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroText p {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--bg-white);
+    padding: 0.5rem 0 4rem 0;
+}
+
+.heroText a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--bg-white);
+    margin-bottom: 2em;
+}
+
+.heroText .show {
+    background: var(--bg-white);
+    color: var(--bg-black);
+    padding: 1rem 2rem;
+    margin-top: 2em;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

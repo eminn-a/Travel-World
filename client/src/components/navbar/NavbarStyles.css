@@ -22,10 +22,12 @@
   /* align-items: end; */
   text-align: end;
 }
+
 .logo i {
   font-size: 0.8em;
   padding-left: 0.3em;
 }
+
 .logo h1 {
   font-size: 20px;
 }
@@ -85,6 +87,7 @@
   .navbarItems {
     z-index: 99;
   }
+
   .menuIcons {
     display: block;
     font-size: 1.7rem;
@@ -125,6 +128,7 @@
     text-align: center;
     font-weight: 700;
   }
+
   .navLinks:hover {
     background: var(--main-color);
   }
