@@ -6,7 +6,6 @@ const Hero = ({ image, title, text, url, btnName, img }) => {
       <img src={img} alt="Hero img" />
       <div className={styles.heroText}>
         <h1>{title}</h1>
-        <ul></ul>
         <p>{text}</p>
         {btnName && (
           <a href={url} className={styles.show}>

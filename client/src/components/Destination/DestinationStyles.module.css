@@ -1,0 +1,54 @@
+.destination {
+    text-align: center;
+    margin: 4rem 6rem;
+}
+
+.destination h1 {
+    font-size: 3rem;
+}
+
+.firstDescript {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+}
+
+.descriptText {
+    width: 45%;
+    text-align: start;
+    font-size: 1.4rem;
+}
+
+.descriptText h2 {
+    padding-bottom: 1rem;
+}
+
+.media {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.media img {
+    width: 49%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 1px 2px 20px black;
+    transition: 0.4s ease-in-out;
+}
+
+.media img:nth-child(2) {
+    position: absolute;
+    top: -10%;
+    right: 0;
+}
+
+.media img:hover {
+    width: 69%;
+    z-index: 999;
+
+}
