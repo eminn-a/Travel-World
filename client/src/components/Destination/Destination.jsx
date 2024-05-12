@@ -1,24 +1,25 @@
 import styles from "./DestinationStyles.module.css";
-import img from "../../assets/hero.jpg";
 
-const Destination = () => {
+const Destination = ({
+  title,
+  titleDesc,
+  heading,
+  headingDesc,
+  img1,
+  img2,
+}) => {
   return (
     <div className={styles.destination}>
-      <h1>Popular Destinations</h1>
-      <p>Tours give you the oportyunity to see a lot, withing a time frame.</p>
+      <h1>{title}</h1>
+      <p>{titleDesc}</p>
       <div className={styles.firstDescript}>
         <div className={styles.descriptText}>
-          <h2>Heading goes here</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-            minima voluptates quis ratione fugiat ipsum exercitationem veritatis
-            molestias nemo qui, placeat, facere repellat neque. Reprehenderit
-            ratione eveniet expedita quam eos!
-          </p>
+          <h2>{heading}</h2>
+          <p>{headingDesc}</p>
         </div>
         <div className={styles.media}>
-          <img src={img} alt="img" />
-          <img src={img} alt="img" />
+          <img src={img1} alt="desctinationImg" />
+          <img src={img2} alt="desctinationImg" />
         </div>
       </div>
     </div>

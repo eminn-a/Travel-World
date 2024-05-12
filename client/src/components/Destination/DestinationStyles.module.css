@@ -1,6 +1,6 @@
 .destination {
     text-align: center;
-    margin: 4rem 6rem;
+    margin: 8rem 6rem;
 }
 
 .destination h1 {
@@ -29,7 +29,7 @@
     width: 50%;
     display: flex;
     justify-content: space-between;
-    /* z-index: 99; */
+    z-index: 10;
 }
 
 .media img {

@@ -1,4 +1,4 @@
-export const data = {
+export const homeData = {
   home: {
     img: "https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg",
     title: "Your journey, your story!",
