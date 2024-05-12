@@ -29,7 +29,7 @@
     width: 50%;
     display: flex;
     justify-content: space-between;
-    z-index: 99;
+    /* z-index: 99; */
 }
 
 .media img {
@@ -37,7 +37,7 @@
     height: 350px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 1px 2px 20px black;
+    box-shadow: 1px 2px 11px black;
     transition: 0.4s ease-in-out;
 }
 
@@ -49,6 +49,30 @@
 
 .media img:hover {
     width: 69%;
-    z-index: 999;
+    z-index: 1;
+    /* box-shadow: 1px 2px 50px black; */
+}
 
+@media screen and (max-width:850px) {
+    .destination {
+        margin: 4rem 2rem;
+    }
+
+    .firstDescript {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4rem;
+        flex-direction: column-reverse;
+    }
+
+    .descriptText {
+        width: 90%;
+        margin-top: 2rem;
+    }
+
+    .media {
+        margin: 1rem 0;
+        width: 90%;
+    }
 }
