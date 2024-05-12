@@ -29,6 +29,8 @@
 
 .logo h1 {
   font-size: 20px;
+  white-space: nowrap;
+
 }
 
 .navMenu {

@@ -1,10 +1,12 @@
 .destination {
     text-align: center;
     margin: 8rem 6rem;
+
 }
 
 .destination h1 {
     font-size: 3rem;
+    margin-top: -1rem;
 }
 
 .firstDescript {
@@ -21,7 +23,7 @@
 }
 
 .descriptText h2 {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
 .media {

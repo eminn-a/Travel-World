@@ -6,6 +6,7 @@ import { destinationData } from "../data/destinationData";
 
 import hero from "../assets/hero.jpg";
 
+// Testing if its working with img's
 const img1 =
   "https://images.pexels.com/photos/531602/pexels-photo-531602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 const img2 =
