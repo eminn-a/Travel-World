@@ -16,6 +16,14 @@
     margin-top: 4.5rem;
 }
 
+.firstDescriptReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6.5rem;
+}
+
 .descriptText {
     width: 45%;
     text-align: start;
@@ -36,11 +44,12 @@
 
 .media img {
     width: 49%;
-    height: 350px;
+    height: 450px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 1px 2px 11px black;
     transition: 0.4s ease-in-out;
+    z-index: 1;
 }
 
 .media img:nth-child(2) {
@@ -51,7 +60,7 @@
 
 .media img:hover {
     width: 69%;
-    z-index: 1;
+    z-index: 2;
     /* box-shadow: 1px 2px 50px black; */
 }
 
@@ -61,6 +70,14 @@
     }
 
     .firstDescript {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4rem;
+        flex-direction: column-reverse;
+    }
+
+    .firstDescriptReverse {
         display: flex;
         align-items: center;
         justify-content: space-between;

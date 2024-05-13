@@ -1,9 +1,10 @@
 export const destinationData = {
-  img: "https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg",
+  img1: "https://images.pexels.com/photos/2620778/pexels-photo-2620778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  img2: "https://images.pexels.com/photos/14601758/pexels-photo-14601758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   title: "Popular Destinations!",
   titleDesc:
     "Tours give you the oportyunity to see a lot, withing a time frame.",
-  heading: "Heading goes here !",
+  heading: "Venice, Northeastern Italy",
   headingDesc:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima voluptates quis ratione fugiat ipsum exercitationem veritatis molestias nemo qui, placeat, facere repellat neque. Reprehenderit ratione eveniet expedita quam eos!",
+    "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals – including the Grand Canal thoroughfare – lined with Renaissance and Gothic palaces. The central square, Piazza San Marco, contains St. Mark’s Basilica, which is tiled with Byzantine mosaics, and the Campanile bell tower offering views of the city’s red roofs.",
 };
