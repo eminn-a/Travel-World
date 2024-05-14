@@ -6,8 +6,10 @@ const SingleTrip = ({ img, heading, desc }) => {
       <div className={styles.tImage}>
         <img src={img} alt="" />
       </div>
-      <h4>{heading}</h4>
-      <p>{desc}</p>
+      <div className={styles.sTripText}>
+        <h4>{heading}</h4>
+        <p>{desc}</p>
+      </div>
     </div>
   );
 };
