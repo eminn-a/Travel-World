@@ -5,8 +5,11 @@ import { tripData } from "../../data/tripData";
 const Trips = () => {
   return (
     <div className={styles.trip}>
-      <h1>Recent Trips</h1>
-      <p>Discover your next adventure!</p>
+      <h1>Latest blog posts!</h1>
+      <p>
+        Discover unforgettable adventures and amazing memories we've made
+        together!
+      </p>
       <div className={styles.tripCardContainer}>
         {tripData.map((x, index) => (
           <SingleTrip {...x} key={index} />

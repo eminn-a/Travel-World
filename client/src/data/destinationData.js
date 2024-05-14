@@ -1,7 +1,7 @@
 export const destinationData = {
   img1: "https://images.pexels.com/photos/2620778/pexels-photo-2620778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   img2: "https://images.pexels.com/photos/14601758/pexels-photo-14601758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  title: "Popular Destinations!",
+  title: "Next Destinations!",
   titleDesc:
     "Tours give you the oportyunity to see a lot, withing a time frame.",
   heading: "Venice, Northeastern Italy",
