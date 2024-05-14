@@ -5,6 +5,7 @@ import { heroData } from "../data/heroData";
 import { destinationData } from "../data/destinationData";
 
 import hero from "../assets/hero.jpg";
+import Trips from "../components/Trips/Trips";
 // Testing if its working with img's
 
 const Home = () => {
@@ -12,9 +13,11 @@ const Home = () => {
     <>
       <Hero {...heroData.home} image={hero} />
       <Destination {...destinationData} />
-      <Hero {...heroData.about} image={hero} />
+      <Trips />
+
+      {/* <Hero {...heroData.about} image={hero} />
       <Hero {...heroData.contacts} image={hero} />
-      <Hero {...heroData.about} image={hero} />
+      <Hero {...heroData.about} image={hero} /> */}
     </>
   );
 };

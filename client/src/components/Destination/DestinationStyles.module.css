@@ -9,6 +9,10 @@
     margin-top: -1rem;
 }
 
+.destination p {
+    font-size: 1.3rem;
+}
+
 .firstDescript {
     display: flex;
     align-items: center;
