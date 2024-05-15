@@ -14,10 +14,6 @@ const Home = () => {
       <Hero {...heroData.home} image={hero} />
       <Destination {...destinationData} />
       <Trips />
-
-      {/* <Hero {...heroData.about} image={hero} />
-      <Hero {...heroData.contacts} image={hero} />
-      <Hero {...heroData.about} image={hero} /> */}
     </>
   );
 };

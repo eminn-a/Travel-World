@@ -50,6 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <h5 className={styles.rights}>
+        <hr />
         All rights reserved © 2024 Emin Apturaim
       </h5>
     </div>
