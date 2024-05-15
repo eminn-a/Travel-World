@@ -1,0 +1,44 @@
+.footer {
+  text-align: start;
+  padding: 2rem 6rem;
+  background-color: black;
+  color: white;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icons {
+  display: flex;
+  gap: 1em;
+}
+
+.icons i {
+  font-size: 2em;
+  transition: 0.2s ease-in-out;
+}
+
+.icons i:hover {
+  color: var(--main-color);
+  box-shadow: 0 5px 20px var(--main-color);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.bottom h4 {
+  margin-bottom: 0.4em;
+}
+
+.rights {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: -2em;
+}
