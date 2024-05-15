@@ -6,7 +6,7 @@ const Footer = () => {
       <div className={styles.top}>
         <div>
           <h1>Travel-World</h1>
-          <p>You'r unforgetable memories!</p>
+          <p>Your unforgettable memories!</p>
         </div>
         <div className={styles.icons}>
           <i class="fa-brands fa-square-facebook"></i>
