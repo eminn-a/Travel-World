@@ -55,6 +55,9 @@
   margin-bottom: -2em;
 }
 
+.rights hr {
+  color: var(--bg-white);
+}
 @media screen and (max-width: 850px) {
   .footer {
     padding: 2rem 4rem;
