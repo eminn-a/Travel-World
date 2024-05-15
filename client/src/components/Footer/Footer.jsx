@@ -5,7 +5,7 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.top}>
         <div>
-          <h1>Trawel-World</h1>
+          <h1>Travel-World</h1>
           <p>You'r unforgetable memories!</p>
         </div>
         <div className={styles.icons}>
@@ -26,6 +26,14 @@ const Footer = () => {
         </div>
         <div>
           <h4>Second Section</h4>
+          <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third!</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Third Section</h4>
           <ul>
             <li>First</li>
             <li>Second</li>
