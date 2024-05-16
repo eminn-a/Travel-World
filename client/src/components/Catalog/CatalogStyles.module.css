@@ -11,7 +11,7 @@
 }
 
 .trip p {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5em;
     width: 100%;
 }
@@ -66,6 +66,10 @@
 .sTripText {
     padding: 0rem 1rem;
     width: 50%;
+}
+
+.sTripText p {
+    font-size: 0.9rem;
 }
 
 .btn {
