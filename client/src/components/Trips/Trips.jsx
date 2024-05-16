@@ -2,7 +2,7 @@ import SingleTrip from "./SingleTrip";
 import styles from "./TripsStyles.module.css";
 import { tripData } from "../../data/tripData";
 
-const Trips = (tripData) => {
+const Trips = () => {
   return (
     <div className={styles.trip}>
       <h1>Latest blog posts!</h1>
@@ -11,9 +11,9 @@ const Trips = (tripData) => {
         together!
       </p>
       <div className={styles.tripCardContainer}>
-        {/* {tripData.map((x, index) => (
+        {tripData.map((x, index) => (
           <SingleTrip {...x} key={index} />
-        ))} */}
+        ))}
       </div>
     </div>
   );
