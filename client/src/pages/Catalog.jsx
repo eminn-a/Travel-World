@@ -1,12 +1,12 @@
 import Hero from "../components/Hero/Hero";
-import Trips from "../components/Trips/Trips";
 import { heroData } from "../data/heroData";
+import CatalogItem from "../components/Catalog/CatalogItem";
 
 const Catalog = () => {
   return (
     <>
       <Hero {...heroData.catalog} />
-      <Trips />
+      <CatalogItem />
     </>
   );
 };
