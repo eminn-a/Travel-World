@@ -13,6 +13,7 @@
   gap: 1em;
   flex-wrap: wrap;
 }
+
 .top h1 {
   text-align: center;
 }
@@ -39,6 +40,7 @@
   margin-top: 2em;
   flex-wrap: wrap;
 }
+
 .bottom div {
   width: 25%;
   margin-bottom: 1em;
@@ -57,7 +59,9 @@
 
 .rights hr {
   color: var(--bg-white);
+  margin-bottom: 0.3em;
 }
+
 @media screen and (max-width: 850px) {
   .footer {
     padding: 2rem 4rem;

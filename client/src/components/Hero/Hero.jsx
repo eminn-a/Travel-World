@@ -1,8 +1,9 @@
 import styles from "./HeroStyles.module.css";
 
-const Hero = ({ image, title, text, url, btnName, img }) => {
+const Hero = ({ image, title, text, url, btnName, img, largeImg }) => {
+  console.log(largeImg);
   return (
-    <div className={styles.hero}>
+    <div className={largeImg ? styles.hero : styles.heroMid}>
       <img src={img} alt="Hero img" />
       <div className={styles.heroText}>
         <h1>{title}</h1>

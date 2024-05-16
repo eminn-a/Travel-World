@@ -9,10 +9,10 @@ const Footer = () => {
           <p>Your unforgettable memories!</p>
         </div>
         <div className={styles.icons}>
-          <i class="fa-brands fa-square-facebook"></i>
-          <i class="fa-brands fa-square-instagram"></i>
-          <i class="fa-brands fa-square-youtube"></i>
-          <i class="fa-brands fa-square-twitter"></i>
+          <i className="fa-brands fa-square-facebook"></i>
+          <i className="fa-brands fa-square-instagram"></i>
+          <i className="fa-brands fa-square-youtube"></i>
+          <i className="fa-brands fa-square-twitter"></i>
         </div>
       </div>
       <div className={styles.bottom}>
