@@ -42,6 +42,9 @@ const Navbar = () => {
           <li className={styles.navLinks}>
             <i className="fa-solid fa-address-book"></i>Contacts
           </li>
+          <li className={styles.navLinks}>
+            <i className="fa-solid fa-address-book"></i>Blogs
+          </li>
           <li className={styles.navLinksMobile}>Sign Up</li>
           <button className={styles.navbarBtn}>Sign Up</button>
         </ul>
