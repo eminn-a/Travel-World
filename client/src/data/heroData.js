@@ -21,7 +21,7 @@ export const heroData = {
   },
   catalog: {
     img: "https://images.pexels.com/photos/335393/pexels-photo-335393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    title: "Explore All Our Future Destinations",
+    title: "Our Future Destinations",
     text: "Find Your Dream Getaway Today!",
     url: "/",
   },

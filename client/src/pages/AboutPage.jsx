@@ -2,7 +2,7 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Hero from "../components/Hero/Hero";
 import { heroData } from "../data/heroData";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <>
       <Hero {...heroData.about} />
@@ -10,4 +10,4 @@ const About = () => {
     </>
   );
 };
-export default About;
+export default AboutPage;

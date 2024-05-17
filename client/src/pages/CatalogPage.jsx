@@ -3,7 +3,7 @@ import { heroData } from "../data/heroData";
 import CatalogItem from "../components/Catalog/CatalogItem";
 import { tripData } from "../data/tripData";
 
-const Catalog = () => {
+const CatalogPage = () => {
   return (
     <>
       <Hero {...heroData.catalog} />
@@ -12,4 +12,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default CatalogPage;

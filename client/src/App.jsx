@@ -1,16 +1,18 @@
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
-import About from "./pages/About";
-import CatalogItem from "./pages/Catalog";
-import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import CatalogPage from "./pages/CatalogPage";
+import ContactsPage from "./pages/ContactsPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
-      <CatalogItem />
-      <About />
+      <HomePage />
+      <CatalogPage />
+      <AboutPage />
+      <ContactsPage />
       <Footer />
     </>
   );

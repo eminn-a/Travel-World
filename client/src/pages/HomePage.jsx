@@ -8,7 +8,7 @@ import hero from "../assets/hero.jpg";
 import Trips from "../components/Trips/Trips";
 // Testing if its working with img's
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <Hero {...heroData.home} image={hero} />
@@ -17,4 +17,4 @@ const Home = () => {
     </>
   );
 };
-export default Home;
+export default HomePage;

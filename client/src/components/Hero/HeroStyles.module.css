@@ -7,7 +7,7 @@
 
 .heroMid {
     width: 100%;
-    height: 45vh;
+    height: 60vh;
     position: relative;
     text-align: center;
 }
@@ -72,6 +72,10 @@ img {
 }
 
 @media (max-width: 1110px) {
+    .heroMid {
+        height: 68vh;
+    }
+
     .hero {
         margin-top: 0;
     }

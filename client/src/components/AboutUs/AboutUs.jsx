@@ -13,14 +13,14 @@ const AboutUs = () => {
           consectetur nostrum deserunt, id accusamus nihil fugit libero!
           Adipisci ad sed dolorum veniam ea.
         </p>
-        <h1>Our Mision</h1>
+        <h1>Our Mission</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quo,
           atque soluta cupiditate nostrum, distinctio provident neque hic dolor
           iste molestiae ipsam esse. Quos eos veritatis soluta recusandae
           possimus ipsum.
         </p>
-        <h1>Our Values</h1>
+        <h1>Our Vision</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iure
           commodi, facere rem voluptates fugiat harum tempora assumenda vitae
