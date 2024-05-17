@@ -44,3 +44,18 @@
     background-color: var(--second-color);
     color: var(--bg-white);
 }
+
+@media screen and (max-width:850px) {
+    .formContainer {
+        margin: 2rem 4rem;
+    }
+
+    .formContainer .title {
+        font-size: 2.5em;
+
+    }
+
+    .formContainer form {
+        width: 80%;
+    }
+}
