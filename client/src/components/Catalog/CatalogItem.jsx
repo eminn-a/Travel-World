@@ -1,8 +1,7 @@
 import styles from "./CatalogStyles.module.css";
-import { tripData } from "../../data/tripData";
 import SingleCatalogItem from "./SingleCatalogItem";
 
-const CatalogItem = () => {
+const CatalogItem = (catalogData) => {
   return (
     <div className={styles.trip}>
       <h1>Catalog items here</h1>
@@ -11,7 +10,7 @@ const CatalogItem = () => {
         together!
       </p>
       <div className={styles.tripCardContainer}>
-        {tripData.map((x, index) => (
+        {catalogData.data.map((x, index) => (
           <SingleCatalogItem key={index} {...x} />
         ))}
       </div>

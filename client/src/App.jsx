@@ -1,5 +1,6 @@
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import About from "./pages/About";
 import CatalogItem from "./pages/Catalog";
 import Home from "./pages/Home";
 
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Home />
       <CatalogItem />
+      <About />
       <Footer />
     </>
   );
