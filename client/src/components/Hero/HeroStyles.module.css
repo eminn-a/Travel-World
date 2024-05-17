@@ -72,6 +72,10 @@ img {
 }
 
 @media (max-width: 1110px) {
+    .heroMid {
+        height: 68vh;
+    }
+
     .hero {
         margin-top: 0;
     }

@@ -1,0 +1,10 @@
+.aboutUs {
+    padding: 4rem 6rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutUs p {
+    margin-bottom: 2em;
+}

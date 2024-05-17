@@ -1,7 +1,6 @@
 import styles from "./HeroStyles.module.css";
 
 const Hero = ({ image, title, text, url, btnName, img, largeImg }) => {
-  console.log(largeImg);
   return (
     <div className={largeImg ? styles.hero : styles.heroMid}>
       <img src={img} alt="Hero img" />
