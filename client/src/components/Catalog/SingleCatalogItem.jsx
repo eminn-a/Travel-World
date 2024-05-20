@@ -9,8 +9,6 @@ const SingleCatalogItem = ({ img, heading, desc }) => {
       <div className={styles.sTripText}>
         <h4>{heading}</h4>
         <p>{desc}</p>
-        <p>{desc}</p>
-        <p>{desc}</p>
       </div>
       <button className={styles.btn}>Check out!</button>
     </div>

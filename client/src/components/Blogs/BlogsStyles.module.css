@@ -22,6 +22,10 @@
     flex-wrap: wrap;
 }
 
+.tripCardContainer p {
+    font-size: 1rem;
+}
+
 .tCard {
     width: 31%;
     text-align: start;
@@ -55,7 +59,9 @@
 
 .sTripText {
     padding: 0rem 1rem;
-
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
 }
 
 @media screen and (max-width:850px) {
