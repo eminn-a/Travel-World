@@ -1,4 +1,5 @@
 import styles from "./HeroStyles.module.css";
+import { Link } from "react-router-dom";
 
 const Hero = ({ image, title, text, url, btnName, img, largeImg }) => {
   return (
@@ -8,9 +9,9 @@ const Hero = ({ image, title, text, url, btnName, img, largeImg }) => {
         <h1>{title}</h1>
         <p>{text}</p>
         {btnName && (
-          <a href={url} className={styles.show}>
+          <Link to={url} className={styles.show}>
             {btnName}
-          </a>
+          </Link>
         )}
       </div>
     </div>

@@ -3,7 +3,7 @@ export const heroData = {
     img: "https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg",
     title: "Your Journey, Your Story!",
     text: "Chose Your Favorite Destination!",
-    url: "/",
+    url: "/catalog",
     btnName: "Travel Plan",
     largeImg: true,
   },
@@ -11,7 +11,7 @@ export const heroData = {
     img: "https://images.pexels.com/photos/1313814/pexels-photo-1313814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "About Us",
     text: "About Us",
-    url: "/",
+    url: "/contacts",
   },
   contacts: {
     img: "https://images.pexels.com/photos/1851481/pexels-photo-1851481.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
