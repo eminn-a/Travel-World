@@ -6,13 +6,12 @@ import { destinationData } from "../data/destinationData";
 
 import hero from "../assets/hero.jpg";
 import Trips from "../components/Trips/Trips";
-// Testing if its working with img's
 
 const HomePage = () => {
   return (
     <>
       <Hero {...heroData.home} image={hero} />
-      <Destination {...destinationData} />
+      <Destination data={destinationData} />
       <Trips />
     </>
   );
