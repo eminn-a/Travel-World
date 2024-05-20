@@ -16,6 +16,10 @@
   z-index: 9999;
 }
 
+.navbarItems li a {
+  color: var(--text-color);
+}
+
 .logo {
   display: flex;
   text-align: end;
@@ -47,6 +51,10 @@
   padding: 0.7rem 0.3rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+}
+
+.navLinks {
+  color: var(--text-color);
 }
 
 .navLinks i {

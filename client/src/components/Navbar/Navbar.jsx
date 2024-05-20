@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 import { useState } from "react";
+
 import styles from "./NavbarStyles.module.css";
 
 const Navbar = () => {
@@ -6,6 +9,10 @@ const Navbar = () => {
 
   const activeMenu = () => {
     setMobileMenu((state) => (state = !mobileMenu));
+  };
+
+  const closeMenu = () => {
+    setMobileMenu((state) => (state = true));
   };
 
   return (
@@ -30,18 +37,26 @@ const Navbar = () => {
             mobileMenu ? styles.navMenu : `${styles.navMenu} ${styles.active}`
           }
         >
-          <li className={styles.navLinks}>
-            <i className="fa-solid fa-house"></i>Home
-          </li>
-          <li className={styles.navLinks}>
-            <i className="fa-solid fa-map-location-dot"></i>Destinations
-          </li>
-          <li className={styles.navLinks}>
-            <i className="fa-solid fa-circle-info"></i>About
-          </li>
-          <li className={styles.navLinks}>
-            <i className="fa-solid fa-address-book"></i>Contacts
-          </li>
+          <Link to={"/"} onClick={closeMenu}>
+            <li className={styles.navLinks}>
+              <i className="fa-solid fa-house"></i>Home
+            </li>
+          </Link>
+          <Link to={"/catalog"} onClick={closeMenu}>
+            <li className={styles.navLinks}>
+              <i className="fa-solid fa-map-location-dot"></i>Destinations
+            </li>
+          </Link>
+          <Link to={"/about"} onClick={closeMenu}>
+            <li className={styles.navLinks}>
+              <i className="fa-solid fa-circle-info"></i>About
+            </li>
+          </Link>
+          <Link to={"/contacts"} onClick={closeMenu}>
+            <li className={styles.navLinks}>
+              <i className="fa-solid fa-address-book"></i>Contacts
+            </li>
+          </Link>
           <li className={styles.navLinksMobile}>Sign Up</li>
           <button className={styles.navbarBtn}>Sign Up</button>
         </ul>
