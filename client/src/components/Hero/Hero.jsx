@@ -1,7 +1,7 @@
 import styles from "./HeroStyles.module.css";
 import { Link } from "react-router-dom";
 
-const Hero = ({ image, title, text, url, btnName, img, largeImg }) => {
+const Hero = ({ title, text, url, btnName, img, largeImg }) => {
   return (
     <div className={largeImg ? styles.hero : styles.heroMid}>
       <img src={img} alt="Hero img" />

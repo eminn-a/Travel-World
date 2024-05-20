@@ -1,6 +1,6 @@
-import styles from "./TripsStyles.module.css";
+import styles from "./BlogsStyles.module.css";
 
-const SingleTrip = ({ img, heading, desc }) => {
+const Singleblog = ({ img, heading, desc }) => {
   return (
     <div className={styles.tCard}>
       <div className={styles.tImage}>
@@ -14,4 +14,4 @@ const SingleTrip = ({ img, heading, desc }) => {
   );
 };
 
-export default SingleTrip;
+export default Singleblog;
