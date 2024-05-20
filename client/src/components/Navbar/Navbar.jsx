@@ -19,10 +19,12 @@ const Navbar = () => {
     <>
       <nav className={styles.navbarItems}>
         <div className={styles.logo}>
-          <h1 className={styles.navbarLogo}>
-            Travel-World
-            <i className="fa-solid fa-umbrella-beach"></i>
-          </h1>
+          <Link to={"/"}>
+            <h1 className={styles.navbarLogo}>
+              Travel-World
+              <i className="fa-solid fa-umbrella-beach"></i>
+            </h1>
+          </Link>
         </div>
 
         <div className={styles.menuIcons}>
