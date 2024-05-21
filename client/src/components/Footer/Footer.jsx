@@ -29,7 +29,7 @@ const Footer = () => {
           <ul>
             <li>First</li>
             <li>Second</li>
-            <li>Third!</li>
+            <li>Thirdasdasd!</li>
           </ul>
         </div>
         <div>
