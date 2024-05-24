@@ -15,7 +15,7 @@ const Hero = ({ title, text, url, btnName, img, largeImg }) => {
             // to={url}
             className={styles.show}
             onClick={() => {
-              toast.success("Success");
+              toast.success(title);
             }}
           >
             {btnName}

@@ -10,39 +10,15 @@ import HomePage from "./pages/HomePage";
 
 import { Toaster } from "react-hot-toast";
 
+import { toastOptions } from "./data/configToaster";
+
 function App() {
   useScrollToTop();
 
   return (
     <>
       <Navbar />
-      <Toaster
-        position="bottom-right"
-        reverseOrder={false}
-        toastOptions={{
-          success: {
-            iconTheme: {
-              primary: "white",
-              secondary: "black",
-            },
-            style: {
-              background: "#92E981",
-            },
-          },
-          error: {
-            style: {
-              background: "#ffb3b8",
-            },
-          },
-          style: {
-            borderRadius: "50px",
-            fontSize: "20px",
-            fontWeight: "600",
-            padding: "15px 70px",
-          },
-        }}
-      />
-
+      <Toaster {...toastOptions} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
