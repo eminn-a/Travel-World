@@ -15,21 +15,7 @@ const Hero = ({ title, text, url, btnName, img, largeImg }) => {
             // to={url}
             className={styles.show}
             onClick={() => {
-              toast.success("Success", {
-                style: {
-                  padding: "15px 90px",
-                  color: "white",
-                  background: "blue",
-                  borderRadius: "50px",
-                  fontWeight: "800",
-                  fontSize: "20px",
-                },
-                iconTheme: {
-                  primary: "white",
-                  secondary: "black",
-                },
-                duration: 2000,
-              });
+              toast.success("Success");
             }}
           >
             {btnName}

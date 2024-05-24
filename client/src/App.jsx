@@ -16,7 +16,32 @@ function App() {
   return (
     <>
       <Navbar />
-      <Toaster position="bottom-right" reverseOrder={false} richColor />
+      <Toaster
+        position="bottom-right"
+        reverseOrder={false}
+        toastOptions={{
+          success: {
+            iconTheme: {
+              primary: "white",
+              secondary: "black",
+            },
+            style: {
+              background: "#92E981",
+            },
+          },
+          error: {
+            style: {
+              background: "#ffb3b8",
+            },
+          },
+          style: {
+            borderRadius: "50px",
+            fontSize: "20px",
+            fontWeight: "600",
+            padding: "15px 70px",
+          },
+        }}
+      />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
