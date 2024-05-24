@@ -8,12 +8,16 @@ import CatalogPage from "./pages/CatalogPage";
 import ContactsPage from "./pages/ContactsPage";
 import HomePage from "./pages/HomePage";
 
+import { Toaster } from "react-hot-toast";
+
 function App() {
   useScrollToTop();
 
   return (
     <>
       <Navbar />
+      <Toaster position="bottom-right" reverseOrder={false} richColor />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
