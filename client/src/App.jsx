@@ -1,31 +1,45 @@
-import { Routes, Route } from "react-router-dom";
-import useScrollToTop from "./hooks/useScrollToTop";
-
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
-import AboutPage from "./pages/AboutPage";
-import CatalogPage from "./pages/CatalogPage";
-import ContactsPage from "./pages/ContactsPage";
-import HomePage from "./pages/HomePage";
-
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import { toastOptions } from "./data/configToaster";
+import RouterLayout from "./pages/RootLayout";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactsPage from "./pages/ContactsPage";
+import CatalogPage from "./pages/CatalogPage";
 
 function App() {
-  useScrollToTop();
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RouterLayout />,
+      // errorElement: <>404 page not found</>,
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: "/about",
+          element: <AboutPage />,
+        },
+        {
+          path: "/contacts",
+          element: <ContactsPage />,
+        },
+        {
+          path: "/catalog",
+          element: <CatalogPage />,
+        },
+      ],
+    },
+  ]);
 
   return (
     <>
-      <Navbar />
       <Toaster {...toastOptions} />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contacts" element={<ContactsPage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-      </Routes>
-      <Footer />
+      <RouterProvider router={router}></RouterProvider>
     </>
   );
 }

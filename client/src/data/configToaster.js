@@ -1,5 +1,5 @@
 export const toastOptions = {
-  position: "bottom-center",
+  position: "bottom-right",
   reverseOrder: false,
   toastOptions: {
     success: {

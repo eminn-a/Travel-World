@@ -3,6 +3,16 @@ import { Link } from "react-router-dom";
 
 import toast from "react-hot-toast";
 
+function notify() {
+  return (
+    <>
+      <p>
+        <i className="fa-solid fa-map-location-dot"></i> Destinations
+      </p>
+    </>
+  );
+}
+
 const Hero = ({ title, text, url, btnName, img, largeImg }) => {
   return (
     <div className={largeImg ? styles.hero : styles.heroMid}>
@@ -15,7 +25,7 @@ const Hero = ({ title, text, url, btnName, img, largeImg }) => {
             // to={url}
             className={styles.show}
             onClick={() => {
-              toast.success(title);
+              toast.success(notify);
             }}
           >
             {btnName}

@@ -44,17 +44,17 @@ const Navbar = () => {
               <i className="fa-solid fa-house"></i>Home
             </li>
           </Link>
-          <Link to={"/catalog"} onClick={closeMenu}>
+          <Link to={"catalog"} onClick={closeMenu}>
             <li className={styles.navLinks}>
               <i className="fa-solid fa-map-location-dot"></i>Destinations
             </li>
           </Link>
-          <Link to={"/about"} onClick={closeMenu}>
+          <Link to={"about"} onClick={closeMenu}>
             <li className={styles.navLinks}>
               <i className="fa-solid fa-circle-info"></i>About
             </li>
           </Link>
-          <Link to={"/contacts"} onClick={closeMenu}>
+          <Link to={"contacts"} onClick={closeMenu}>
             <li className={styles.navLinks}>
               <i className="fa-solid fa-address-book"></i>Contacts
             </li>
