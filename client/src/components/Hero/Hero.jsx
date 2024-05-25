@@ -22,6 +22,7 @@ const Hero = ({ title, text, url, btnName, img, largeImg }) => {
         <p>{text}</p>
         {btnName && (
           <Link
+            preventScrollReset={true}
             // to={url}
             className={styles.show}
             onClick={() => {

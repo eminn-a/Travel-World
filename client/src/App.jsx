@@ -1,5 +1,9 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  ScrollRestoration,
+} from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import { toastOptions } from "./data/configToaster";
@@ -21,15 +25,15 @@ function App() {
           element: <HomePage />,
         },
         {
-          path: "/about",
+          path: "about",
           element: <AboutPage />,
         },
         {
-          path: "/contacts",
+          path: "contacts",
           element: <ContactsPage />,
         },
         {
-          path: "/catalog",
+          path: "catalog",
           element: <CatalogPage />,
         },
       ],

@@ -5,8 +5,8 @@ import Navbar from "../components/Navbar/Navbar";
 const RouterLayout = () => {
   return (
     <>
-      <ScrollRestoration />
       <Navbar />
+      <ScrollRestoration />
       <Outlet />
       <Footer />
     </>
