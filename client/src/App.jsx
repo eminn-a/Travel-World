@@ -12,6 +12,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactsPage from "./pages/ContactsPage";
 import CatalogPage from "./pages/CatalogPage";
+import CreateDestinationPage from "./pages/CreateDestination";
 
 function App() {
   const router = createBrowserRouter([
@@ -35,6 +36,10 @@ function App() {
         {
           path: "catalog",
           element: <CatalogPage />,
+        },
+        {
+          path: "create",
+          element: <CreateDestinationPage />,
         },
       ],
     },

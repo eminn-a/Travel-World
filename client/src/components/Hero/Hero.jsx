@@ -3,16 +3,6 @@ import { Link } from "react-router-dom";
 
 import toast from "react-hot-toast";
 
-function notify() {
-  return (
-    <>
-      <p>
-        <i className="fa-solid fa-map-location-dot"></i> Destinations
-      </p>
-    </>
-  );
-}
-
 const Hero = ({ title, text, url, btnName, img, largeImg }) => {
   return (
     <div className={largeImg ? styles.hero : styles.heroMid}>

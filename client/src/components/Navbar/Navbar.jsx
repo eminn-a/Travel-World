@@ -59,6 +59,11 @@ const Navbar = () => {
               <i className="fa-solid fa-address-book"></i>Contacts
             </li>
           </Link>
+          <Link to={"create"} onClick={closeMenu}>
+            <li className={styles.navLinks}>
+              <i class="fa-solid fa-folder-plus"></i>Create Destination
+            </li>
+          </Link>
           <li className={styles.navLinksMobile}>Sign Up</li>
           <button className={styles.navbarBtn}>Sign Up</button>
         </ul>
