@@ -14,7 +14,6 @@ const CreateDestination = () => {
     await new Promise((res) => setTimeout(res, 1000));
     console.log(data);
   };
-  const errorMessage = Object.keys(errors)[0];
 
   return (
     <div className={styles.formContainer}>
@@ -48,7 +47,9 @@ const CreateDestination = () => {
         <div>
           {/* {errors.title && <p className="errorMsg">{errors.title.message}</p>} */}
           {errors && (
-            <p className="errorMsg">{errors[errorMessage]?.message}</p>
+            <p className="errorMsg">
+              {errors[Object.keys(errors)[0]]?.message}
+            </p>
           )}
         </div>
       </form>
