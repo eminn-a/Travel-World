@@ -26,3 +26,7 @@
 body {
   color: var(--text-color);
 }
+
+.errorMsg {
+  color: red;
+}

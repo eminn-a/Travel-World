@@ -61,7 +61,7 @@ const Navbar = () => {
           </Link>
           <Link to={"create"} onClick={closeMenu}>
             <li className={styles.navLinks}>
-              <i class="fa-solid fa-folder-plus"></i>Create Destination
+              <i className="fa-solid fa-folder-plus"></i>Create Destination
             </li>
           </Link>
           <li className={styles.navLinksMobile}>Sign Up</li>
