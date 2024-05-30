@@ -1,13 +1,13 @@
 import styles from "./DestinationStyles.module.css";
 
-const SingleDestination = ({ heading, desc, img1, img2, index }) => {
+const SingleDestination = ({ title, description, img1, img2, index }) => {
   const flag = Number(index) % 2 === 0 ? true : false;
 
   return (
     <div className={flag ? styles.firstDescript : styles.firstDescriptReverse}>
       <div className={styles.descriptText}>
-        <h2>{heading}</h2>
-        <p>{desc}</p>
+        <h2>{title}</h2>
+        <p>{description}</p>
       </div>
       <div className={styles.media}>
         <img src={img1} alt="desctinationImg1" />

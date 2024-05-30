@@ -8,7 +8,7 @@ const Destination = ({ data }) => {
       <p>Tours give you the oportyunity to see a lot, withing a time frame.</p>
 
       {data.map((x, index) => (
-        <SingleDestination {...x} index={index} key={index} />
+        <SingleDestination {...x} index={index} key={x._id} />
       ))}
     </div>
   );
