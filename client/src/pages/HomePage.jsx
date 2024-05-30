@@ -15,7 +15,7 @@ const HomePage = () => {
     destinationService.getAll().then((res) => setDestinations(res));
   }, []);
 
-  console.log(destinations);
+  // console.log(destinations);
   return (
     <>
       <Hero {...heroData.home} image={hero} />

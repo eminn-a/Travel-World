@@ -2,6 +2,7 @@ import styles from "./DestinationStyles.module.css";
 import SingleDestination from "./singleDestination";
 
 const Destination = ({ data }) => {
+  console.log(data);
   return (
     <div className={styles.destination}>
       <h1>Next Destinations!</h1>
@@ -10,6 +11,8 @@ const Destination = ({ data }) => {
       {data.map((x, index) => (
         <SingleDestination {...x} index={index} key={x._id} />
       ))}
+
+      {data.length === 0 && <h3 className="errorMsg">No item there!</h3>}
     </div>
   );
 };
