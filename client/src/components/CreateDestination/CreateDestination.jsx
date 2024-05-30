@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import styles from "./CreateDestinationStyles.module.css";
 import { createFormSchema } from "../../validations/formValidation";
+import * as destinationServices from "../../services/destinationServices";
 
 const CreateDestination = () => {
   const navigate = useNavigate();
@@ -19,14 +20,12 @@ const CreateDestination = () => {
 
   const onSubmit = async (data) => {
     try {
-      await new Promise((res) => {
-        setTimeout(res, 1000);
-      });
-      // throw new Error("invalid email");
-      console.log(data);
+      let result = await destinationServices.createDestination(data);
+      console.log(result);
       navigate("/catalog");
       toast.success("Successfully added new destination!");
     } catch (error) {
+      navigate("/catalog");
       toast.error(`${error.message}`);
     }
   };
@@ -40,7 +39,13 @@ const CreateDestination = () => {
         <input {...register("price")} type="number" placeholder="Price" />
         <input {...register("img1")} type="text" placeholder="Img 1" />
         <input {...register("img2")} type="text" placeholder="Img 2" />
-        <textarea name="" id="" placeholder="Descriptions" rows="10"></textarea>
+        <textarea
+          name=""
+          {...register("description")}
+          id=""
+          placeholder="Descriptions"
+          rows="10"
+        ></textarea>
 
         <button disabled={isSubmitting}>
           {isSubmitting ? "Sending..." : "Send message"}
