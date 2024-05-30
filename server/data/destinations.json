@@ -1,0 +1,29 @@
+{
+  "5f45cd39-857d-4c68-a2e2-9ef09b7542e1": {
+    "img1": "https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 300,
+    "date": "2024-04-30",
+    "title": "Paris, France's capital",
+    "img2": "https://images.pexels.com/photos/2082103/pexels-photo-2082103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals – including the Grand Canal thoroughfare – lined with Renaissance and Gothic palaces. The central square, Piazza San Marco, contains St. Mark’s Basilica, which is tiled with Byzantine mosaics, and the Campanile bell tower offering views of the city’s red roofs.",
+    "_id": "5f45cd39-857d-4c68-a2e2-9ef09b7542e1"
+  },
+  "7488014a-81d0-4de0-9285-f2283eb88698": {
+    "img1": "https://images.pexels.com/photos/2620778/pexels-photo-2620778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 450,
+    "date": "2024-06-08",
+    "title": "Venice, Northeastern Italy",
+    "img2": "https://images.pexels.com/photos/14601758/pexels-photo-14601758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals – including the Grand Canal thoroughfare – lined with Renaissance and Gothic palaces. The central square, Piazza San Marco, contains St. Mark’s Basilica, which is tiled with Byzantine mosaics, and the Campanile bell tower offering views of the city’s red roofs.",
+    "_id": "7488014a-81d0-4de0-9285-f2283eb88698"
+  },
+  "0e8d2197-4348-4d02-85ed-80d9c83b1825": {
+    "img1": "https://images.pexels.com/photos/18140870/pexels-photo-18140870/free-photo-of-view-of-the-shore-and-waterfront-buildings-on-mykonos-greece.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 350,
+    "date": "2024-07-18",
+    "title": "Mykonos, Island in Greece",
+    "img2": "https://images.pexels.com/photos/15532701/pexels-photo-15532701/free-photo-of-mediterranean-town-in-summer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals – including the Grand Canal thoroughfare – lined with Renaissance and Gothic palaces. The central square, Piazza San Marco, contains St. Mark’s Basilica, which is tiled with Byzantine mosaics, and the Campanile bell tower offering views of the city’s red roofs.",
+    "_id": "0e8d2197-4348-4d02-85ed-80d9c83b1825"
+  }
+}
