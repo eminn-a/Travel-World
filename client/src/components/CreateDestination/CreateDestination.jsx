@@ -20,7 +20,7 @@ const CreateDestination = () => {
 
   const onSubmit = async (data) => {
     try {
-      let result = await destinationServices.createDestination(data);
+      let result = await destinationServices.create(data);
       console.log(result);
       navigate("/catalog");
       toast.success("Successfully added new destination!");
@@ -47,9 +47,11 @@ const CreateDestination = () => {
           rows="10"
         ></textarea>
 
-        <button disabled={isSubmitting}>
+        {/* <button disabled={isSubmitting}>
           {isSubmitting ? "Sending..." : "Send message"}
-        </button>
+        </button> */}
+
+        <button>"Send message"</button>
         <div>
           {errors && (
             <p className="errorMsg">
