@@ -14,9 +14,5 @@ export const createFormSchema = yup.object().shape({
     .required("Please provide plan cost.")
     .min(1, "Too little price")
     .max(5000, "Very costly price!"),
-  img1: yup.string().required("At least 1 img please!"),
-  // .matches(
-  //   /((https?):\/\/)?(www\.)?[a-z0-9]+(\.[a-z]{2,}){1,3}((\/|#)?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+(&[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+)*)?$/,
-  //   "Enter correct img url!"
-  // ),
+  img1: yup.string().url().required("Please enter img1 at least"),
 });
