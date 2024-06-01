@@ -13,13 +13,14 @@ import AboutPage from "./pages/AboutPage";
 import ContactsPage from "./pages/ContactsPage";
 import CatalogPage from "./pages/CatalogPage";
 import CreateDestinationPage from "./pages/CreateDestination";
+import Page404 from "./components/404/404Page";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <RouterLayout />,
-      // errorElement: <>404 page not found</>,
+      errorElement: <Page404 />,
       children: [
         {
           index: true,

@@ -1,0 +1,16 @@
+.error {
+    display: flex;
+    gap: 4em;
+    margin-top: 2em;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.error img {
+    width: 400px;
+}
+
+.error a {
+    color: var(--main-color);
+}
