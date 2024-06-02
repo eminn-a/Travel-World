@@ -10,15 +10,19 @@ import { heroData } from "../data/heroData";
 import { tripData } from "../data/tripData";
 
 const HomePage = () => {
-  const [destinations, setDestinations] = useState([]);
+  const [spinner, setSpinner] = useState(true);
+  const [destinations, setDestinations] = useState(undefined);
   useEffect(() => {
-    destinationService.getAll().then((res) => setDestinations(res));
+    setTimeout(() => {
+      destinationService.getAll().then((res) => setDestinations(res));
+      setSpinner((state) => (state = false));
+    }, 3000);
   }, []);
 
   return (
     <>
       <Hero {...heroData.home} />
-      <Destination data={destinations} />
+      <Destination data={destinations} spinner={spinner} />
       <Blogs data={tripData} />
     </>
   );
