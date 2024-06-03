@@ -5,7 +5,7 @@ const SingleDestination = ({ title, description, img1, img2, index, _id }) => {
   const flag = Number(index) % 2 === 0 ? true : false;
 
   return (
-    <Link to={`http://localhost:5173/catalog/${_id}`}>
+    <Link to={`/catalog/${_id}`}>
       <div
         className={flag ? styles.firstDescript : styles.firstDescriptReverse}
       >

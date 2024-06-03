@@ -6,7 +6,6 @@ import * as destinationService from "./../services/destinationServices";
 
 const SingleDestinationPage = () => {
   const { id } = useParams();
-
   const [destination, setDestination] = useState({});
 
   useEffect(() => {
@@ -16,9 +15,8 @@ const SingleDestinationPage = () => {
         setDestination(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
-  console.log(destination.img1);
   return (
     <>
       <Hero
@@ -30,4 +28,5 @@ const SingleDestinationPage = () => {
     </>
   );
 };
+
 export default SingleDestinationPage;

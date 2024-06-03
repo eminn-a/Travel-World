@@ -5,11 +5,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   scroll-padding-top: 4rem;
   list-style: none;
   text-decoration: none;
-
 }
 
 /* Colors */

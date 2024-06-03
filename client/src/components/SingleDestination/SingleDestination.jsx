@@ -1,4 +1,18 @@
 const SingleDestination = () => {
-  return <h1>SingleDestination item</h1>;
+  return (
+    <div>
+      <h1>SingleDestination item</h1>
+      <h1>SingleDestination item</h1>
+      <h1>SingleDestination item</h1>
+      <h1>SingleDestination item</h1>
+      <h1>SingleDestination item</h1>
+      <h1>SingleDestination item</h1>
+      <h1>SingleDestination item</h1>
+      <h1>SingleDestination item</h1>
+      <h1>SingleDestination item</h1>
+
+      <h1>SingleDestination item</h1>
+    </div>
+  );
 };
 export default SingleDestination;

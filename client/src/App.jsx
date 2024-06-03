@@ -1,6 +1,6 @@
+// App.js
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-
 import { toastOptions } from "./data/configToaster";
 
 import RouterLayout from "./pages/RootLayout";
@@ -19,30 +19,12 @@ function App() {
       element: <RouterLayout />,
       errorElement: <Page404 />,
       children: [
-        {
-          index: true,
-          element: <HomePage />,
-        },
-        {
-          path: "about",
-          element: <AboutPage />,
-        },
-        {
-          path: "contacts",
-          element: <ContactsPage />,
-        },
-        {
-          path: "catalog",
-          element: <CatalogPage />,
-        },
-        {
-          path: "catalog/:id",
-          element: <SingleDestinationPage />,
-        },
-        {
-          path: "create",
-          element: <CreateDestinationPage />,
-        },
+        { index: true, element: <HomePage /> },
+        { path: "about", element: <AboutPage /> },
+        { path: "contacts", element: <ContactsPage /> },
+        { path: "catalog", element: <CatalogPage /> },
+        { path: "catalog/:id", element: <SingleDestinationPage /> },
+        { path: "create", element: <CreateDestinationPage /> },
       ],
     },
   ]);
@@ -50,7 +32,7 @@ function App() {
   return (
     <>
       <Toaster {...toastOptions} />
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router} />
     </>
   );
 }
