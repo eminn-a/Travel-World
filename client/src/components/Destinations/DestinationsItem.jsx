@@ -10,7 +10,10 @@ const SingleDestination = ({ title, description, img1, img2, index, _id }) => {
         className={flag ? styles.firstDescript : styles.firstDescriptReverse}
       >
         <div className={styles.descriptText}>
-          <h2>{title}</h2>
+          <h2>
+            <i class="fa-solid fa-signs-post"></i>
+            {title}
+          </h2>
           <p>{description}</p>
         </div>
         <div className={styles.media}>

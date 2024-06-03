@@ -39,6 +39,11 @@
   padding-bottom: 2rem;
 }
 
+.descriptText h2 i {
+  font-size: 44px;
+  padding-right: 0.3em;
+}
+
 .media {
   position: relative;
   width: 50%;
