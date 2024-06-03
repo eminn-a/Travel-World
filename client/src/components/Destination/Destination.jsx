@@ -3,7 +3,6 @@ import styles from "./DestinationStyles.module.css";
 import SingleDestination from "./singleDestination";
 
 const Destination = ({ data, spinner }) => {
-  console.log(spinner);
   return (
     <div className={styles.destination}>
       <h1>Next Destinations!</h1>

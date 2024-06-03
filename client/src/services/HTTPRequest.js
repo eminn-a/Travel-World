@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 const HTTPRequest = async (method, url, data) => {
   const options = {
     method,
@@ -9,10 +11,25 @@ const HTTPRequest = async (method, url, data) => {
     options.body = JSON.stringify(data);
   }
 
-  const response = await fetch(url, options);
+  try {
+    const response = await fetch(url, options);
 
-  const result = await response.json();
-  return result;
+    if (response.ok != true) {
+      if (response.status == 403) {
+        // clearUserData();
+      }
+      const error = await response.json();
+      throw new Error(error.message);
+    }
+    if (response.status == 204) {
+      return response;
+    } else {
+      return response.json();
+    }
+  } catch (error) {
+    toast.error(error.message);
+    throw error;
+  }
 };
 
 // PARTIAL APPLICATION

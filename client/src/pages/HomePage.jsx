@@ -12,10 +12,18 @@ import { tripData } from "../data/tripData";
 const HomePage = () => {
   const [spinner, setSpinner] = useState(true);
   const [destinations, setDestinations] = useState(undefined);
+
   useEffect(() => {
     setTimeout(() => {
-      destinationService.getAll().then((res) => setDestinations(res));
-      setSpinner((state) => (state = false));
+      destinationService
+        .getAll()
+        .then((res) => {
+          setDestinations(res);
+        })
+        .catch(() => {
+          setDestinations((state) => (state = []));
+        })
+        .finally(setSpinner((state) => (state = false)));
     }, 3000);
   }, []);
 
