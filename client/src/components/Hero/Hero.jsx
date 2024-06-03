@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const Hero = ({ title, text, url, btnName, img, largeImg }) => {
+  console.log(img);
   return (
     <div className={largeImg ? styles.hero : styles.heroMid}>
       <img src={img} alt="Hero img" />

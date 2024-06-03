@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import * as destinationService from "./../services/destinationServices";
 
 import Hero from "../components/Hero/Hero";
-import Destination from "../components/Destination/Destination";
+import Destinations from "../components/Destinations/Destinations";
 import Blogs from "../components/Blogs/Blogs";
 
 import { heroData } from "../data/heroData";
@@ -19,18 +19,19 @@ const HomePage = () => {
         .getAll()
         .then((res) => {
           setDestinations(res);
+          console.log(res);
         })
         .catch(() => {
           setDestinations((state) => (state = []));
         })
         .finally(setSpinner((state) => (state = false)));
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
     <>
       <Hero {...heroData.home} />
-      <Destination data={destinations} spinner={spinner} />
+      <Destinations data={destinations} spinner={spinner} />
       <Blogs data={tripData} />
     </>
   );

@@ -7,6 +7,11 @@ export const getAll = async () => {
   return Object.values(result);
 };
 
+export const getById = async (id) => {
+  const result = await destinationServices.get(baseUrl + "/" + id);
+  return result;
+};
+
 export const create = async (data) => {
   const result = await destinationServices.post(baseUrl, data);
   console.log(result);

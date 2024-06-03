@@ -1,0 +1,102 @@
+.destination {
+  text-align: center;
+  margin: 8rem 8rem;
+}
+
+.destination h1 {
+  font-size: 3rem;
+  margin-top: -1rem;
+}
+
+.destination p {
+  font-size: 1.3rem;
+}
+
+.firstDescript {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+  color: var(--text-color);
+}
+
+.firstDescriptReverse {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6.5rem;
+  color: var(--text-color);
+}
+
+.descriptText {
+  width: 45%;
+  text-align: start;
+  font-size: 1.4rem;
+}
+
+.descriptText h2 {
+  padding-bottom: 2rem;
+}
+
+.media {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.media img {
+  width: 49%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 1px 2px 11px black;
+  transition: 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.media img:nth-child(2) {
+  position: absolute;
+  top: -10%;
+  right: 0;
+}
+
+.media img:hover {
+  width: 69%;
+  z-index: 2;
+  /* box-shadow: 1px 2px 50px black; */
+}
+
+@media screen and (max-width: 850px) {
+  .destination {
+    margin: 4rem 2rem;
+  }
+
+  .firstDescript {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    flex-direction: column-reverse;
+  }
+
+  .firstDescriptReverse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    flex-direction: column-reverse;
+  }
+
+  .descriptText {
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  .media {
+    margin: 1rem 0;
+    width: 90%;
+  }
+}

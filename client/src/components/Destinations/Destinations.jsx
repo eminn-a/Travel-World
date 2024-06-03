@@ -1,6 +1,6 @@
 import Spinner from "../Shared/Spinner/Spinner";
 import styles from "./DestinationStyles.module.css";
-import SingleDestination from "./singleDestination";
+import DestinationsItem from "./DestinationsItem";
 
 const Destination = ({ data, spinner }) => {
   return (
@@ -11,7 +11,7 @@ const Destination = ({ data, spinner }) => {
       {spinner && <Spinner />}
 
       {data?.map((x, index) => (
-        <SingleDestination {...x} index={index} key={x._id} />
+        <DestinationsItem {...x} index={index} key={x._id} />
       ))}
 
       {data?.length === 0 && <h3 className="errorMsg">No item there!</h3>}
