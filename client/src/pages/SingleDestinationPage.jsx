@@ -22,7 +22,7 @@ const SingleDestinationPage = () => {
       <Hero
         img={destination?.img1}
         title={destination?.title}
-        text={destination.date}
+        btnName={destination.date}
       />
       <SingleDestination />
     </>

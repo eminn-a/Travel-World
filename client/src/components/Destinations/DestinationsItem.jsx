@@ -14,6 +14,7 @@ const SingleDestination = ({ title, description, img1, img2, index, _id }) => {
             <i class="fa-solid fa-signs-post"></i>
             {title}
           </h2>
+
           <p>{description}</p>
         </div>
         <div className={styles.media}>
