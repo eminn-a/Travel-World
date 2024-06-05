@@ -10,7 +10,7 @@ import ContactsPage from "./pages/ContactsPage";
 import CatalogPage from "./pages/CatalogPage";
 import CreateDestinationPage from "./pages/CreateDestination";
 import Page404 from "./components/404/404Page";
-import SingleDestinationPage from "./pages/SingleDestinationPage";
+import DestinationDetailsPage from "./pages/DestinationDetailsPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,7 +23,7 @@ function App() {
         { path: "about", element: <AboutPage /> },
         { path: "contacts", element: <ContactsPage /> },
         { path: "catalog", element: <CatalogPage /> },
-        { path: "catalog/:id", element: <SingleDestinationPage /> },
+        { path: "catalog/:id", element: <DestinationDetailsPage /> },
         { path: "create", element: <CreateDestinationPage /> },
       ],
     },

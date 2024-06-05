@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
 import SingleDestination from "../components/SingleDestination/SingleDestination";
 import { useEffect, useState } from "react";
-import * as destinationService from "./../services/destinationServices";
+import * as destinationService from "../services/destinationServices";
 
 const SingleDestinationPage = () => {
   const { id } = useParams();

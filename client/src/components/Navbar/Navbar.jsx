@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-
 import { useState } from "react";
-
 import styles from "./NavbarStyles.module.css";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
+
+  let user = true;
+  let isAdmin = false;
 
   const activeMenu = () => {
     setMobileMenu((state) => (state = !mobileMenu));
@@ -64,8 +66,33 @@ const Navbar = () => {
               <i className="fa-solid fa-folder-plus"></i>Create Destination
             </li>
           </Link>
-          <li className={styles.navLinksMobile}>Sign Up</li>
-          <button className={styles.navbarBtn}>Sign Up</button>
+          {user ? (
+            <div class={styles.dropdown}>
+              <button class={styles.dropbtn}>
+                <i class="fa-solid fa-circle-user"></i> My Profile
+              </button>
+              <div class={styles.dropdownContent}>
+                <button
+                  onClick={() => {
+                    toast.success("check out");
+                  }}
+                >
+                  <i class="fa-solid fa-cart-shopping"></i> CheckOut
+                </button>
+                <button
+                  onClick={() => {
+                    toast.success("loged out");
+                  }}
+                >
+                  <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button className={styles.navbarBtn}>Sign Up</button>
+          )}
+
+          {!user && <li className={styles.navLinksMobile}>Sign Up</li>}
         </ul>
       </nav>
     </>
