@@ -19,7 +19,6 @@ const HomePage = () => {
         .getAll()
         .then((res) => {
           setDestinations(res);
-          console.log(res);
         })
         .catch(() => {
           setDestinations((state) => (state = []));

@@ -11,7 +11,7 @@ const SingleDestination = ({ title, description, img1, img2, index, _id }) => {
       >
         <div className={styles.descriptText}>
           <h2>
-            <i class="fa-solid fa-signs-post"></i>
+            <i className="fa-solid fa-signs-post"></i>
             {title}
           </h2>
 

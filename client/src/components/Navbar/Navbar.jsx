@@ -2,12 +2,26 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import styles from "./NavbarStyles.module.css";
 import toast from "react-hot-toast";
+import AuthModal from "../Modal/AuthModal";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
+  const [modal, setModal] = useState(false);
 
-  let user = true;
+  let user = false;
   let isAdmin = false;
+
+  const closeModal = (e) => {
+    if (
+      e.target.classList.contains("_modalContainer_115ov_1") ||
+      e.target.classList.contains("fa-xmark")
+    ) {
+      setModal(!modal);
+    }
+  };
+  const openModal = () => {
+    setModal(true);
+  };
 
   const activeMenu = () => {
     setMobileMenu((state) => (state = !mobileMenu));
@@ -67,34 +81,41 @@ const Navbar = () => {
             </li>
           </Link>
           {user ? (
-            <div class={styles.dropdown}>
-              <button class={styles.dropbtn}>
-                <i class="fa-solid fa-circle-user"></i> My Profile
+            <div className={styles.dropdown}>
+              <button className={styles.dropbtn}>
+                <i className="fa-solid fa-circle-user"></i> My Profile
               </button>
-              <div class={styles.dropdownContent}>
+              <div className={styles.dropdownContent}>
                 <button
                   onClick={() => {
                     toast.success("check out");
                   }}
                 >
-                  <i class="fa-solid fa-cart-shopping"></i> CheckOut
+                  <i className="fa-solid fa-cart-shopping"></i> CheckOut
                 </button>
                 <button
                   onClick={() => {
                     toast.success("loged out");
                   }}
                 >
-                  <i class="fa-solid fa-right-from-bracket"></i> Logout
+                  <i className="fa-solid fa-right-from-bracket"></i> Logout
                 </button>
               </div>
             </div>
           ) : (
-            <button className={styles.navbarBtn}>Sign Up</button>
+            <button className={styles.navbarBtn} onClick={openModal}>
+              Sign Up
+            </button>
           )}
 
-          {!user && <li className={styles.navLinksMobile}>Sign Up</li>}
+          {!user && (
+            <li className={styles.navLinksMobile} onClick={openModal}>
+              Sign Up
+            </li>
+          )}
         </ul>
       </nav>
+      <AuthModal show={modal} closeModal={closeModal} />
     </>
   );
 };
