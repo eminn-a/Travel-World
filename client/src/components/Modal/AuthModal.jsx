@@ -1,8 +1,27 @@
+import { useForm } from "react-hook-form";
 import styles from "./AuthModal.module.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { loginValidation } from "../../validations/loginValidation";
 
 const AuthModal = ({ show, closeModal }) => {
-  const [register, setRegister] = useState(true);
+  const [registered, setRegistered] = useState(false);
+
+  const validationSchema = loginValidation(registered);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
+    reset({ rePassword: "" });
+  };
 
   return (
     <>
@@ -15,49 +34,75 @@ const AuthModal = ({ show, closeModal }) => {
               </button>
             </div>
             <div className={styles.titleText}>
-              {register ? (
+              {registered ? (
                 <div className={`${styles.title} ${styles.signup}`}>
-                  Sign Up{" "}
+                  Register now
                 </div>
               ) : (
-                <div className={`${styles.title} ${styles.login}`}>Login </div>
+                <div className={`${styles.title} ${styles.login}`}>
+                  Sign in{" "}
+                </div>
               )}
             </div>
             <div className={styles.formContainer}>
               <div className={styles.formInner}>
-                <form className={styles.login}>
+                <form
+                  className={styles.login}
+                  onSubmit={handleSubmit(onSubmit)}
+                >
                   <div className={styles.field}>
-                    <input type="text" placeholder="Email Address" />
+                    <input
+                      {...register("email")}
+                      type="text"
+                      placeholder="Email Address"
+                    />
                   </div>
                   <div className={styles.field}>
-                    <input type="password" placeholder="Password" />
+                    <input
+                      {...register("password")}
+                      type="password"
+                      placeholder="Password"
+                    />
                   </div>
-                  {register ? (
+                  {registered && (
                     <div className={styles.field}>
-                      <input type="password" placeholder="Re-Password" />
-                    </div>
-                  ) : (
-                    <div className={styles.passLink}>
-                      <a href="#">Forgot password?</a>
+                      <input
+                        {...register("rePassword")}
+                        reset
+                        type="password"
+                        placeholder="Re-Password"
+                      />
                     </div>
                   )}
+                  <div className={styles.passLink}>
+                    <a href="#">Forgot password?</a>
+                  </div>
                   <div className={`${styles.field} ${styles.btn}`}>
                     <div className={styles.btnLayer}></div>
                     <input
                       type="submit"
-                      value={register ? "Register" : "Login"}
+                      value={registered ? "Register" : "Sign In"}
                     />
                   </div>
                 </form>
-                {!register ? (
+                {errors && (
+                  <p className="errorMsg">
+                    {errors[Object.keys(errors)[0]]?.message}
+                  </p>
+                )}
+                {!registered ? (
                   <div className={styles.signupLink}>
-                    Not a member?{" "}
-                    <p onClick={() => setRegister(true)}>Signup now</p>
+                    <hr />
+                    Not a member?
+                    <p onClick={() => setRegistered(true)}>Register now</p>
+                    <hr />
                   </div>
                 ) : (
-                  <div class={styles.signupLink}>
-                    Already registered?{" "}
-                    <p onClick={() => setRegister(false)}>Login now</p>
+                  <div className={styles.signupLink}>
+                    <hr />
+                    Already registered?
+                    <p onClick={() => setRegistered(false)}>Sign in now</p>
+                    <hr />
                   </div>
                 )}
               </div>

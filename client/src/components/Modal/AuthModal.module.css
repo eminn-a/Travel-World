@@ -113,6 +113,8 @@
     color: #1a75ff;
     text-decoration: none;
     cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .signupLink p:hover {
