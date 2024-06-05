@@ -30,7 +30,12 @@ const AuthModal = ({ show, closeModal }) => {
         <div className={styles.modalContainer}>
           <div className={styles.wrapper}>
             <div className={styles.closeBtn}>
-              <button onClick={closeModal}>
+              <button
+                onClick={() => {
+                  closeModal();
+                  reset();
+                }}
+              >
                 <i className="fa-solid fa-xmark"></i>
               </button>
             </div>
