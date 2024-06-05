@@ -11,16 +11,11 @@ const Navbar = () => {
   let user = false;
   let isAdmin = false;
 
-  const closeModal = (e) => {
-    if (
-      e.target.classList.contains("_modalContainer_115ov_1") ||
-      e.target.classList.contains("fa-xmark")
-    ) {
-      setModal(!modal);
-    }
+  const closeModal = () => {
+    setModal((state) => (state = false));
   };
   const openModal = () => {
-    setModal(true);
+    setModal((state) => (state = true));
   };
 
   const activeMenu = () => {
@@ -65,21 +60,34 @@ const Navbar = () => {
               <i className="fa-solid fa-map-location-dot"></i>Destinations
             </li>
           </Link>
-          <Link to={"about"} onClick={closeMenu}>
-            <li className={styles.navLinks}>
-              <i className="fa-solid fa-circle-info"></i>About
-            </li>
-          </Link>
-          <Link to={"contacts"} onClick={closeMenu}>
-            <li className={styles.navLinks}>
-              <i className="fa-solid fa-address-book"></i>Contacts
-            </li>
-          </Link>
-          <Link to={"create"} onClick={closeMenu}>
-            <li className={styles.navLinks}>
-              <i className="fa-solid fa-folder-plus"></i>Create Destination
-            </li>
-          </Link>
+
+          {isAdmin ? (
+            <>
+              <Link to={"create"} onClick={closeMenu}>
+                <li className={styles.navLinks}>
+                  <i className="fa-solid fa-folder-plus"></i>Add Destination
+                </li>
+              </Link>
+              <Link to={"create"} onClick={closeMenu}>
+                <li className={styles.navLinks}>
+                  <i className="fa-solid fa-folder-plus"></i>Add Blog
+                </li>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link to={"about"} onClick={closeMenu}>
+                <li className={styles.navLinks}>
+                  <i className="fa-solid fa-circle-info"></i>About
+                </li>
+              </Link>
+              <Link to={"contacts"} onClick={closeMenu}>
+                <li className={styles.navLinks}>
+                  <i className="fa-solid fa-address-book"></i>Contacts
+                </li>
+              </Link>
+            </>
+          )}
           {user ? (
             <div className={styles.dropdown}>
               <button className={styles.dropbtn}>

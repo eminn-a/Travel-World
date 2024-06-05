@@ -43,6 +43,7 @@
   grid-template-columns: repeat(6, auto);
   align-items: center;
   white-space: nowrap;
+  gap: .2em;
 }
 
 .navLinks {

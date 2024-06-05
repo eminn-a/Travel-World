@@ -20,12 +20,14 @@ const AuthModal = ({ show, closeModal }) => {
 
   const onSubmit = (data) => {
     console.log(data);
+    closeModal();
+    reset();
   };
 
   return (
     <>
       {show ? (
-        <div className={styles.modalContainer} onClick={closeModal}>
+        <div className={styles.modalContainer}>
           <div className={styles.wrapper}>
             <div className={styles.closeBtn}>
               <button onClick={closeModal}>
