@@ -20,7 +20,6 @@ const AuthModal = ({ show, closeModal }) => {
 
   const onSubmit = (data) => {
     console.log(data);
-    reset({ rePassword: "" });
   };
 
   return (
@@ -64,7 +63,7 @@ const AuthModal = ({ show, closeModal }) => {
                       placeholder="Password"
                     />
                   </div>
-                  {registered && (
+                  {registered ? (
                     <div className={styles.field}>
                       <input
                         {...register("rePassword")}
@@ -73,10 +72,11 @@ const AuthModal = ({ show, closeModal }) => {
                         placeholder="Re-Password"
                       />
                     </div>
+                  ) : (
+                    <div className={styles.passLink}>
+                      <a href="#">Forgot password?</a>
+                    </div>
                   )}
-                  <div className={styles.passLink}>
-                    <a href="#">Forgot password?</a>
-                  </div>
                   <div className={`${styles.field} ${styles.btn}`}>
                     <div className={styles.btnLayer}></div>
                     <input
@@ -94,14 +94,28 @@ const AuthModal = ({ show, closeModal }) => {
                   <div className={styles.signupLink}>
                     <hr />
                     Not a member?
-                    <p onClick={() => setRegistered(true)}>Register now</p>
+                    <p
+                      onClick={() => {
+                        setRegistered(true);
+                        reset();
+                      }}
+                    >
+                      Register now
+                    </p>
                     <hr />
                   </div>
                 ) : (
                   <div className={styles.signupLink}>
                     <hr />
                     Already registered?
-                    <p onClick={() => setRegistered(false)}>Sign in now</p>
+                    <p
+                      onClick={() => {
+                        setRegistered(false);
+                        reset();
+                      }}
+                    >
+                      Sign in now
+                    </p>
                     <hr />
                   </div>
                 )}
