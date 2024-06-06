@@ -1,17 +1,39 @@
-const SingleDestination = () => {
-  return (
-    <div>
-      <h1>SingleDestination item</h1>
-      <h1>SingleDestination item</h1>
-      <h1>SingleDestination item</h1>
-      <h1>SingleDestination item</h1>
-      <h1>SingleDestination item</h1>
-      <h1>SingleDestination item</h1>
-      <h1>SingleDestination item</h1>
-      <h1>SingleDestination item</h1>
-      <h1>SingleDestination item</h1>
+import toast from "react-hot-toast";
+import styles from "./SingleDestinationStyles.module.css";
+import Spinner from "../Shared/Spinner/Spinner";
 
-      <h1>SingleDestination item</h1>
+const SingleDestination = (data) => {
+  if (!data) {
+    return (
+      <div className={styles.infoContainer}>
+        <Spinner />
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.infoContainer}>
+      <br />
+      <h1>Price: $ {data.price}</h1>
+      <button
+        onClick={() => {
+          toast.success(`${data.title} - Booked!`);
+        }}
+      >
+        Book Now!
+      </button>
+      <div>
+        <h4>Description:</h4>
+        <p>{data.description}</p>
+      </div>
+      <div className={styles.mediaContainer}>
+        <div className={styles.mediaBox}>
+          <img src={data.img1} alt="" />
+        </div>
+        <div className={styles.mediaBox}>
+          <img src={data.img2} alt="" />
+        </div>
+      </div>
     </div>
   );
 };

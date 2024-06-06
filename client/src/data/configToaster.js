@@ -17,6 +17,7 @@ export const toastOptions = {
         background: "#ffb3b8",
       },
     },
+    duration: 3000,
     style: {
       borderRadius: "50px",
       fontSize: "20px",

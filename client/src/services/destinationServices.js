@@ -16,3 +16,12 @@ export const create = async (data) => {
   const result = await destinationServices.post(baseUrl, data);
   console.log(result);
 };
+
+export const update = async (data, id) => {
+  let result = await destinationServices.put(baseUrl + id, data);
+  console.log(result);
+};
+
+export const dleteById = async (id) => {
+  const result = await destinationServices.remove(baseUrl + id);
+};

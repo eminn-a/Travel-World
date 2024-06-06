@@ -9,7 +9,7 @@ const Navbar = () => {
   const [modal, setModal] = useState(false);
 
   let user = false;
-  let isAdmin = false;
+  let isAdmin = true;
 
   const closeModal = () => {
     setModal((state) => (state = false));
