@@ -14,22 +14,24 @@ const SingleDestination = (data) => {
   }
 
   return (
-    <div className={styles.infoContainer}>
-      <br />
-      <h1>Price: $ {data.price}</h1>
-      <button
-        onClick={() => {
-          toast.success(`${data.title} - Booked!`);
-        }}
-      >
-        Book Now!
-      </button>
-      <div>
-        <h4>Description:</h4>
-        <p>{data.description}</p>
+    <>
+      <div className={styles.infoContainer}>
+        <br />
+        <h1>Price: $ {data.price}</h1>
+        <button
+          onClick={() => {
+            toast.success(`${data.title} - Booked!`);
+          }}
+        >
+          Book Now!
+        </button>
+        <div>
+          <h4>Description:</h4>
+          <p>{data.description}</p>
+        </div>
       </div>
       <ImageSlider images={data.images} />
-    </div>
+    </>
   );
 };
 export default SingleDestination;
