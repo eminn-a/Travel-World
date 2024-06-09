@@ -34,6 +34,7 @@ const AuthModal = ({ show, closeModal }) => {
                 onClick={() => {
                   closeModal();
                   reset();
+                  setRegistered(false);
                 }}
               >
                 <i className="fa-solid fa-xmark"></i>

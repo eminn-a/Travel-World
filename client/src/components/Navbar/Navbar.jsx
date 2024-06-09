@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
   const [modal, setModal] = useState(false);
 
-  let user = true;
+  let user = false;
   let isAdmin = true;
 
   const closeModal = () => {
@@ -112,13 +112,13 @@ const Navbar = () => {
             </div>
           ) : (
             <button className={styles.navbarBtn} onClick={openModal}>
-              Sign Up
+              Sign In
             </button>
           )}
 
           {!user && (
             <li className={styles.navLinksMobile} onClick={openModal}>
-              Sign Up
+              Sign In
             </li>
           )}
         </ul>

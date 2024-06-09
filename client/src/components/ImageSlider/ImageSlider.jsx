@@ -5,8 +5,6 @@ import "./imageSliderStyles.css";
 const ImageSlider = ({ images }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
-  console.log(images);
-
   function showNextImg() {
     setImageIndex((index) => {
       if (index === images.length - 1) return 0;

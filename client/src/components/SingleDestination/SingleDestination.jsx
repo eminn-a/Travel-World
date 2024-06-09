@@ -4,7 +4,6 @@ import Spinner from "../Shared/Spinner/Spinner";
 import ImageSlider from "../ImageSlider/ImageSlider";
 
 const SingleDestination = (data) => {
-  console.log(data);
   if (!data) {
     return (
       <div className={styles.infoContainer}>
