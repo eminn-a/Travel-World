@@ -1,0 +1,96 @@
+.sectionSlider {
+    max-width: 95%;
+    width: 100%;
+    aspect-ratio: 15/10;
+    margin: 1rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sliderContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sliderImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: translate 300ms ease-in-out;
+}
+
+.sliderBtn {
+    all: unset;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out;
+}
+
+.sliderBtn:hover,
+.sliderBtn:focus-visible {
+    background-color: rgb(0, 0, 0, 0.2);
+}
+
+.sliderBtn i:hover,
+.sliderBtn i:focus-visible {
+    animation: squish 200ms ease-in-out;
+}
+
+.sliderBtn i {
+    color: white;
+    font-size: 26px;
+    width: 2rem;
+    height: 2rem;
+}
+
+.imgCard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.pageContainer {
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    translate: -50%;
+    display: flex;
+    gap: .25em;
+}
+
+.pageBtns {
+    all: unset;
+    color: white;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.pageBtns:hover,
+.pageBtns:focus-visible {
+    font-size: 22px;
+}
+
+.active {
+    font-size: 22px;
+}
+
+
+@keyframes squish {
+    50% {
+        scale: 1.6 0.6;
+    }
+}
+
+.pageBtns:focus-visible,
+.sliderBtn:focus-visible {
+    outline: auto;
+}

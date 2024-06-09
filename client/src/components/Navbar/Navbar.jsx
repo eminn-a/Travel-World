@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
   const [modal, setModal] = useState(false);
 
-  let user = false;
+  let user = true;
   let isAdmin = true;
 
   const closeModal = () => {

@@ -19,6 +19,14 @@ const CreateDestination = () => {
   });
 
   const onSubmit = async (data) => {
+    console.log(data);
+    data.images = [data.img1, data.img2, data.img3, data.img4];
+
+    delete data.img1;
+    delete data.img2;
+    delete data.img3;
+    delete data.img4;
+
     try {
       let result = await destinationServices.create(data);
       console.log(result);
@@ -38,7 +46,9 @@ const CreateDestination = () => {
         <input {...register("date")} type="date" placeholder="Date" />
         <input {...register("price")} type="number" placeholder="Price" />
         <input {...register("img1")} type="text" placeholder="Img 1" />
-        <input {...register("img2")} type="text" placeholder="Img 2" />
+        <input {...register("img2")} type="text" placeholder="Img 1" />
+        <input {...register("img3")} type="text" placeholder="Img 1" />
+        <input {...register("img4")} type="text" placeholder="Img 2" />
         <textarea
           name=""
           {...register("description")}
@@ -51,7 +61,7 @@ const CreateDestination = () => {
           {isSubmitting ? "Sending..." : "Send message"}
         </button> */}
 
-        <button>"Send message"</button>
+        <button>Create</button>
         <div>
           {errors && (
             <p className="errorMsg">

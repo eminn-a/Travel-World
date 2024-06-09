@@ -1,7 +1,16 @@
+import { useState, useEffect } from "react";
 import styles from "./DestinationStyles.module.css";
 import { Link } from "react-router-dom";
 
-const SingleDestination = ({ title, description, img1, img2, index, _id }) => {
+const SingleDestination = ({ title, description, images, index, _id }) => {
+  const [loadedImages, setLoadedImages] = useState([]);
+
+  useEffect(() => {
+    if (images) {
+      setLoadedImages(images);
+    }
+  }, [images]);
+
   const flag = Number(index) % 2 === 0 ? true : false;
 
   return (
@@ -18,8 +27,12 @@ const SingleDestination = ({ title, description, img1, img2, index, _id }) => {
           <p>{description}</p>
         </div>
         <div className={styles.media}>
-          <img src={img1} alt="desctinationImg1" />
-          <img src={img2} alt="desctinationImg2" />
+          {loadedImages[0] && (
+            <img src={loadedImages[0]} alt="destinationImg1" />
+          )}
+          {loadedImages[1] && (
+            <img src={loadedImages[1]} alt="destinationImg2" />
+          )}
         </div>
       </div>
     </Link>

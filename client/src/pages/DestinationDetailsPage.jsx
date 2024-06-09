@@ -5,6 +5,15 @@ import { useEffect, useState } from "react";
 import * as destinationService from "../services/destinationServices";
 import Spinner from "../components/Shared/Spinner/Spinner";
 
+import car1 from "../assets/car1.jpeg";
+import car2 from "../assets/car2.jpeg";
+import car3 from "../assets/car3.jpeg";
+import car4 from "../assets/car4.jpeg";
+import car5 from "../assets/car5.jpeg";
+import ImageSlider from "../components/ImageSlider/ImageSlider";
+
+const IMAGES = [car1, car2, car3, car4, car5];
+
 const SingleDestinationPage = () => {
   const { id } = useParams();
   const [destination, setDestination] = useState({});
@@ -17,16 +26,16 @@ const SingleDestinationPage = () => {
       })
       .catch((err) => console.log(err));
   }, [id]);
-  console.log(destination);
   return (
-    <div>
+    <>
       <Hero
-        img={destination?.img1}
+        img={destination.images}
         title={destination?.title}
         btnName={destination.date}
       />
       <SingleDestination {...destination} />
-    </div>
+      {/* <ImageSlider images={IMAGES} /> */}
+    </>
   );
 };
 

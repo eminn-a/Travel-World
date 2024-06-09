@@ -1,8 +1,10 @@
 import toast from "react-hot-toast";
 import styles from "./SingleDestinationStyles.module.css";
 import Spinner from "../Shared/Spinner/Spinner";
+import ImageSlider from "../ImageSlider/ImageSlider";
 
 const SingleDestination = (data) => {
+  console.log(data);
   if (!data) {
     return (
       <div className={styles.infoContainer}>
@@ -26,14 +28,7 @@ const SingleDestination = (data) => {
         <h4>Description:</h4>
         <p>{data.description}</p>
       </div>
-      <div className={styles.mediaContainer}>
-        <div className={styles.mediaBox}>
-          <img src={data.img1} alt="" />
-        </div>
-        <div className={styles.mediaBox}>
-          <img src={data.img2} alt="" />
-        </div>
-      </div>
+      <ImageSlider images={data.images} />
     </div>
   );
 };
