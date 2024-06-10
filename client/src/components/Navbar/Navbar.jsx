@@ -16,7 +16,7 @@ const Navbar = () => {
   const { userData, setUserData } = useContext(UserContext);
 
   let user = userData?.email;
-  let isAdmin = user === "admin@abv.bg";
+  let isAdmin = user === "admin@abv.bg" || "emin@abv.bg";
 
   const closeModal = () => {
     setModal((state) => (state = false));
@@ -116,6 +116,7 @@ const Navbar = () => {
                     logout();
                     setUserData(null);
                     clearUserData();
+                    closeMenu();
                     toast.success("loged out");
                   }}
                 >
