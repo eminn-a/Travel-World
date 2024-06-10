@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { loginValidation } from "../../validations/loginValidation";
 import styles from "./AuthModal.module.css";
 import { login } from "../../services/authServices";
+import { create } from "../../services/authServices";
 
 const AuthModal = ({ show, closeModal, setUser }) => {
   const [registered, setRegistered] = useState(false);
@@ -19,12 +20,20 @@ const AuthModal = ({ show, closeModal, setUser }) => {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = async ({ email, password }) => {
-    const user = await login(email, password);
-    console.log(user.email);
-    setUser(user.email);
-    closeModal();
-    reset();
+  const onSubmit = async (data) => {
+    if (!registered) {
+      const user = await login(data.email, data.password);
+      console.log(user.email);
+      setUser(user.email);
+      closeModal();
+      reset();
+    } else {
+      const user = await create(data.email, data.password);
+      console.log(user.email);
+      setUser(user.email);
+      closeModal();
+      reset();
+    }
   };
 
   return (

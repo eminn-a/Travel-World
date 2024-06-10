@@ -16,3 +16,11 @@ export async function login(email, password) {
   });
   return user;
 }
+
+export async function create(email, password) {
+  const user = await HTTPRequest.post(host + endpoint.register, {
+    email,
+    password,
+  });
+  return user;
+}

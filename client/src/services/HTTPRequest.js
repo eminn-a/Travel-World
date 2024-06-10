@@ -30,7 +30,7 @@ const HTTPRequest = async (method, url, data) => {
     }
   } catch (error) {
     toast.error(error.message);
-    throw error;
+    // throw error;
   }
 };
 
