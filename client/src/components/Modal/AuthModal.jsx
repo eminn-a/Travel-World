@@ -29,6 +29,7 @@ const AuthModal = ({ show, closeModal, setUser }) => {
         setUser({ ...user });
         closeModal();
         reset();
+        setRegistered(false);
       }
     } else {
       const user = await create(data.email, data.password);
@@ -37,6 +38,7 @@ const AuthModal = ({ show, closeModal, setUser }) => {
         setUser({ ...user });
         closeModal();
         reset();
+        setRegistered(false);
       }
     }
   };
