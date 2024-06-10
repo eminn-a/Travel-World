@@ -9,7 +9,7 @@ export const loginValidation = (isRegistering) => {
     password: yup
       .string()
       .required("Password is missing")
-      .min(6, "Password must be at least 6 characters long"),
+      .min(5, "Password must be at least 5 characters long"),
   });
 
   if (isRegistering) {

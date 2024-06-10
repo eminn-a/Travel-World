@@ -1,6 +1,6 @@
 import toast from "react-hot-toast";
 
-const host = "http://localhost:3030/jsonstore/destinations";
+const host = "http://localhost:3030/";
 
 const HTTPRequest = async (method, url, data) => {
   const options = {

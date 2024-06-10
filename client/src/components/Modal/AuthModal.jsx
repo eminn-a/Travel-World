@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import styles from "./AuthModal.module.css";
-import { useState, useEffect } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginValidation } from "../../validations/loginValidation";
+import styles from "./AuthModal.module.css";
+import { login } from "../../services/authServices";
 
-const AuthModal = ({ show, closeModal }) => {
+const AuthModal = ({ show, closeModal, setUser }) => {
   const [registered, setRegistered] = useState(false);
 
   const validationSchema = loginValidation(registered);
@@ -18,8 +19,10 @@ const AuthModal = ({ show, closeModal }) => {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async ({ email, password }) => {
+    const user = await login(email, password);
+    console.log(user.email);
+    setUser(user.email);
     closeModal();
     reset();
   };
@@ -75,7 +78,6 @@ const AuthModal = ({ show, closeModal }) => {
                     <div className={styles.field}>
                       <input
                         {...register("rePassword")}
-                        reset
                         type="password"
                         placeholder="Re-Password"
                       />

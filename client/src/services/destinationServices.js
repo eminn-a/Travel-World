@@ -2,6 +2,18 @@ import * as destinationServices from "./HTTPRequest";
 
 const baseUrl = "http://localhost:3030/jsonstore/destinations";
 
+const endpoints = {
+  recent: "/data/laptops?sortBy=_createdOn%20desc&distinct=category",
+  all: "/data/laptops?sortBy=_createdOn%20des",
+  getLatest: (number) => {
+    return `/data/laptops?sortBy=_createdOn%20des&pageSize=${number}`;
+  },
+  create: "/data/laptops",
+  byId: "/data/laptops/",
+  deleteById: "/data/laptops/",
+  update: "/data/laptops/",
+};
+
 export const getAll = async () => {
   const result = await destinationServices.get(baseUrl);
   return Object.values(result);

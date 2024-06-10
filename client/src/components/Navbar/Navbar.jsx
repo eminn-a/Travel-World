@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import styles from "./NavbarStyles.module.css";
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
+
+import styles from "./NavbarStyles.module.css";
+import { UserContext } from "../../contexts/authContext";
+
 import AuthModal from "../Modal/AuthModal";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
   const [modal, setModal] = useState(false);
 
-  let user = false;
-  let isAdmin = true;
+  const { email, setEmail } = useContext(UserContext);
+
+  let user = email;
+  let isAdmin = user === "admin@abv.bg";
 
   const closeModal = () => {
     setModal((state) => (state = false));
@@ -94,6 +99,9 @@ const Navbar = () => {
                 <i className="fa-solid fa-circle-user"></i> My Profile
               </button>
               <div className={styles.dropdownContent}>
+                <p>
+                  <i>{user}</i>
+                </p>
                 <button
                   onClick={() => {
                     toast.success("check out");
@@ -123,7 +131,7 @@ const Navbar = () => {
           )}
         </ul>
       </nav>
-      <AuthModal show={modal} closeModal={closeModal} />
+      <AuthModal show={modal} closeModal={closeModal} setUser={setEmail} />
     </>
   );
 };
