@@ -15,7 +15,7 @@ export async function login(email, password) {
     email,
     password,
   });
-  setUserData(user);
+
   return user;
 }
 
@@ -24,7 +24,7 @@ export async function create(email, password) {
     email,
     password,
   });
-  setUserData(user);
+
   return user;
 }
 

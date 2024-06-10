@@ -5,6 +5,7 @@ import { loginValidation } from "../../validations/loginValidation";
 import styles from "./AuthModal.module.css";
 import { login } from "../../services/authServices";
 import { create } from "../../services/authServices";
+import { setUserData } from "../../utils/utils";
 
 const AuthModal = ({ show, closeModal, setUser }) => {
   const [registered, setRegistered] = useState(false);
@@ -23,14 +24,20 @@ const AuthModal = ({ show, closeModal, setUser }) => {
   const onSubmit = async (data) => {
     if (!registered) {
       const user = await login(data.email, data.password);
-      setUser({ ...user });
-      closeModal();
-      reset();
+      if (user) {
+        setUserData(user);
+        setUser({ ...user });
+        closeModal();
+        reset();
+      }
     } else {
       const user = await create(data.email, data.password);
-      setUser({ ...user });
-      closeModal();
-      reset();
+      if (user) {
+        setUserData(user);
+        setUser({ ...user });
+        closeModal();
+        reset();
+      }
     }
   };
 
