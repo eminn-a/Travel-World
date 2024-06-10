@@ -6,6 +6,7 @@ import styles from "./AuthModal.module.css";
 import { login } from "../../services/authServices";
 import { create } from "../../services/authServices";
 import { setUserData } from "../../utils/utils";
+import toast from "react-hot-toast";
 
 const AuthModal = ({ show, closeModal, setUser }) => {
   const [registered, setRegistered] = useState(false);
@@ -30,6 +31,7 @@ const AuthModal = ({ show, closeModal, setUser }) => {
         closeModal();
         reset();
         setRegistered(false);
+        toast.success(`Hello, ${user.email}`);
       }
     } else {
       const user = await create(data.email, data.password);
@@ -39,6 +41,7 @@ const AuthModal = ({ show, closeModal, setUser }) => {
         closeModal();
         reset();
         setRegistered(false);
+        toast.success(`Hello, ${user.email}`);
       }
     }
   };

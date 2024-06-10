@@ -22,7 +22,7 @@ export const toastOptions = {
       borderRadius: "50px",
       fontSize: "18px",
       fontWeight: "600",
-      padding: "10px 25px",
+      padding: "10px 13px",
       textAlign: "center",
     },
   },

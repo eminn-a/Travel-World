@@ -16,8 +16,7 @@ const Navbar = () => {
   const { userData, setUserData } = useContext(UserContext);
 
   let user = userData?.email;
-  let isAdmin = user === "admin@abv.bg" || "emin@abv.bg";
-
+  let isAdmin = user === "admin@abv.bg" || user === "emin@abv.bg";
   const closeModal = () => {
     setModal((state) => (state = false));
   };
@@ -101,9 +100,7 @@ const Navbar = () => {
                 <i className="fa-solid fa-circle-user"></i> My Profile
               </button>
               <div className={styles.dropdownContent}>
-                <p>
-                  <i>{user}</i>
-                </p>
+                <span className={styles.userSpan}>{user}</span>
                 <button
                   onClick={() => {
                     toast.success("check out");

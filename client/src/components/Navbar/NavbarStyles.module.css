@@ -35,7 +35,6 @@
   font-size: 20px;
   white-space: nowrap;
   color: var(--text-color);
-
 }
 
 .navMenu {
@@ -43,7 +42,7 @@
   grid-template-columns: repeat(6, auto);
   align-items: center;
   white-space: nowrap;
-  gap: .2em;
+  gap: 0.2em;
 }
 
 .navLinks {
@@ -106,7 +105,7 @@
   gap: 3em;
   padding: 0.5rem 1rem;
   white-space: nowrap;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   font-size: 1rem;
   font-weight: 600;
   border: none;
@@ -122,6 +121,13 @@
   border-radius: 0 0 6px 6px;
   color: var(--text-color);
   display: none;
+}
+
+.userSpan {
+  max-width: 151px; /* Adjust the width as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .dropdownContent button {
@@ -145,6 +151,9 @@
 @media (max-width: 1000px) {
   .navbarItems {
     z-index: 99;
+  }
+  .userSpan {
+    max-width: 100%;
   }
 
   .menuIcons {
@@ -214,7 +223,7 @@
     width: 80% !important;
     padding: 1.2rem !important;
     font-size: 1.6rem !important;
-    font-weight: 700 !important
+    font-weight: 700 !important;
   }
 
   .dropdownContent {
