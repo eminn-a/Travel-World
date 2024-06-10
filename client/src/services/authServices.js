@@ -29,6 +29,5 @@ export async function create(email, password) {
 }
 
 export async function logout() {
-  clearUserData();
-  await HTTPRequest.get(endpoint.logout);
+  await HTTPRequest.get(host + endpoint.logout);
 }

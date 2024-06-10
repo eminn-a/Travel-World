@@ -4,10 +4,10 @@ import toast from "react-hot-toast";
 
 import styles from "./NavbarStyles.module.css";
 import { UserContext } from "../../contexts/authContext";
-
-import AuthModal from "../Modal/AuthModal";
 import { logout } from "../../services/authServices";
 import { clearUserData } from "../../utils/utils";
+
+import AuthModal from "../Modal/AuthModal";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
@@ -115,6 +115,7 @@ const Navbar = () => {
                   onClick={() => {
                     logout();
                     setUserData(null);
+                    clearUserData();
                     toast.success("loged out");
                   }}
                 >
