@@ -23,14 +23,12 @@ const AuthModal = ({ show, closeModal, setUser }) => {
   const onSubmit = async (data) => {
     if (!registered) {
       const user = await login(data.email, data.password);
-      console.log(user.email);
-      setUser(user.email);
+      setUser({ ...user });
       closeModal();
       reset();
     } else {
       const user = await create(data.email, data.password);
-      console.log(user.email);
-      setUser(user.email);
+      setUser({ ...user });
       closeModal();
       reset();
     }

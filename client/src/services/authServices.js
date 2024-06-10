@@ -1,3 +1,4 @@
+import { clearUserData, setUserData } from "../utils/utils";
 import * as HTTPRequest from "./HTTPRequest";
 
 const endpoint = {
@@ -14,6 +15,7 @@ export async function login(email, password) {
     email,
     password,
   });
+  setUserData(user);
   return user;
 }
 
@@ -22,5 +24,11 @@ export async function create(email, password) {
     email,
     password,
   });
+  setUserData(user);
   return user;
+}
+
+export async function logout() {
+  clearUserData();
+  await HTTPRequest.get(endpoint.logout);
 }

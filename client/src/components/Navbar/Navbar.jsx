@@ -6,14 +6,16 @@ import styles from "./NavbarStyles.module.css";
 import { UserContext } from "../../contexts/authContext";
 
 import AuthModal from "../Modal/AuthModal";
+import { logout } from "../../services/authServices";
+import { clearUserData } from "../../utils/utils";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
   const [modal, setModal] = useState(false);
 
-  const { email, setEmail } = useContext(UserContext);
+  const { userData, setUserData } = useContext(UserContext);
 
-  let user = email;
+  let user = userData?.email;
   let isAdmin = user === "admin@abv.bg";
 
   const closeModal = () => {
@@ -111,6 +113,8 @@ const Navbar = () => {
                 </button>
                 <button
                   onClick={() => {
+                    logout();
+                    setUserData(null);
                     toast.success("loged out");
                   }}
                 >
@@ -131,7 +135,7 @@ const Navbar = () => {
           )}
         </ul>
       </nav>
-      <AuthModal show={modal} closeModal={closeModal} setUser={setEmail} />
+      <AuthModal show={modal} closeModal={closeModal} setUser={setUserData} />
     </>
   );
 };

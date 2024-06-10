@@ -1,5 +1,7 @@
 import toast from "react-hot-toast";
 
+import { clearUserData, getAccessToken } from "../utils/utils";
+
 const host = "http://localhost:3030/";
 
 const HTTPRequest = async (method, url, data) => {
@@ -8,17 +10,21 @@ const HTTPRequest = async (method, url, data) => {
     headers: {},
   };
 
+  const token = getAccessToken();
+
+  if (token) {
+    options.headers["X-Authorization"] = token;
+  }
   if (data) {
-    options.headers["Content-Type"] = "appliccation/json";
+    options.headers["Content-Type"] = "application/json";
     options.body = JSON.stringify(data);
   }
-
   try {
     const response = await fetch(url, options);
 
     if (response.ok != true) {
       if (response.status == 403) {
-        // clearUserData();
+        clearUserData();
       }
       const error = await response.json();
       throw new Error(error.message);
