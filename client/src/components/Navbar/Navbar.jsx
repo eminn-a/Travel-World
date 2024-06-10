@@ -117,7 +117,7 @@ const Navbar = () => {
                     setUserData(null);
                     clearUserData();
                     closeMenu();
-                    toast.success("loged out");
+                    toast.success(`Goodbye! ${user}`);
                   }}
                 >
                   <i className="fa-solid fa-right-from-bracket"></i> Logout

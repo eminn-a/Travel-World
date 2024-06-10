@@ -20,9 +20,10 @@ export const toastOptions = {
     duration: 3000,
     style: {
       borderRadius: "50px",
-      fontSize: "20px",
+      fontSize: "18px",
       fontWeight: "600",
-      padding: "15px 70px",
+      padding: "10px 25px",
+      textAlign: "center",
     },
   },
 };
