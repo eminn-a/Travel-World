@@ -8,29 +8,37 @@ import Blogs from "../components/Blogs/Blogs";
 
 import { heroData } from "../data/heroData";
 import { tripData } from "../data/tripData";
+import { useQuery } from "@tanstack/react-query";
 
 const HomePage = () => {
-  const [spinner, setSpinner] = useState(true);
-  const [destinations, setDestinations] = useState(undefined);
+  const {
+    data: destinations,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["destinations"],
+    queryFn: destinationService.getAll,
+  });
+  console.log(destinations, isLoading);
 
-  useEffect(() => {
-    setTimeout(() => {
-      destinationService
-        .getAll()
-        .then((res) => {
-          setDestinations(res);
-        })
-        .catch(() => {
-          setDestinations((state) => (state = []));
-        })
-        .finally(setSpinner((state) => (state = false)));
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     destinationService
+  //       .getAll()
+  //       .then((res) => {
+  //         setDestinations(res);
+  //       })
+  //       .catch(() => {
+  //         setDestinations((state) => (state = []));
+  //       })
+  //       .finally(setSpinner((state) => (state = false)));
+  //   }, 2000);
+  // }, []);
 
   return (
     <>
       <Hero {...heroData.home} />
-      <Destinations data={destinations} spinner={spinner} />
+      <Destinations data={destinations} spinner={isLoading} />
       <Blogs data={tripData} />
     </>
   );
