@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 import * as destinationService from "./../services/destinationServices";
 
@@ -8,7 +8,6 @@ import Blogs from "../components/Blogs/Blogs";
 
 import { heroData } from "../data/heroData";
 import { tripData } from "../data/tripData";
-import { useQuery } from "@tanstack/react-query";
 
 const HomePage = () => {
   const {
@@ -19,7 +18,7 @@ const HomePage = () => {
     queryKey: ["destinations"],
     queryFn: destinationService.getAll,
   });
-  console.log(destinations, isLoading);
+  console.log(destinations);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -38,7 +37,7 @@ const HomePage = () => {
   return (
     <>
       <Hero {...heroData.home} />
-      <Destinations data={destinations} spinner={isLoading} />
+      <Destinations data={destinations} spinner={isLoading} error={error} />
       <Blogs data={tripData} />
     </>
   );

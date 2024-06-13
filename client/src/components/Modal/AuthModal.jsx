@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginValidation } from "../../validations/loginValidation";
 import styles from "./AuthModal.module.css";
-import { login } from "../../services/authServices";
-import { create } from "../../services/authServices";
+import { login, create } from "../../services/authServices";
 import { setUserData } from "../../utils/utils";
 import toast from "react-hot-toast";
+import { useMutation } from "@tanstack/react-query";
 
 const AuthModal = ({ show, closeModal, setUser }) => {
   const [registered, setRegistered] = useState(false);
@@ -22,27 +22,39 @@ const AuthModal = ({ show, closeModal, setUser }) => {
     resolver: yupResolver(validationSchema),
   });
 
+  const loginUserMutation = useMutation({
+    mutationFn: (data) => login(data.email, data.password),
+    onSuccess: (user) => {
+      if (user) {
+        setUserData(user);
+        setUser({ ...user });
+        closeModal();
+        reset();
+      }
+      setRegistered(false);
+      toast.success(`Hello, ${user.email}`);
+    },
+  });
+
+  const createUserMutation = useMutation({
+    mutationFn: (data) => create(data.email, data.password),
+    onSuccess: (user) => {
+      if (user) {
+        setUserData(user);
+        setUser({ ...user });
+        closeModal();
+        reset();
+      }
+      setRegistered(false);
+      toast.success(`Hello, ${user.email}`);
+    },
+  });
+
   const onSubmit = async (data) => {
     if (!registered) {
-      const user = await login(data.email, data.password);
-      if (user) {
-        setUserData(user);
-        setUser({ ...user });
-        closeModal();
-        reset();
-        setRegistered(false);
-        toast.success(`Hello, ${user.email}`);
-      }
+      loginUserMutation.mutate(data);
     } else {
-      const user = await create(data.email, data.password);
-      if (user) {
-        setUserData(user);
-        setUser({ ...user });
-        closeModal();
-        reset();
-        setRegistered(false);
-        toast.success(`Hello, ${user.email}`);
-      }
+      createUserMutation.mutate(data);
     }
   };
 

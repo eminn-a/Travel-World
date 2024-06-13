@@ -6,36 +6,40 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import styles from "./CreateDestinationStyles.module.css";
 import { createFormSchema } from "../../validations/formValidation";
 import * as destinationServices from "../../services/destinationServices";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const CreateDestination = () => {
   const navigate = useNavigate();
-
+  const queryClient = useQueryClient();
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm({
     resolver: yupResolver(createFormSchema),
   });
 
-  const onSubmit = async (data) => {
-    console.log(data);
-    data.images = [data.img1, data.img2, data.img3, data.img4];
+  const addDestinationMutation = useMutation({
+    mutationFn: (data) => destinationServices.create(data),
+    onSuccess: () => {
+      // queryClient.invalidateQueries(["destindations"]);
+      navigate("/");
+      toast.success("Successfully added new destination!");
+    },
+    onError: (error) => {
+      navigate("/");
+      toast.error(`${error.message}`);
+    },
+  });
 
+  const onSubmit = async (data) => {
+    data.images = [data.img1, data.img2, data.img3, data.img4];
     delete data.img1;
     delete data.img2;
     delete data.img3;
     delete data.img4;
 
-    try {
-      let result = await destinationServices.create(data);
-      console.log(result);
-      navigate("/catalog");
-      toast.success("Successfully added new destination!");
-    } catch (error) {
-      navigate("/catalog");
-      toast.error(`${error.message}`);
-    }
+    addDestinationMutation.mutate(data);
   };
 
   return (
