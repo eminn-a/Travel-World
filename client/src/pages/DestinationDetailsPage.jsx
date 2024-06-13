@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
 import SingleDestination from "../components/SingleDestination/SingleDestination";
-import { useEffect, useState } from "react";
 import * as destinationService from "../services/destinationServices";
 import Spinner from "../components/Shared/Spinner/Spinner";
-import { useMutation, useQueries, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
 const SingleDestinationPage = () => {
   const { id } = useParams();
@@ -19,11 +18,33 @@ const SingleDestinationPage = () => {
   });
 
   if (isLoading) {
-    return <Spinner />;
+    return (
+      <div
+        style={{
+          height: "76vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Spinner />
+      </div>
+    );
   }
 
   if (error) {
-    return <div>Error loading destination.</div>;
+    return (
+      <div
+        style={{
+          height: "76vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h1 className="errorMsg">Something went wrong!</h1>
+      </div>
+    );
   }
 
   return (
