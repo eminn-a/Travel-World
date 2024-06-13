@@ -4,26 +4,27 @@ import SingleDestination from "../components/SingleDestination/SingleDestination
 import { useEffect, useState } from "react";
 import * as destinationService from "../services/destinationServices";
 import Spinner from "../components/Shared/Spinner/Spinner";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueries, useQuery } from "@tanstack/react-query";
 
 const SingleDestinationPage = () => {
   const { id } = useParams();
-  const [destination, setDestination] = useState(undefined);
 
-  const getDestinationMutation = useMutation({
-    mutationFn: (id) => destinationService.getById(id),
-    onSuccess: (destinationData) => {
-      console.log(destinationData);
-      if (destinationData) {
-        setDestination(destinationData);
-      }
-    },
-    onError: (err) => console.log(err),
+  const {
+    data: destination,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["destination", id],
+    queryFn: () => destinationService.getById(id),
   });
 
-  useEffect(() => {
-    getDestinationMutation.mutate(id);
-  }, [id]);
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  if (error) {
+    return <div>Error loading destination.</div>;
+  }
 
   return (
     <>
