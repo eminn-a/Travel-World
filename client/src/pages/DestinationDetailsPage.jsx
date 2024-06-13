@@ -4,25 +4,33 @@ import SingleDestination from "../components/SingleDestination/SingleDestination
 import { useEffect, useState } from "react";
 import * as destinationService from "../services/destinationServices";
 import Spinner from "../components/Shared/Spinner/Spinner";
+import { useMutation } from "@tanstack/react-query";
 
 const SingleDestinationPage = () => {
   const { id } = useParams();
-  const [destination, setDestination] = useState({});
+  const [destination, setDestination] = useState(undefined);
+
+  const getDestinationMutation = useMutation({
+    mutationFn: (id) => destinationService.getById(id),
+    onSuccess: (destinationData) => {
+      console.log(destinationData);
+      if (destinationData) {
+        setDestination(destinationData);
+      }
+    },
+    onError: (err) => console.log(err),
+  });
 
   useEffect(() => {
-    destinationService
-      .getById(id)
-      .then((data) => {
-        setDestination(data);
-      })
-      .catch((err) => console.log(err));
+    getDestinationMutation.mutate(id);
   }, [id]);
+
   return (
     <>
       <Hero
-        img={destination.images}
+        img={destination?.images}
         title={destination?.title}
-        btnName={destination.date}
+        btnName={destination?.date}
       />
       <SingleDestination {...destination} />
     </>

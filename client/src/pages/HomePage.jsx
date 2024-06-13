@@ -18,21 +18,6 @@ const HomePage = () => {
     queryKey: ["destinations"],
     queryFn: destinationService.getAll,
   });
-  console.log(destinations);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     destinationService
-  //       .getAll()
-  //       .then((res) => {
-  //         setDestinations(res);
-  //       })
-  //       .catch(() => {
-  //         setDestinations((state) => (state = []));
-  //       })
-  //       .finally(setSpinner((state) => (state = false)));
-  //   }, 2000);
-  // }, []);
 
   return (
     <>

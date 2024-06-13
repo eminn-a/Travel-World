@@ -21,6 +21,7 @@ export const getAll = async () => {
 
 export const getById = async (id) => {
   const result = await destinationServices.get(baseUrl + "/" + id);
+
   return result;
 };
 
