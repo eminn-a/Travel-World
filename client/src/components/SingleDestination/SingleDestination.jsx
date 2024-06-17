@@ -16,7 +16,9 @@ const SingleDestination = (data) => {
     <>
       <div className={styles.infoContainer}>
         <br />
-        <h1>Price: $ {data.price}</h1>
+        <h1>
+          Price: <i class="fa-solid fa-euro-sign"></i> {data.price}
+        </h1>
         <button
           onClick={() => {
             toast.success(`${data.title} - Booked!`);

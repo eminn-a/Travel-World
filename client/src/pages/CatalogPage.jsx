@@ -1,13 +1,26 @@
 import Hero from "../components/Hero/Hero";
 import { heroData } from "../data/heroData";
 import CatalogItem from "../components/Catalog/CatalogItem";
-import { tripData } from "../data/tripData";
+import { useQuery } from "@tanstack/react-query";
+import * as destinationService from "./../services/destinationServices";
+import Spinner from "../components/Shared/Spinner/Spinner";
 
 const CatalogPage = () => {
+  const {
+    data: alldestinations,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["alldestinations"],
+    queryFn: destinationService.getAll,
+  });
+
+  console.log(alldestinations);
+
   return (
     <>
       <Hero {...heroData.catalog} />
-      <CatalogItem data={tripData} />
+      <CatalogItem data={alldestinations} error={error} isLoading={isLoading} />
     </>
   );
 };
