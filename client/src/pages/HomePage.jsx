@@ -16,9 +16,8 @@ const HomePage = () => {
     error,
   } = useQuery({
     queryKey: ["destinations"],
-    queryFn: destinationService.getAll,
+    queryFn: () => destinationService.getLatest(3),
   });
-
   return (
     <>
       <Hero {...heroData.home} />

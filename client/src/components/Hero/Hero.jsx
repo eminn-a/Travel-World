@@ -13,11 +13,11 @@ const Hero = ({ title, text, url, btnName, img, largeImg }) => {
         {btnName && (
           <Link
             preventScrollReset={true}
-            // to={url}
+            to={url}
             className={styles.show}
-            onClick={() => {
-              toast.success("Success");
-            }}
+            // onClick={() => {
+            //   toast.success("Success");
+            // }}
           >
             {btnName}
           </Link>

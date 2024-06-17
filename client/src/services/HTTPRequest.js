@@ -2,7 +2,7 @@ import toast from "react-hot-toast";
 
 import { clearUserData, getAccessToken } from "../utils/utils";
 
-const host = "http://localhost:3030/";
+const host = "http://localhost:3030";
 
 const HTTPRequest = async (method, url, data) => {
   const options = {
@@ -20,7 +20,7 @@ const HTTPRequest = async (method, url, data) => {
     options.body = JSON.stringify(data);
   }
   try {
-    const response = await fetch(url, options);
+    const response = await fetch(host + url, options);
 
     if (response.ok != true) {
       if (response.status == 403) {

@@ -6,11 +6,8 @@ const endpoint = {
   logout: "/users/logout",
 };
 
-//delete after check
-const host = "http://localhost:3030";
-
 export async function login(email, password) {
-  const user = await HTTPRequest.post(host + endpoint.login, {
+  const user = await HTTPRequest.post(endpoint.login, {
     email,
     password,
   });
@@ -18,7 +15,7 @@ export async function login(email, password) {
 }
 
 export async function create(email, password) {
-  const user = await HTTPRequest.post(host + endpoint.register, {
+  const user = await HTTPRequest.post(endpoint.register, {
     email,
     password,
   });
@@ -27,5 +24,5 @@ export async function create(email, password) {
 }
 
 export async function logout() {
-  await HTTPRequest.get(host + endpoint.logout);
+  await HTTPRequest.get(endpoint.logout);
 }

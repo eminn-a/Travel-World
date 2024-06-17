@@ -7,7 +7,7 @@ import { UserContext } from "../../contexts/authContext";
 import { logout } from "../../services/authServices";
 import { clearUserData } from "../../utils/utils";
 
-import AuthModal from "../Modal/AuthModal";
+import AuthModal from "../AuthModal/AuthModal";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
@@ -17,6 +17,7 @@ const Navbar = () => {
 
   let user = userData?.email;
   let isAdmin = user === "admin@abv.bg" || user === "emin@abv.bg";
+
   const closeModal = () => {
     setModal((state) => (state = false));
   };
