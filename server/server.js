@@ -1673,6 +1673,7 @@
     },
     destinations: {
       "5f45cd39-857d-4c68-a2e2-9ef09b7542e1": {
+        _ownerId: "da98c5d0-4a61-45bc-b07e-4271775dc589",
         price: 300,
         date: "2024-04-30",
         title: "Paris, France's capital",
@@ -1685,11 +1686,12 @@
           "https://images.pexels.com/photos/1144265/pexels-photo-1144265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         ],
         description:
-          "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals – including the Grand Canal thoroughfare – lined with Renaissance and Gothic palaces. The central square, Piazza San Marco, contains St. Mark’s Basilica, which is tiled with Byzantine mosaics, and the Campanile bell tower offering views of the city’s red roofs.",
+          "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.",
         _id: "5f45cd39-857d-4c68-a2e2-9ef09b7542e1",
         _createdOn: 1615546332126,
       },
       "7488014a-81d0-4de0-9285-f2283eb88698": {
+        _ownerId: "da98c5d0-4a61-45bc-b07e-4271775dc589",
         price: 450,
         date: "2024-06-08",
         title: "Venice, Northeastern Italy",
@@ -1703,10 +1705,11 @@
         ],
         description:
           "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals – including the Grand Canal thoroughfare – lined with Renaissance and Gothic palaces. The central square, Piazza San Marco, contains St. Mark’s Basilica, which is tiled with Byzantine mosaics, and the Campanile bell tower offering views of the city’s red roofs.",
-        _id: "7488014a-81d0-4de0-9285-f2283eb88698",
         _createdOn: 1615545572296,
+        _id: "7488014a-81d0-4de0-9285-f2283eb88698",
       },
       "0e8d2197-4348-4d02-85ed-80d9c83b1825": {
+        _ownerId: "da98c5d0-4a61-45bc-b07e-4271775dc589",
         price: 350,
         date: "2024-07-18",
         title: "Mykonos, Island in Greece",
@@ -1717,9 +1720,9 @@
           "https://images.pexels.com/photos/3727255/pexels-photo-3727255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         ],
         description:
-          "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals – including the Grand Canal thoroughfare – lined with Renaissance and Gothic palaces. The central square, Piazza San Marco, contains St. Mark’s Basilica, which is tiled with Byzantine mosaics, and the Campanile bell tower offering views of the city’s red roofs.",
-        _id: "0e8d2197-4348-4d02-85ed-80d9c83b1825",
+          "Mykonos is an island in the Cyclades group in the Aegean Sea. It's popularly known for its summer party atmosphere. Beaches such as Paradise and Super Paradise have bars that blare thumping music. Massive dance clubs attract world-renowned DJs and typically stay open well past dawn. Iconic landmarks include a row of 16th-century windmills, which sit on a hill above Mykonos town.",
         _createdOn: 1615545143015,
+        _id: "0e8d2197-4348-4d02-85ed-80d9c83b1825",
       },
     },
     members: {
