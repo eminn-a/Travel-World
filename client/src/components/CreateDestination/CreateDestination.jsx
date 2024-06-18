@@ -6,11 +6,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import styles from "./CreateDestinationStyles.module.css";
 import { createFormSchema } from "../../validations/formValidation";
 import * as destinationServices from "../../services/destinationServices";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
+import useImageInputs from "../../hooks/useImageInputs";
 
 const CreateDestination = () => {
+  const { imgCount, handleAddImage } = useImageInputs(2);
+
   const navigate = useNavigate();
-  const queryClient = useQueryClient();
+
   const {
     register,
     handleSubmit,
@@ -22,7 +25,6 @@ const CreateDestination = () => {
   const addDestinationMutation = useMutation({
     mutationFn: (data) => destinationServices.create(data),
     onSuccess: () => {
-      // queryClient.invalidateQueries(["destindations"]);
       navigate("/");
       toast.success("Successfully added new destination!");
     },
@@ -33,46 +35,50 @@ const CreateDestination = () => {
   });
 
   const onSubmit = async (data) => {
-    data.images = [data.img1, data.img2, data.img3, data.img4];
-    delete data.img1;
-    delete data.img2;
-    delete data.img3;
-    delete data.img4;
+    const images = [];
+    for (let i = 1; i <= imgCount; i++) {
+      if (data[`img${i}`]) {
+        images.push(data[`img${i}`]);
+      }
+      delete data[`img${i}`];
+    }
+    data.images = images;
 
     addDestinationMutation.mutate(data);
   };
 
   return (
     <div className={styles.formContainer}>
-      <h1 className={styles.title}>Destination informations</h1>
+      <h1 className={styles.title}>Destination Information</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("title")} type="text" placeholder="Title" />
         <input {...register("date")} type="date" placeholder="Date" />
         <input {...register("price")} type="number" placeholder="Price" />
-        <input {...register("img1")} type="text" placeholder="Img 1" />
-        <input {...register("img2")} type="text" placeholder="Img 1" />
-        <input {...register("img3")} type="text" placeholder="Img 1" />
-        <input {...register("img4")} type="text" placeholder="Img 2" />
+
+        {[...Array(imgCount)].map((_, index) => (
+          <input
+            key={index}
+            {...register(`img${index + 1}`)}
+            type="text"
+            placeholder={`Img ${index + 1}`}
+          />
+        ))}
+
+        <button type="button" onClick={handleAddImage}>
+          Add Image
+        </button>
+
         <textarea
-          name=""
           {...register("description")}
-          id=""
-          placeholder="Descriptions"
+          placeholder="Description"
           rows="10"
         ></textarea>
 
-        {/* <button disabled={isSubmitting}>
-          {isSubmitting ? "Sending..." : "Send message"}
-        </button> */}
+        <button type="submit">Create</button>
 
-        <button>Create</button>
-        <div>
-          {errors && (
-            <p className="errorMsg">
-              {errors[Object.keys(errors)[0]]?.message}
-            </p>
-          )}
-        </div>
+        {errors && (
+          <p className="errorMsg">{errors[Object.keys(errors)[0]]?.message}</p>
+        )}
       </form>
     </div>
   );

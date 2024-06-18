@@ -14,5 +14,10 @@ export const createFormSchema = yup.object().shape({
     .required("Please provide plan cost.")
     .min(1, "Too little price")
     .max(5000, "Very costly price!"),
-  img1: yup.string().url().required("Please enter img1 at least"),
+  img1: yup.string().url().required("Please enter 2 images at least"),
+  img2: yup.string().url().required("Please enter 2 images at least"),
+  description: yup
+    .string()
+    .required("Description is missing")
+    .min(170, "Description must be 170 chars atleast"),
 });
