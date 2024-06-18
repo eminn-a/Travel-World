@@ -3,7 +3,6 @@ import { heroData } from "../data/heroData";
 import CatalogItem from "../components/Catalog/CatalogItem";
 import { useQuery } from "@tanstack/react-query";
 import * as destinationService from "./../services/destinationServices";
-import Spinner from "../components/Shared/Spinner/Spinner";
 
 const CatalogPage = () => {
   const {
@@ -14,8 +13,6 @@ const CatalogPage = () => {
     queryKey: ["alldestinations"],
     queryFn: destinationService.getAll,
   });
-
-  console.log(alldestinations);
 
   return (
     <>

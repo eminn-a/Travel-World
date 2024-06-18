@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./CatalogStyles.module.css";
+import formatDate from "../../utils/dateFormater";
 
 const SingleCatalogItem = ({
   images,
@@ -18,12 +19,12 @@ const SingleCatalogItem = ({
         <h4>{title}</h4>
         <div className={styles.infoContainer}>
           <div>
-            <i class="fa-solid fa-euro-sign"></i>
+            <i className="fa-solid fa-euro-sign"></i>
             {price}
           </div>
           <div>
-            <i class="fa-regular fa-calendar"></i>
-            {date}
+            <i className="fa-regular fa-calendar"></i>
+            {formatDate(date)}
           </div>
         </div>
         <p>{description}</p>

@@ -13,11 +13,9 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
   const [modal, setModal] = useState(false);
 
-  const { userData, setUserData } = useContext(UserContext);
-
+  const { userData, setUserData, isAdmin } = useContext(UserContext);
   let user = userData?.email;
-  let isAdmin = user === "admin@abv.bg" || user === "emin@abv.bg";
-
+  console.log(isAdmin);
   const closeModal = () => {
     setModal((state) => (state = false));
   };
