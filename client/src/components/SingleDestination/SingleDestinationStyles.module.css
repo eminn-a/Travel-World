@@ -6,6 +6,18 @@
     justify-content: center;
 }
 
+.destinationBookContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 2em;
+    padding: 1em 3em;
+    border-radius: 1em;
+    background-color: #f0f0f0;
+    position: sticky;
+    top: 10%;
+}
 
 .mediaContainer {
     margin-top: 2em;
@@ -13,7 +25,6 @@
     gap: 2em;
     align-items: center;
     justify-content: center;
-
 }
 
 .mediaContainer img {
@@ -21,7 +32,6 @@
     height: 70%;
     border-radius: 7px;
     transition: .4s ease-in-out;
-
 }
 
 .mediaContainer .mediaBox {
@@ -34,6 +44,84 @@
         width: 70%;
     }
 
-    height: 350px;
+    /* height: 350px; */
+}
 
+.destinationInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 79vw;
+    gap: 3em;
+}
+
+
+.btnContainer {
+    display: flex;
+    gap: 1em;
+    margin: 1em;
+}
+
+.editBtn {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background-color: #4caf50;
+    color: white;
+}
+
+.deleteBtn {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background-color: #f85555;
+    color: white;
+}
+
+.editBtn:hover {
+    background-color: #129117;
+}
+
+.deleteBtn:hover {
+    background-color: #f83131;
+}
+
+.bookBtn {
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background-color: #004181;
+    color: white;
+
+}
+
+.bookBtn:hover {
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 660px) {
+    .destinationBookContainer {
+        flex-direction: column;
+    }
+
+    .destinationBookContainer p {
+        flex-wrap: nowrap;
+    }
 }
