@@ -36,6 +36,6 @@ export const update = async (data, id) => {
   let result = await destinationServices.put(endpoints.update + id, data);
 };
 
-export const dleteById = async (id) => {
+export const deleteById = async (id) => {
   const result = await destinationServices.remove(endpoints.deleteById + id);
 };

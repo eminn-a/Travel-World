@@ -23,7 +23,8 @@ const HTTPRequest = async (method, url, data) => {
     const response = await fetch(host + url, options);
 
     if (response.ok != true) {
-      if (response.status == 403) {
+      if (response.status == 403 || response.status == 401) {
+        location.reload();
         clearUserData();
       }
       const error = await response.json();

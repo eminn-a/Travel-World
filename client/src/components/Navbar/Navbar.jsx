@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const { userData, setUserData, isAdmin } = useContext(UserContext);
   let user = userData?.email;
-  console.log(isAdmin);
+
   const closeModal = () => {
     setModal((state) => (state = false));
   };

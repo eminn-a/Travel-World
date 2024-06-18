@@ -5,9 +5,29 @@ import ImageSlider from "../ImageSlider/ImageSlider";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/authContext";
 import formatDate from "../../utils/dateFormater";
+import { useMutation } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
+import * as destinationService from "../../services/destinationServices";
 
 const SingleDestination = (data) => {
   const { isAdmin } = useContext(UserContext);
+
+  const navigate = useNavigate();
+
+  const deleteDestinationMutation = useMutation({
+    mutationFn: (id) => destinationService.deleteById(id),
+    onSuccess: () => {
+      navigate("/catalog");
+      toast.success(`successfully deleted`);
+    },
+    onError: (error) => {
+      toast.error(`Error deleting ${error.message}`);
+    },
+  });
+
+  const onDeleteHandler = () => {
+    deleteDestinationMutation.mutate(data._id);
+  };
 
   if (!data) {
     return (
@@ -45,7 +65,9 @@ const SingleDestination = (data) => {
         {isAdmin && (
           <div className={styles.btnContainer}>
             <button className={styles.editBtn}>Edit</button>
-            <button className={styles.deleteBtn}>Delete</button>
+            <button onClick={onDeleteHandler} className={styles.deleteBtn}>
+              Delete
+            </button>
           </div>
         )}
       </div>
@@ -53,4 +75,5 @@ const SingleDestination = (data) => {
     </>
   );
 };
+
 export default SingleDestination;
