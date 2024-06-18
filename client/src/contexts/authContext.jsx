@@ -11,9 +11,11 @@ export const UserProvider = ({ children }) => {
       setUserData(checkUser);
     }
   }
-
+  const adminId = "60f0cf0b-34b0-4abd-9769-8c42f830dffc";
   return (
-    <UserContext.Provider value={{ userData, setUserData }}>
+    <UserContext.Provider
+      value={{ userData, setUserData, isAdmin: userData?._id === adminId }}
+    >
       {children}
     </UserContext.Provider>
   );
