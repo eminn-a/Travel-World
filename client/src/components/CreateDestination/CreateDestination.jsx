@@ -2,17 +2,35 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useState, useEffect } from "react";
 
 import styles from "./CreateDestinationStyles.module.css";
 import { createFormSchema } from "../../validations/formValidation";
 import * as destinationServices from "../../services/destinationServices";
-import { useMutation } from "@tanstack/react-query";
-import useImageInputs from "../../hooks/useImageInputs";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-const CreateDestination = () => {
-  const { imgCount, handleAddImage } = useImageInputs(2);
-
+const CreateDestination = ({ editData }) => {
+  const [imageFields, setImageFields] = useState([]);
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
+
+  useEffect(() => {
+    if (editData && editData.images) {
+      setImageFields(editData.images);
+    } else {
+      setImageFields(["", ""]);
+    }
+  }, [editData]);
+
+  const addImageField = () => {
+    setImageFields([...imageFields, ""]);
+  };
+
+  const handleImageChange = (index, value) => {
+    const newImageFields = [...imageFields];
+    newImageFields[index] = value;
+    setImageFields(newImageFields);
+  };
 
   const {
     register,
@@ -20,31 +38,59 @@ const CreateDestination = () => {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(createFormSchema),
+    defaultValues: editData
+      ? {
+          title: editData.title,
+          date: editData.date,
+          price: editData.price,
+          description: editData.description,
+          ...editData.images.reduce((acc, image, index) => {
+            acc[`img${index + 1}`] = image;
+            return acc;
+          }, {}),
+        }
+      : {},
   });
 
   const addDestinationMutation = useMutation({
-    mutationFn: (data) => destinationServices.create(data),
+    mutationFn: (formData) => destinationServices.create(formData),
     onSuccess: () => {
-      navigate("/");
+      navigate("/catalog");
       toast.success("Successfully added new destination!");
     },
     onError: (error) => {
-      navigate("/");
+      navigate("/catalog");
       toast.error(`${error.message}`);
     },
   });
 
-  const onSubmit = async (data) => {
-    const images = [];
-    for (let i = 1; i <= imgCount; i++) {
-      if (data[`img${i}`]) {
-        images.push(data[`img${i}`]);
-      }
-      delete data[`img${i}`];
-    }
-    data.images = images;
+  const updateDestinationMutation = useMutation({
+    mutationFn: (formData) =>
+      destinationServices.update(formData, formData._id),
+    onSuccess: () => {
+      queryClient.invalidateQueries("editDestination");
+      navigate("/catalog");
+      toast.success("Successfully updated destination!");
+    },
+    onError: (error) => {
+      navigate("/catalog");
+      toast.error(`${error.message}`);
+    },
+  });
 
-    addDestinationMutation.mutate(data);
+  const onSubmit = async (formData) => {
+    // Prepare formData if necessary (e.g., handling images)
+    const images = imageFields.filter((image) => image.trim() !== "");
+    formData.images = images;
+
+    if (editData) {
+      // Update existing destination
+      formData._id = editData._id; // Assuming `_id` is the identifier for the destination
+      updateDestinationMutation.mutate(formData);
+    } else {
+      // Create new destination
+      addDestinationMutation.mutate(formData);
+    }
   };
 
   return (
@@ -55,16 +101,18 @@ const CreateDestination = () => {
         <input {...register("date")} type="date" placeholder="Date" />
         <input {...register("price")} type="number" placeholder="Price" />
 
-        {[...Array(imgCount)].map((_, index) => (
+        {imageFields.map((image, index) => (
           <input
             key={index}
             {...register(`img${index + 1}`)}
             type="text"
+            value={image}
+            onChange={(e) => handleImageChange(index, e.target.value)}
             placeholder={`Img ${index + 1}`}
           />
         ))}
 
-        <button type="button" onClick={handleAddImage}>
+        <button type="button" onClick={addImageField}>
           Add Image
         </button>
 

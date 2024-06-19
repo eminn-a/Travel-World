@@ -1673,7 +1673,7 @@
     },
     destinations: {
       "5f45cd39-857d-4c68-a2e2-9ef09b7542e1": {
-        _ownerId: "da98c5d0-4a61-45bc-b07e-4271775dc589",
+        _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         price: 300,
         date: "2024-04-30",
         title: "Paris, France's capital",
@@ -1691,7 +1691,7 @@
         _createdOn: 1615546332126,
       },
       "7488014a-81d0-4de0-9285-f2283eb88698": {
-        _ownerId: "da98c5d0-4a61-45bc-b07e-4271775dc589",
+        _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         price: 450,
         date: "2024-06-08",
         title: "Venice, Northeastern Italy",
@@ -1709,7 +1709,7 @@
         _id: "7488014a-81d0-4de0-9285-f2283eb88698",
       },
       "0e8d2197-4348-4d02-85ed-80d9c83b1825": {
-        _ownerId: "da98c5d0-4a61-45bc-b07e-4271775dc589",
+        _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         price: 350,
         date: "2024-07-18",
         title: "Mykonos, Island in Greece",

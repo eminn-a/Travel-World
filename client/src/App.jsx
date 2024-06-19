@@ -11,6 +11,7 @@ import CatalogPage from "./pages/CatalogPage";
 import CreateDestinationPage from "./pages/CreateDestination";
 import Page404 from "./components/404/404Page";
 import DestinationDetailsPage from "./pages/DestinationDetailsPage";
+import EditDestinationPage from "./pages/EditDestinationPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +26,7 @@ function App() {
         { path: "catalog", element: <CatalogPage /> },
         { path: "catalog/:id", element: <DestinationDetailsPage /> },
         { path: "create", element: <CreateDestinationPage /> },
+        { path: "edit/:id", element: <EditDestinationPage /> },
       ],
     },
   ]);

@@ -6,19 +6,18 @@ import { useContext } from "react";
 import { UserContext } from "../../contexts/authContext";
 import formatDate from "../../utils/dateFormater";
 import { useMutation } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import * as destinationService from "../../services/destinationServices";
 
 const SingleDestination = (data) => {
-  const { isAdmin } = useContext(UserContext);
+  const { isAdmin, userData } = useContext(UserContext);
 
   const navigate = useNavigate();
-
   const deleteDestinationMutation = useMutation({
     mutationFn: (id) => destinationService.deleteById(id),
     onSuccess: () => {
       navigate("/catalog");
-      toast.success(`successfully deleted`);
+      toast.success(`Successfully deleted ${data.title}`);
     },
     onError: (error) => {
       toast.error(`Error deleting ${error.message}`);
@@ -26,7 +25,8 @@ const SingleDestination = (data) => {
   });
 
   const onDeleteHandler = () => {
-    deleteDestinationMutation.mutate(data._id);
+    if (confirm(`Delete ${data.title}? This action cannot be undone.`))
+      deleteDestinationMutation.mutate(data._id);
   };
 
   if (!data) {
@@ -48,7 +48,11 @@ const SingleDestination = (data) => {
             <button
               className={styles.bookBtn}
               onClick={() => {
-                toast.success(`${data.title} - Booked!`);
+                if (userData) {
+                  toast.success(`${data.title} - Booked!`);
+                } else {
+                  toast.error("Need to log in first!");
+                }
               }}
             >
               Book Now!
@@ -64,7 +68,9 @@ const SingleDestination = (data) => {
         </div>
         {isAdmin && (
           <div className={styles.btnContainer}>
-            <button className={styles.editBtn}>Edit</button>
+            <Link to={`/edit/${data._id}`}>
+              <button className={styles.editBtn}>Edit</button>
+            </Link>
             <button onClick={onDeleteHandler} className={styles.deleteBtn}>
               Delete
             </button>

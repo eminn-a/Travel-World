@@ -1,5 +1,5 @@
 .sectionSlider {
-    max-width: 78%;
+    max-width: 70%;
     width: 100%;
     aspect-ratio: 15/8;
     margin: 1rem auto;
@@ -93,4 +93,12 @@
 .pageBtns:focus-visible,
 .sliderBtn:focus-visible {
     outline: auto;
+}
+
+
+@media (max-width: 425px) {
+    .sectionSlider {
+        max-width: 95%;
+        aspect-ratio: 15/15;
+    }
 }
