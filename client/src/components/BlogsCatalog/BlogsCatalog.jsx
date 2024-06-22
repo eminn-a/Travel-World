@@ -4,11 +4,8 @@ import styles from "./BlogCatalogStyles.module.css";
 const BlogCatalog = ({ data }) => {
   return (
     <div className={styles.trip}>
-      <h1>Latest blog posts!</h1>
-      <p>
-        Discover unforgettable adventures and amazing memories we've made
-        together!
-      </p>
+      <h1>All Blogs!</h1>
+      <p>Check out our amazing memories</p>
       <div className={styles.tripCardContainer}>
         {data.map((x, index) => (
           <SingleBlogCatalog {...x} key={index} count={index} />

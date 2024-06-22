@@ -33,6 +33,12 @@ export const heroData = {
     text: "Let's create ot now!",
     url: "/",
   },
+  editDestination: {
+    img: "https://images.pexels.com/photos/163194/old-retro-antique-vintage-163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Destination Edit",
+    text: "Change destination information here",
+    url: "/",
+  },
   blog: {
     img: "https://images.pexels.com/photos/185933/pexels-photo-185933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Memories in Every Mil",

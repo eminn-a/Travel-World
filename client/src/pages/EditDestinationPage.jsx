@@ -35,7 +35,7 @@ const EditDestinationPage = () => {
 
   return (
     <>
-      <Hero {...heroData.CreateDestination} />
+      <Hero {...heroData.editDestination} />
       <CreateDestination editData={destination} />
     </>
   );

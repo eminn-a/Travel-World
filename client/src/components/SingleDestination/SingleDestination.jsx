@@ -63,6 +63,7 @@ const SingleDestination = (data) => {
             <p>{data.description}</p>
           </div>
           <h3>
+            <h4>Journey Starts:</h4>
             <i className="fa-regular fa-calendar"></i> {formatDate(data.date)}
           </h3>
         </div>
