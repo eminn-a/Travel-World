@@ -12,7 +12,7 @@ import CreateDestinationPage from "./pages/CreateDestinationPage";
 import Page404 from "./components/404/404Page";
 import DestinationDetailsPage from "./pages/DestinationDetailsPage";
 import EditDestinationPage from "./pages/EditDestinationPage";
-import BlogPage from "./pages/BlogPage";
+import BlogsPage from "./pages/BlogsPage";
 import CreateBlogPage from "./pages/CreateBlogPage";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
         { path: "createDestination", element: <CreateDestinationPage /> },
         { path: "createBlog", element: <CreateBlogPage /> },
         { path: "edit/:id", element: <EditDestinationPage /> },
-        { path: "blogs", element: <BlogPage /> },
+        { path: "blogs", element: <BlogsPage /> },
       ],
     },
   ]);

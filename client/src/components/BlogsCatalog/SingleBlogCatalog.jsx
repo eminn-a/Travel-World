@@ -1,15 +1,15 @@
 import styles from "./BlogCatalogStyles.module.css";
 
-const SingleBlogCatalog = ({ img, heading, desc, count }) => {
+const SingleBlogCatalog = ({ images, title, description, count }) => {
   const flag = Number(count) % 2 === 0 ? true : false;
   return (
     <div className={flag ? styles.tCard : styles.tCardReverse}>
       <div className={styles.tImage}>
-        <img src={img} alt="" />
+        <img src={images[0]} alt="" />
       </div>
       <div className={styles.sTripText}>
-        <h4>{heading}</h4>
-        <p>{desc}</p>
+        <h4>{title}</h4>
+        <p>{description}</p>
       </div>
     </div>
   );
