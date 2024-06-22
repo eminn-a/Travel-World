@@ -67,7 +67,7 @@ const Navbar = () => {
           </Link>
           <Link to={"blogs"} onClick={closeMenu}>
             <li className={styles.navLinks}>
-              <i class="fa-solid fa-pen-to-square"></i>Blogs
+              <i className="fa-solid fa-pen-to-square"></i>Blogs
             </li>
           </Link>
 
