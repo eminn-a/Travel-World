@@ -27,10 +27,16 @@ export const heroData = {
     text: "Find Your Dream Getaway Today!",
     url: "/",
   },
-  CreateDestination: {
+  createDestination: {
     img: "https://images.pexels.com/photos/1252500/pexels-photo-1252500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Create Amazing Destination",
     text: "Let's create ot now!",
+    url: "/",
+  },
+  blog: {
+    img: "https://images.pexels.com/photos/185933/pexels-photo-185933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Memories in Every Mil",
+    text: "Discover moments that made our travels unforgettable",
     url: "/",
   },
 };

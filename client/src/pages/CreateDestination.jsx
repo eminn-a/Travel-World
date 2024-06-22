@@ -6,7 +6,7 @@ import { heroData } from "../data/heroData";
 const CreateDestinationPage = () => {
   return (
     <>
-      <Hero {...heroData.CreateDestination} />
+      <Hero {...heroData.createDestination} />
       <CreateDestination />
     </>
   );
