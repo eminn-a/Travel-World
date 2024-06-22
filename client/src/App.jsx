@@ -8,11 +8,12 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactsPage from "./pages/ContactsPage";
 import CatalogPage from "./pages/CatalogPage";
-import CreateDestinationPage from "./pages/CreateDestination";
+import CreateDestinationPage from "./pages/CreateDestinationPage";
 import Page404 from "./components/404/404Page";
 import DestinationDetailsPage from "./pages/DestinationDetailsPage";
 import EditDestinationPage from "./pages/EditDestinationPage";
 import BlogPage from "./pages/BlogPage";
+import CreateBlogPage from "./pages/CreateBlogPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -26,7 +27,8 @@ function App() {
         { path: "contacts", element: <ContactsPage /> },
         { path: "catalog", element: <CatalogPage /> },
         { path: "catalog/:id", element: <DestinationDetailsPage /> },
-        { path: "create", element: <CreateDestinationPage /> },
+        { path: "createDestination", element: <CreateDestinationPage /> },
+        { path: "createBlog", element: <CreateBlogPage /> },
         { path: "edit/:id", element: <EditDestinationPage /> },
         { path: "blogs", element: <BlogPage /> },
       ],

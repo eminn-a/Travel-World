@@ -1,17 +1,22 @@
 import styles from "./BlogsStyles.module.css";
 
-const Singleblog = ({ img, heading, desc }) => {
+const Singleblog = ({ images, title, description }) => {
   return (
     <div className={styles.tCard}>
       <div className={styles.tImage}>
-        <img src={img} alt="" />
+        <img src={images[0]} alt="" />
       </div>
       <div className={styles.sTripText}>
-        <h4>{heading}</h4>
-        <p>{desc}</p>
+        <h4>{title}</h4>
+        <p>{textSlice(description)}</p>
       </div>
     </div>
   );
 };
 
 export default Singleblog;
+
+function textSlice(string) {
+  let result = `${string.slice(0, 170)}...`;
+  return result;
+}

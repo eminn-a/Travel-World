@@ -73,12 +73,12 @@ const Navbar = () => {
 
           {isAdmin ? (
             <>
-              <Link to={"create"} onClick={closeMenu}>
+              <Link to={"createDestination"} onClick={closeMenu}>
                 <li className={styles.navLinks}>
                   <i className="fa-solid fa-folder-plus"></i>Destination
                 </li>
               </Link>
-              <Link to={"create"} onClick={closeMenu}>
+              <Link to={"createBlog"} onClick={closeMenu}>
                 <li className={styles.navLinks}>
                   <i className="fa-solid fa-folder-plus"></i>Blog
                 </li>

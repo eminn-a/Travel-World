@@ -45,4 +45,10 @@ export const heroData = {
     text: "Discover moments that made our travels unforgettable",
     url: "/",
   },
+  createBlog: {
+    img: "https://images.pexels.com/photos/163194/old-retro-antique-vintage-163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Create Blog",
+    text: "Add photos and memories to blog page",
+    url: "/",
+  },
 };
