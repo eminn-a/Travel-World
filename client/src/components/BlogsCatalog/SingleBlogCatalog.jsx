@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import formatDate from "../../utils/dateFormater";
 import styles from "./BlogCatalogStyles.module.css";
+import textSlice from "../../utils/textSlicer";
 
 const SingleBlogCatalog = ({
   images,
@@ -24,10 +25,10 @@ const SingleBlogCatalog = ({
             <i className="fa-regular fa-calendar"></i> {formatDate(date)}
           </i>
         </div>
-        <p>{description}</p>
-        <br />
+        <p>{textSlice(description)}</p>
+        {/* <br /> */}
         <Link to={`/blogs/${_id}`}>
-          <p className={styles.readMore}>Read More...</p>
+          <p className={styles.readMore}>Read More</p>
         </Link>
       </div>
     </div>
