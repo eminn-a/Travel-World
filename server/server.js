@@ -1725,48 +1725,61 @@
         _id: "0e8d2197-4348-4d02-85ed-80d9c83b1825",
       },
     },
-    members: {
-      "cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-        status: "member",
-        _createdOn: 1616236790262,
-        _updatedOn: 1616236792930,
-      },
-      "61a19986-3b86-4347-8ca4-8c074ed87591": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-        status: "member",
-        _createdOn: 1616237188183,
-        _updatedOn: 1616237189016,
-      },
-      "8a03aa56-7a82-4a6b-9821-91349fbc552f": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
-        status: "member",
-        _createdOn: 1616237193355,
-        _updatedOn: 1616237195145,
-      },
-      "9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-        status: "member",
-        _createdOn: 1616237231299,
-        _updatedOn: 1616237235713,
-      },
-      "280b4a1a-d0f3-4639-aa54-6d9158365152": {
+    blogs: {
+      "9d9a2cc6-983a-41e5-83bc-49b29a8f61f5": {
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-        teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-        status: "member",
-        _createdOn: 1616237257265,
-        _updatedOn: 1616237278248,
+        title: "Giza, Amazing City in Egypt",
+        description:
+          "Giza is an Egyptian city on the west bank of the Nile, near Cairo. The Giza Plateau is home to iconic Egyptian monuments, including 3 tall pyramids built as royal mausoleums around the 26th century B.C. The largest, the Great Pyramid, is King Khufu’s tomb. The Great Sphinx is a vast sculpture of a man’s head on a lion’s body. The Solar Boat Museum displays a restored cedar barge found buried near the Great Pyramid.",
+        images: [
+          "https://images.pexels.com/photos/3522880/pexels-photo-3522880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/20840213/pexels-photo-20840213/free-photo-of-road-stretching-between-two-pyramids-in-giza.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/16959212/pexels-photo-16959212/free-photo-of-man-on-camel-by-pyramid-in-giza.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/14085756/pexels-photo-14085756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/1369212/pexels-photo-1369212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/15127143/pexels-photo-15127143/free-photo-of-woman-walking-towards-pyramids-and-sphinx.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        ],
+        _createdOn: 1719132170495,
+        date: "2024-01-08",
+        _id: "9d9a2cc6-983a-41e5-83bc-49b29a8f61f5",
       },
-      "e797fa57-bf0a-4749-8028-72dba715e5f8": {
+
+      "702ef38b-11f3-4ca0-8fd1-e0ce2f1468a0": {
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-        teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-        status: "member",
-        _createdOn: 1616237272948,
-        _updatedOn: 1616237293676,
+        title: "Amazing Tokyo: Discover the Capital of Japan",
+        description:
+          "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
+        images: [
+          "https://images.pexels.com/photos/2339009/pexels-photo-2339009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/2599247/pexels-photo-2599247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/427747/pexels-photo-427747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/4151484/pexels-photo-4151484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/248195/pexels-photo-248195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/2187422/pexels-photo-2187422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/2187457/pexels-photo-2187457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        ],
+        _createdOn: 1719132475152,
+        date: "2024-02-08",
+        _id: "702ef38b-11f3-4ca0-8fd1-e0ce2f1468a0",
+      },
+      "6bb200f8-98c8-481a-a6cd-fc8c5e8de012": {
+        _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+        title: "Amazing Barcelona: Discover the Heart of Catalonia",
+        description:
+          "Barcelona, the cosmopolitan capital of Spain’s Catalonia region, is known for its art and architecture. The fantastical Sagrada Família church and other modernist landmarks designed by Antoni Gaudí dot the city. Museu Picasso and Fundació Joan Miró feature modern art by their namesakes. City history museum MUHBA, includes several Roman archaeological sites.",
+        images: [
+          "https://images.pexels.com/photos/998736/pexels-photo-998736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/6516369/pexels-photo-6516369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/1386444/pexels-photo-1386444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/14051745/pexels-photo-14051745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/5282585/pexels-photo-5282585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/2031992/pexels-photo-2031992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/2889277/pexels-photo-2889277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/819767/pexels-photo-819767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        ],
+        _createdOn: 1719132874315,
+        date: "2024-06-08",
+        _id: "6bb200f8-98c8-481a-a6cd-fc8c5e8de012",
       },
     },
   };

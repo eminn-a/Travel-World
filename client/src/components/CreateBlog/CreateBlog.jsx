@@ -5,11 +5,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useState, useEffect } from "react";
 
 import styles from "./CreateBlogStyles.module.css";
-import { createFormSchema } from "../../validations/formValidation";
+import { createBlogSchema } from "../../validations/formValidation";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 //CREATE BLOG SERVICES
-import * as destinationServices from "../../services/destinationServices";
+import * as blogService from "../../services/blogService";
 
 const CreateBlog = ({ editData }) => {
   const [imageFields, setImageFields] = useState([]);
@@ -39,12 +39,10 @@ const CreateBlog = ({ editData }) => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(createFormSchema),
+    resolver: yupResolver(createBlogSchema),
     defaultValues: editData
       ? {
           title: editData.title,
-          date: editData.date,
-          price: editData.price,
           description: editData.description,
           ...editData.images.reduce((acc, image, index) => {
             acc[`img${index + 1}`] = image;
@@ -56,21 +54,20 @@ const CreateBlog = ({ editData }) => {
 
   //   ADD BLOG
   const addDestinationMutation = useMutation({
-    mutationFn: (formData) => destinationServices.create(formData),
+    mutationFn: (formData) => blogService.create(formData),
     onSuccess: () => {
-      navigate("/catalog");
-      toast.success("Successfully added new destination!");
+      navigate("/blogs");
+      toast.success("Successfully added new blog!");
     },
     onError: (error) => {
-      navigate("/catalog");
+      navigate("/blogs");
       toast.error(`${error.message}`);
     },
   });
 
   //   UPDATE BLOG
   const updateDestinationMutation = useMutation({
-    mutationFn: (formData) =>
-      destinationServices.update(formData, formData._id),
+    mutationFn: (formData) => blogService.update(formData, formData._id),
     onSuccess: () => {
       queryClient.invalidateQueries("editDestination");
       navigate("/catalog");
@@ -87,6 +84,12 @@ const CreateBlog = ({ editData }) => {
     const images = imageFields.filter((image) => image.trim() !== "");
     formData.images = images;
 
+    // IMG CLEANER
+    images.forEach((x, index) => {
+      console.log(index);
+      delete formData[`img${index + 1}`];
+    });
+
     if (editData) {
       // Update existing destination
       formData._id = editData._id; // Assuming `_id` is the identifier for the destination
@@ -102,6 +105,7 @@ const CreateBlog = ({ editData }) => {
       <h1 className={styles.title}>Blog Information</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("title")} type="text" placeholder="Title" />
+        <input {...register("date")} type="date" placeholder="Date" />
 
         {imageFields.map((image, index) => (
           <input

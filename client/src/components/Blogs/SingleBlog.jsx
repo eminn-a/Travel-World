@@ -1,3 +1,4 @@
+import textSlice from "../../utils/textSlicer";
 import styles from "./BlogsStyles.module.css";
 
 const Singleblog = ({ images, title, description }) => {
@@ -15,8 +16,3 @@ const Singleblog = ({ images, title, description }) => {
 };
 
 export default Singleblog;
-
-function textSlice(string) {
-  let result = `${string.slice(0, 170)}...`;
-  return result;
-}

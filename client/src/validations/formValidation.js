@@ -21,3 +21,17 @@ export const createFormSchema = yup.object().shape({
     .required("Description is missing")
     .min(170, "Description must be 170 chars atleast"),
 });
+
+export const createBlogSchema = yup.object().shape({
+  title: yup
+    .string()
+    .required("Title is missing")
+    .min(3, "Title must be 3 chars atleast"),
+  date: yup.string().required("Date is missing"),
+  img1: yup.string().url().required("Please enter 2 images at least"),
+  img2: yup.string().url().required("Please enter 2 images at least"),
+  description: yup
+    .string()
+    .required("Description is missing")
+    .min(170, "Description must be 170 chars atleast"),
+});

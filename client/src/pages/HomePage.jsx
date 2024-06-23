@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 import * as destinationService from "./../services/destinationServices";
-// import * as tripService from "./../services/tripServices"; // Import trip service
+import * as blogService from "./../services/blogService";
 
 import Hero from "../components/Hero/Hero";
 import Destinations from "../components/Destinations/Destinations";
@@ -25,7 +25,7 @@ const HomePage = () => {
     error: blogsError,
   } = useQuery({
     queryKey: ["blogs"],
-    queryFn: () => destinationService.getLatest(3), // Adjust the function according to your service
+    queryFn: () => blogService.getLatest(5), // Adjust the function according to your service
   });
 
   return (

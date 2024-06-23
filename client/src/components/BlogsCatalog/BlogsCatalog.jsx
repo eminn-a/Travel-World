@@ -11,7 +11,7 @@ const BlogCatalog = ({ data, spinner, error }) => {
       {error && <h3 className="errorMsg">Something went wrong!</h3>}
       <div className={styles.tripCardContainer}>
         {data?.map((x, index) => (
-          <SingleBlogCatalog {...x} key={index} count={index} />
+          <SingleBlogCatalog {...x} key={x._id} count={index} />
         ))}
       </div>
     </div>

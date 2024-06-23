@@ -1,4 +1,4 @@
-import SingleTrip from "./SingleBlog";
+import SingleBlog from "./SingleBlog";
 import styles from "./BlogsStyles.module.css";
 import Spinner from "../Shared/Spinner/Spinner";
 
@@ -13,8 +13,8 @@ const Blog = ({ data, spinner, error }) => {
       {spinner && <Spinner />}
       {error && <h3 className="errorMsg">Something went wrong!</h3>}
       <div className={styles.tripCardContainer}>
-        {data?.map((x, index) => (
-          <SingleTrip {...x} key={index} />
+        {data?.map((x) => (
+          <SingleBlog {...x} key={x._id} />
         ))}
       </div>
     </div>

@@ -1,9 +1,8 @@
 import BlogCatalog from "../components/BlogsCatalog/BlogsCatalog";
 import Hero from "../components/Hero/Hero";
 import { heroData } from "../data/heroData";
-import { tripData } from "../data/tripData";
 import { useQuery } from "@tanstack/react-query";
-import * as destinationService from "./../services/destinationServices";
+import * as blogService from "./../services/blogService";
 
 const BlogsPage = () => {
   const {
@@ -12,7 +11,7 @@ const BlogsPage = () => {
     error: allBlogsError,
   } = useQuery({
     queryKey: ["allBlogs"],
-    queryFn: destinationService.getAll,
+    queryFn: blogService.getAll,
   });
   console.log(allBlogs);
   return (

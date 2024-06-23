@@ -84,11 +84,9 @@ const CreateDestination = ({ editData }) => {
     formData.images = images;
 
     if (editData) {
-      // Update existing destination
       formData._id = editData._id; // Assuming `_id` is the identifier for the destination
       updateDestinationMutation.mutate(formData);
     } else {
-      // Create new destination
       addDestinationMutation.mutate(formData);
     }
   };
