@@ -69,7 +69,7 @@ const SingleDestination = (data) => {
         </div>
         {isAdmin && (
           <div className={styles.btnContainer}>
-            <Link to={`/edit/${data._id}`}>
+            <Link to={`/editDestination/${data._id}`}>
               <button className={styles.editBtn}>Edit</button>
             </Link>
             <button onClick={onDeleteHandler} className={styles.deleteBtn}>

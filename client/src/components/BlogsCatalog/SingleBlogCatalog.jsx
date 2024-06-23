@@ -1,7 +1,15 @@
+import { Link } from "react-router-dom";
 import formatDate from "../../utils/dateFormater";
 import styles from "./BlogCatalogStyles.module.css";
 
-const SingleBlogCatalog = ({ images, title, description, count, date }) => {
+const SingleBlogCatalog = ({
+  images,
+  title,
+  description,
+  count,
+  date,
+  _id,
+}) => {
   const flag = Number(count) % 2 === 0 ? true : false;
   return (
     <div className={flag ? styles.tCard : styles.tCardReverse}>
@@ -17,6 +25,10 @@ const SingleBlogCatalog = ({ images, title, description, count, date }) => {
           </i>
         </div>
         <p>{description}</p>
+        <br />
+        <Link to={`/blogs/${_id}`}>
+          <p className={styles.readMore}>Read More...</p>
+        </Link>
       </div>
     </div>
   );

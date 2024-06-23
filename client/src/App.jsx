@@ -14,6 +14,7 @@ import DestinationDetailsPage from "./pages/DestinationDetailsPage";
 import EditDestinationPage from "./pages/EditDestinationPage";
 import BlogsPage from "./pages/BlogsPage";
 import CreateBlogPage from "./pages/CreateBlogPage";
+import BlogDetailsPage from "./pages/BlogDetailsPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,9 +29,10 @@ function App() {
         { path: "catalog", element: <CatalogPage /> },
         { path: "catalog/:id", element: <DestinationDetailsPage /> },
         { path: "createDestination", element: <CreateDestinationPage /> },
-        { path: "createBlog", element: <CreateBlogPage /> },
-        { path: "edit/:id", element: <EditDestinationPage /> },
+        { path: "editDestination/:id", element: <EditDestinationPage /> },
         { path: "blogs", element: <BlogsPage /> },
+        { path: "blogs/:id", element: <BlogDetailsPage /> },
+        { path: "createBlog", element: <CreateBlogPage /> },
       ],
     },
   ]);

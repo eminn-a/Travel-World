@@ -1,6 +1,7 @@
 import SingleBlogCatalog from "./SingleBlogCatalog";
 import styles from "./BlogCatalogStyles.module.css";
 import Spinner from "../Shared/Spinner/Spinner";
+import { Link } from "react-router-dom";
 
 const BlogCatalog = ({ data, spinner, error }) => {
   return (
