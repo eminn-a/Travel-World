@@ -32,6 +32,20 @@ const EditDestinationPage = () => {
       </div>
     );
   }
+  if (error) {
+    return (
+      <div
+        style={{
+          height: "76vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h1 className="errorMsg">Something went wrong!</h1>
+      </div>
+    );
+  }
 
   return (
     <>
