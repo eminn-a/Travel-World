@@ -5,6 +5,7 @@ import Hero from "../components/Hero/Hero";
 import Spinner from "../components/Shared/Spinner/Spinner";
 import formatDate from "../utils/dateFormater";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
+import SingleBlog from "../components/SingleBlog/SingleBlog";
 
 const BlogDetailsPage = () => {
   const { id } = useParams();
@@ -55,8 +56,7 @@ const BlogDetailsPage = () => {
         title={blog?.title}
         btnName={formatDate(blog?.date)}
       />
-      <ImageSlider images={blog.images} />
-      <p>{blog.description}</p>
+      <SingleBlog data={blog} />
     </>
   );
 };

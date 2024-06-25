@@ -24,6 +24,9 @@ const HTTPRequest = async (method, url, data) => {
 
     if (response.ok != true) {
       if (response.status == 403 || response.status == 401) {
+        clearUserData();
+      }
+      if (response.status == 401) {
         location.reload();
         clearUserData();
       }
