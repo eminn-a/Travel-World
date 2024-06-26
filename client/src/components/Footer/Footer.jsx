@@ -31,7 +31,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h4>Accepted Payment</h4>
+          <h4>Payment</h4>
           <ul>
             <li>
               <i className="fa-brands fa-cc-visa"></i> Visa
@@ -59,7 +59,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h4>Newsletter Signup</h4>
+          <h4>Newsletter</h4>
           <ul>
             <li>Sign Up for News</li>
             <li>
