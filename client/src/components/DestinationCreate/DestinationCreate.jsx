@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState, useEffect } from "react";
 
-import styles from "./CreateDestinationStyles.module.css";
+import styles from "./DestinationCreateStyles.module.css";
 import { createFormSchema } from "../../validations/formValidation";
 import * as destinationServices from "../../services/destinationServices";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-const CreateDestination = ({ editData }) => {
+const DestinationCreate = ({ editData }) => {
   const [imageFields, setImageFields] = useState([]);
   const navigate = useNavigate();
   const queryClient = useQueryClient();
@@ -130,4 +130,4 @@ const CreateDestination = ({ editData }) => {
   );
 };
 
-export default CreateDestination;
+export default DestinationCreate;

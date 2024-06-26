@@ -1,8 +1,8 @@
 import Spinner from "../Shared/Spinner/Spinner";
-import styles from "./DestinationStyles.module.css";
-import DestinationsItem from "./DestinationsItem";
+import styles from "./DestinationsHomeStyles.module.css";
+import DestinationsHomeItem from "./DestinationsHomeItem";
 
-const Destination = ({ data, spinner, error }) => {
+const DestinationsHome = ({ data, spinner, error }) => {
   return (
     <div className={styles.destination}>
       <h1>Next Destinations!</h1>
@@ -11,7 +11,7 @@ const Destination = ({ data, spinner, error }) => {
       {spinner && <Spinner />}
 
       {data?.map((x, index) => (
-        <DestinationsItem {...x} index={index} key={x._id} />
+        <DestinationsHomeItem {...x} index={index} key={x._id} />
       ))}
 
       {error && <h3 className="errorMsg">Something went wrong!</h3>}
@@ -19,4 +19,4 @@ const Destination = ({ data, spinner, error }) => {
   );
 };
 
-export default Destination;
+export default DestinationsHome;

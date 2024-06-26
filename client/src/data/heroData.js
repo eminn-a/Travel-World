@@ -1,4 +1,4 @@
-import CreateDestination from "../components/CreateDestination/CreateDestination";
+import CreateDestination from "../components/DestinationCreate/DestinationCreate";
 
 export const heroData = {
   home: {

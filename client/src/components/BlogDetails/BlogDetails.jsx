@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ImageSlider from "../ImageSlider/ImageSlider";
-import styles from "./SingleBlogStyles.module.css";
+import styles from "./BlogDetailsStyles.module.css";
 import { UserContext } from "../../contexts/authContext";
 import { Link } from "react-router-dom";
 

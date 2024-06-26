@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import styles from "./CatalogStyles.module.css";
+import styles from "./DestinationsCatalogStyles.module.css";
 import formatDate from "../../utils/dateFormater";
 
-const SingleCatalogItem = ({
+const SingleDestinationCatalogItem = ({
   images,
   title,
   description,
@@ -36,4 +36,4 @@ const SingleCatalogItem = ({
   );
 };
 
-export default SingleCatalogItem;
+export default SingleDestinationCatalogItem;

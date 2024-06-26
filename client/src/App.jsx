@@ -7,15 +7,15 @@ import RouterLayout from "./pages/RootLayout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactsPage from "./pages/ContactsPage";
-import CatalogPage from "./pages/CatalogPage";
-import CreateDestinationPage from "./pages/CreateDestinationPage";
+import DestinationCreatePage from "./pages/DestinationCreatePage";
 import Page404 from "./components/404/404Page";
 import DestinationDetailsPage from "./pages/DestinationDetailsPage";
-import EditDestinationPage from "./pages/EditDestinationPage";
+import DestinationEditPage from "./pages/DestinationEditPage";
 import BlogsPage from "./pages/BlogsPage";
-import CreateBlogPage from "./pages/CreateBlogPage";
+import BlogCreatePage from "./pages/BlogCreatePage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import AuthGuard from "./guards/AuthGuard";
+import DestinationsCatalogPage from "./pages/DestinationsCatalogPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -27,16 +27,16 @@ function App() {
         { index: true, element: <HomePage /> },
         { path: "about", element: <AboutPage /> },
         { path: "contacts", element: <ContactsPage /> },
-        { path: "catalog", element: <CatalogPage /> },
+        { path: "catalog", element: <DestinationsCatalogPage /> },
         { path: "catalog/:id", element: <DestinationDetailsPage /> },
         { path: "blogs", element: <BlogsPage /> },
         { path: "blogs/:id", element: <BlogDetailsPage /> },
         {
           element: <AuthGuard />,
           children: [
-            { path: "createDestination", element: <CreateDestinationPage /> },
-            { path: "editDestination/:id", element: <EditDestinationPage /> },
-            { path: "createBlog", element: <CreateBlogPage /> },
+            { path: "createDestination", element: <DestinationCreatePage /> },
+            { path: "editDestination/:id", element: <DestinationEditPage /> },
+            { path: "createBlog", element: <BlogCreatePage /> },
           ],
         },
       ],

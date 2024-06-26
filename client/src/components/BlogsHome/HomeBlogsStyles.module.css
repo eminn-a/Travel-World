@@ -64,6 +64,11 @@
     gap: .3em;
 }
 
+.readMore {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
 @media screen and (max-width:850px) {
     .trip {
         margin: 4rem 2rem;

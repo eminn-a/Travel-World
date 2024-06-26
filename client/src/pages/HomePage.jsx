@@ -2,12 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 
 import * as destinationService from "./../services/destinationServices";
 import * as blogService from "./../services/blogService";
+import { heroData } from "../data/heroData";
 
 import Hero from "../components/Hero/Hero";
-import Destinations from "../components/Destinations/Destinations";
-import Blogs from "../components/Blogs/Blogs";
-
-import { heroData } from "../data/heroData";
+import DestinationsHome from "../components/DestinationsHome/DestinationsHome";
+import BlogsHome from "../components/BlogsHome/BlogsHome";
 
 const HomePage = () => {
   const {
@@ -31,12 +30,12 @@ const HomePage = () => {
   return (
     <>
       <Hero {...heroData.home} />
-      <Destinations
+      <DestinationsHome
         data={destinations}
         spinner={isDestinationsLoading}
         error={destinationsError}
       />
-      <Blogs data={blogs} spinner={isBlogssLoading} error={blogsError} />
+      <BlogsHome data={blogs} spinner={isBlogssLoading} error={blogsError} />
     </>
   );
 };

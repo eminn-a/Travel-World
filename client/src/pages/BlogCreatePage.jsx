@@ -1,15 +1,15 @@
-import CreateBlog from "../components/CreateBlog/CreateBlog";
+import BlogCreate from "../components/BlogCreate/BlogCreate";
 import Hero from "../components/Hero/Hero";
 
 import { heroData } from "../data/heroData";
 
-const CreateBlogPage = () => {
+const BlogCreatePage = () => {
   return (
     <>
       <Hero {...heroData.createBlog} />
-      <CreateBlog />
+      <BlogCreate />
     </>
   );
 };
 
-export default CreateBlogPage;
+export default BlogCreatePage;

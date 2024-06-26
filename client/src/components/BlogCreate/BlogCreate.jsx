@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState, useEffect } from "react";
 
-import styles from "./CreateBlogStyles.module.css";
+import styles from "./BlogCreateStyles.module.css";
 import { createBlogSchema } from "../../validations/formValidation";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 

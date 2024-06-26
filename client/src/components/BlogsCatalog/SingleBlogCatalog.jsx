@@ -12,6 +12,7 @@ const SingleBlogCatalog = ({
   _id,
 }) => {
   const flag = Number(count) % 2 === 0 ? true : false;
+
   return (
     <div className={flag ? styles.tCard : styles.tCardReverse}>
       <div className={styles.tImage}>

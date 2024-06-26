@@ -48,13 +48,13 @@ const Footer = () => {
           <h4>Support</h4>
           <ul>
             <li>
-              <i class="fa-solid fa-headset"></i> Customer Suppor
+              <i className="fa-solid fa-headset"></i> Customer Suppor
             </li>
             <li>
-              <i class="fa-solid fa-question"></i> FAQ
+              <i className="fa-solid fa-question"></i> FAQ
             </li>
             <li>
-              <i class="fa-regular fa-handshake"></i> Help Center
+              <i className="fa-regular fa-handshake"></i> Help Center
             </li>
           </ul>
         </div>
@@ -63,7 +63,7 @@ const Footer = () => {
           <ul>
             <li>Sign Up for News</li>
             <li>
-              <input type="email" />
+              <input type="email" placeholder=" Email" />
             </li>
             <button className={styles.sbcrbBtn}>Subscribe</button>
           </ul>

@@ -1,8 +1,8 @@
 import Spinner from "../Shared/Spinner/Spinner";
-import styles from "./CatalogStyles.module.css";
-import SingleCatalogItem from "./SingleCatalogItem";
+import styles from "./DestinationsCatalogStyles.module.css";
+import SingleDestinationCatalogItem from "./SingleDestinationCatalogItem";
 
-const CatalogItem = ({ data, error, isLoading }) => {
+const DestinationsCatalog = ({ data, error, isLoading }) => {
   return (
     <div className={styles.trip}>
       <h1>Catalog items here</h1>
@@ -17,11 +17,11 @@ const CatalogItem = ({ data, error, isLoading }) => {
 
       <div className={styles.tripCardContainer}>
         {data?.map((x) => (
-          <SingleCatalogItem key={x._id} {...x} />
+          <SingleDestinationCatalogItem key={x._id} {...x} />
         ))}
       </div>
     </div>
   );
 };
 
-export default CatalogItem;
+export default DestinationsCatalog;

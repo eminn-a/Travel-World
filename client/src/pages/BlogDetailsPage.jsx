@@ -4,8 +4,7 @@ import * as blogService from "../services/blogService";
 import Hero from "../components/Hero/Hero";
 import Spinner from "../components/Shared/Spinner/Spinner";
 import formatDate from "../utils/dateFormater";
-import ImageSlider from "../components/ImageSlider/ImageSlider";
-import SingleBlog from "../components/SingleBlog/SingleBlog";
+import BlogDetails from "../components/BlogDetails/BlogDetails";
 
 const BlogDetailsPage = () => {
   const { id } = useParams();
@@ -56,7 +55,7 @@ const BlogDetailsPage = () => {
         title={blog?.title}
         btnName={formatDate(blog?.date)}
       />
-      <SingleBlog data={blog} />
+      <BlogDetails data={blog} />
     </>
   );
 };

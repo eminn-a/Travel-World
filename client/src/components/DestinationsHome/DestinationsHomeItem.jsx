@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import styles from "./DestinationStyles.module.css";
+import styles from "./DestinationsHomeStyles.module.css";
 import { Link } from "react-router-dom";
 
-const SingleDestination = ({ title, description, images, index, _id }) => {
+const DestinationsHomeItem = ({ title, description, images, index, _id }) => {
   const [loadedImages, setLoadedImages] = useState([]);
 
   useEffect(() => {
@@ -38,4 +38,4 @@ const SingleDestination = ({ title, description, images, index, _id }) => {
     </Link>
   );
 };
-export default SingleDestination;
+export default DestinationsHomeItem;

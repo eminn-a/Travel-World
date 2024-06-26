@@ -1,10 +1,10 @@
 import Hero from "../components/Hero/Hero";
 import { heroData } from "../data/heroData";
-import CatalogItem from "../components/Catalog/CatalogItem";
+import DestinationsCatalog from "../components/DestinationsCatalog/DestinationsCatalog";
 import { useQuery } from "@tanstack/react-query";
-import * as destinationService from "./../services/destinationServices";
+import * as destinationService from "../services/destinationServices";
 
-const CatalogPage = () => {
+const DestinationsCatalogPage = () => {
   const {
     data: alldestinations,
     isLoading,
@@ -17,9 +17,13 @@ const CatalogPage = () => {
   return (
     <>
       <Hero {...heroData.catalog} />
-      <CatalogItem data={alldestinations} error={error} isLoading={isLoading} />
+      <DestinationsCatalog
+        data={alldestinations}
+        error={error}
+        isLoading={isLoading}
+      />
     </>
   );
 };
 
-export default CatalogPage;
+export default DestinationsCatalogPage;

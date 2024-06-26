@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
-import SingleDestination from "../components/SingleDestination/SingleDestination";
+import DestinationDetails from "../components/DestinationDetails/DestinationDetails";
 import * as destinationService from "../services/destinationServices";
 import Spinner from "../components/Shared/Spinner/Spinner";
 import { useQuery } from "@tanstack/react-query";
@@ -55,7 +55,7 @@ const SingleDestinationPage = () => {
         title={destination?.title}
         btnName={formatDate(destination?.date)}
       />
-      <SingleDestination {...destination} />
+      <DestinationDetails {...destination} />
     </>
   );
 };
