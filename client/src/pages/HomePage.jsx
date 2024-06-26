@@ -24,7 +24,7 @@ const HomePage = () => {
     error: blogsError,
   } = useQuery({
     queryKey: ["blogs"],
-    queryFn: () => blogService.getLatest(5), // Adjust the function according to your service
+    queryFn: () => blogService.getLatest(3),
   });
 
   return (
