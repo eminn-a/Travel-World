@@ -16,6 +16,7 @@ import BlogCreatePage from "./pages/BlogCreatePage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import AuthGuard from "./guards/AuthGuard";
 import DestinationsCatalogPage from "./pages/DestinationsCatalogPage";
+import BlogEditPage from "./pages/BlogEditPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -36,6 +37,7 @@ function App() {
           children: [
             { path: "createDestination", element: <DestinationCreatePage /> },
             { path: "editDestination/:id", element: <DestinationEditPage /> },
+            { path: "editBlog/:id", element: <BlogEditPage /> },
             { path: "createBlog", element: <BlogCreatePage /> },
           ],
         },

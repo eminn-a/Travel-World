@@ -11,7 +11,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 //CREATE BLOG SERVICES
 import * as blogService from "../../services/blogService";
 
-const CreateBlog = ({ editData }) => {
+const BlogCreate = ({ editData }) => {
   const [imageFields, setImageFields] = useState([]);
   const navigate = useNavigate();
   const queryClient = useQueryClient();
@@ -44,6 +44,7 @@ const CreateBlog = ({ editData }) => {
       ? {
           title: editData.title,
           description: editData.description,
+          date: editData.date,
           ...editData.images.reduce((acc, image, index) => {
             acc[`img${index + 1}`] = image;
             return acc;
@@ -70,11 +71,11 @@ const CreateBlog = ({ editData }) => {
     mutationFn: (formData) => blogService.update(formData, formData._id),
     onSuccess: () => {
       queryClient.invalidateQueries("editDestination");
-      navigate("/catalog");
+      navigate("/blogs");
       toast.success("Successfully updated destination!");
     },
     onError: (error) => {
-      navigate("/catalog");
+      navigate("/blogs");
       toast.error(`${error.message}`);
     },
   });
@@ -138,4 +139,4 @@ const CreateBlog = ({ editData }) => {
   );
 };
 
-export default CreateBlog;
+export default BlogCreate;

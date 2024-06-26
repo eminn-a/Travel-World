@@ -51,7 +51,7 @@ const SingleDestinationPage = () => {
   return (
     <>
       <Hero
-        img={destination?.images}
+        img={destination?.images[0]}
         title={destination?.title}
         btnName={formatDate(destination?.date)}
       />

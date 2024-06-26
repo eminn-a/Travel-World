@@ -29,14 +29,6 @@ const SingleDestination = (data) => {
       deleteDestinationMutation.mutate(data._id);
   };
 
-  if (!data) {
-    return (
-      <div className={styles.infoContainer}>
-        <Spinner />
-      </div>
-    );
-  }
-
   return (
     <>
       <div className={styles.infoContainer}>
@@ -62,10 +54,12 @@ const SingleDestination = (data) => {
             <h4>Description:</h4>
             <p>{data.description}</p>
           </div>
-          <h3>
+          <div>
             <h4>Journey Starts:</h4>
-            <i className="fa-regular fa-calendar"></i> {formatDate(data.date)}
-          </h3>
+            <h3>
+              <i className="fa-regular fa-calendar"></i> {formatDate(data.date)}
+            </h3>
+          </div>
         </div>
         {isAdmin && (
           <div className={styles.btnContainer}>

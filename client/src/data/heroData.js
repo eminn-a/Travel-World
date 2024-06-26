@@ -34,7 +34,7 @@ export const heroData = {
     url: "/",
   },
   editDestination: {
-    img: "https://images.pexels.com/photos/163194/old-retro-antique-vintage-163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "https://images.pexels.com/photos/7235911/pexels-photo-7235911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Destination Edit",
     text: "Change destination information here",
     url: "/",
@@ -48,6 +48,12 @@ export const heroData = {
   createBlog: {
     img: "https://images.pexels.com/photos/163194/old-retro-antique-vintage-163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Create Blog",
+    text: "Add photos and memories to blog page",
+    url: "/",
+  },
+  editBlog: {
+    img: "https://images.pexels.com/photos/163185/old-retro-antique-vintage-163185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Edit Blog",
     text: "Add photos and memories to blog page",
     url: "/",
   },

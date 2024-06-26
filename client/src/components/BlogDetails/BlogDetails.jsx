@@ -2,10 +2,30 @@ import { useContext } from "react";
 import ImageSlider from "../ImageSlider/ImageSlider";
 import styles from "./BlogDetailsStyles.module.css";
 import { UserContext } from "../../contexts/authContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import * as blogService from "../../services/blogService";
+import { useMutation } from "@tanstack/react-query";
+import toast from "react-hot-toast";
 
 const SingleBlog = ({ data }) => {
   const { isAdmin } = useContext(UserContext);
+
+  const navigate = useNavigate();
+  const deleteBlogMutation = useMutation({
+    mutationFn: (id) => blogService.deleteById(id),
+    onSuccess: () => {
+      navigate("/blogs");
+      toast.success(`Successfully deleted ${data.title}`);
+    },
+    onError: (error) => {
+      toast.error(`Error deleting ${error.message}`);
+    },
+  });
+
+  const onDeleteHandler = () => {
+    if (confirm(`Delete ${data.title}? This action cannot be undone.`))
+      deleteBlogMutation.mutate(data._id);
+  };
 
   return (
     <>
@@ -20,10 +40,12 @@ const SingleBlog = ({ data }) => {
         </div>
         {isAdmin && (
           <div className={styles.btnContainer}>
-            <Link to={`/editDestination/${data._id}`}>
+            <Link to={`/editBlog/${data._id}`}>
               <button className={styles.editBtn}>Edit</button>
             </Link>
-            <button className={styles.deleteBtn}>Delete</button>
+            <button onClick={onDeleteHandler} className={styles.deleteBtn}>
+              Delete
+            </button>
           </div>
         )}
       </div>

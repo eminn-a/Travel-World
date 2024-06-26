@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
+import { heroData } from "../data/heroData";
+import Hero from "../components/Hero/Hero";
 import { useParams } from "react-router-dom";
 import * as blogService from "../services/blogService";
-import Hero from "../components/Hero/Hero";
 import Spinner from "../components/Shared/Spinner/Spinner";
-import formatDate from "../utils/dateFormater";
-import BlogDetails from "../components/BlogDetails/BlogDetails";
+import CreateDestination from "../components/DestinationCreate/DestinationCreate";
+import BlogCreate from "../components/BlogCreate/BlogCreate";
 
-const BlogDetailsPage = () => {
+const BlogEditPage = () => {
   const { id } = useParams();
 
   const {
@@ -14,7 +15,7 @@ const BlogDetailsPage = () => {
     isLoading,
     error,
   } = useQuery({
-    queryKey: ["blog", id],
+    queryKey: ["editBlog", id],
     queryFn: () => blogService.getById(id),
   });
 
@@ -32,7 +33,6 @@ const BlogDetailsPage = () => {
       </div>
     );
   }
-
   if (error) {
     return (
       <div
@@ -50,14 +50,10 @@ const BlogDetailsPage = () => {
 
   return (
     <>
-      <Hero
-        img={blog?.images[0]}
-        title={blog?.title}
-        btnName={formatDate(blog?.date)}
-      />
-      <BlogDetails data={blog} />
+      <Hero {...heroData.editBlog} />
+      <BlogCreate editData={blog} />
     </>
   );
 };
 
-export default BlogDetailsPage;
+export default BlogEditPage;
