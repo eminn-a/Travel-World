@@ -15,6 +15,7 @@ import EditDestinationPage from "./pages/EditDestinationPage";
 import BlogsPage from "./pages/BlogsPage";
 import CreateBlogPage from "./pages/CreateBlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
+import AuthGuard from "./guards/AuthGuard";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,11 +29,16 @@ function App() {
         { path: "contacts", element: <ContactsPage /> },
         { path: "catalog", element: <CatalogPage /> },
         { path: "catalog/:id", element: <DestinationDetailsPage /> },
-        { path: "createDestination", element: <CreateDestinationPage /> },
-        { path: "editDestination/:id", element: <EditDestinationPage /> },
         { path: "blogs", element: <BlogsPage /> },
         { path: "blogs/:id", element: <BlogDetailsPage /> },
-        { path: "createBlog", element: <CreateBlogPage /> },
+        {
+          element: <AuthGuard />,
+          children: [
+            { path: "createDestination", element: <CreateDestinationPage /> },
+            { path: "editDestination/:id", element: <EditDestinationPage /> },
+            { path: "createBlog", element: <CreateBlogPage /> },
+          ],
+        },
       ],
     },
   ]);
