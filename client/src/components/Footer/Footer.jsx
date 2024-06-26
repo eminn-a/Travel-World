@@ -17,35 +17,55 @@ const Footer = () => {
       </div>
       <div className={styles.bottom}>
         <div>
-          <h4>First Section</h4>
+          <h4>Contacts</h4>
           <ul>
-            <li>First</li>
-            <li>Second</li>
-            <li>Third!</li>
+            <li>
+              <i className="fa-solid fa-location-dot"></i> Bulgaria, Haskovo
+            </li>
+            <li>
+              <i className="fa-solid fa-phone"></i> 0888 112 433
+            </li>
+            <li>
+              <i className="fa-solid fa-envelope"></i> travel-world@gmail.com
+            </li>
           </ul>
         </div>
         <div>
-          <h4>Second Section</h4>
+          <h4>Accepted Payment</h4>
           <ul>
-            <li>First</li>
-            <li>Second</li>
-            <li>Third!</li>
+            <li>
+              <i className="fa-brands fa-cc-visa"></i> Visa
+            </li>
+            <li>
+              <i className="fa-brands fa-cc-mastercard"></i> MasterCard
+            </li>
+            <li>
+              <i className="fa-solid fa-shop"></i> Easy Pay
+            </li>
           </ul>
         </div>
         <div>
-          <h4>Third Section</h4>
+          <h4>Support</h4>
           <ul>
-            <li>First</li>
-            <li>Second</li>
-            <li>Third!</li>
+            <li>
+              <i class="fa-solid fa-headset"></i> Customer Suppor
+            </li>
+            <li>
+              <i class="fa-solid fa-question"></i> FAQ
+            </li>
+            <li>
+              <i class="fa-regular fa-handshake"></i> Help Center
+            </li>
           </ul>
         </div>
         <div>
-          <h4>Third Section</h4>
+          <h4>Newsletter Signup</h4>
           <ul>
-            <li>First</li>
-            <li>Second</li>
-            <li>Third!</li>
+            <li>Sign Up for News</li>
+            <li>
+              <input type="email" />
+            </li>
+            <button className={styles.sbcrbBtn}>Subscribe</button>
           </ul>
         </div>
       </div>
