@@ -1,23 +1,23 @@
 .infoContainer {
-    padding: 3em 5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  padding: 3em 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .destinationBookContainer {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-    margin-bottom: 2em;
-    padding: 1em 3em;
-    border-radius: 1em;
-    background-color: #f0f0f0;
-    position: sticky;
-    top: 10%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 2em;
+  padding: 1em 3em;
+  border-radius: 1em;
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 17%;
 }
 
 /* .mediaContainer {
@@ -47,80 +47,77 @@
 } */
 
 .destinationInfoContainer {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    width: 79vw;
-    gap: 3em;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 79vw;
+  gap: 3em;
 }
 
-
 .btnContainer {
-    display: flex;
-    gap: 1em;
-    margin: 1em;
+  display: flex;
+  gap: 1em;
+  margin: 1em;
 }
 
 .editBtn {
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    background-color: #4caf50;
-    color: white;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background-color: #4caf50;
+  color: white;
 }
 
 .deleteBtn {
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    background-color: #f85555;
-    color: white;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background-color: #f85555;
+  color: white;
 }
 
 .editBtn:hover {
-    background-color: #129117;
+  background-color: #129117;
 }
 
 .deleteBtn:hover {
-    background-color: #f83131;
+  background-color: #f83131;
 }
 
 .bookBtn {
-    padding: 0.5rem 2rem;
-    white-space: nowrap;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    background-color: #004181;
-    color: white;
-
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background-color: #004181;
+  color: white;
 }
 
 .bookBtn:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-
 @media (max-width: 660px) {
-    .destinationBookContainer {
-        flex-direction: column;
-    }
+  .destinationBookContainer {
+    flex-direction: column;
+  }
 
-    .destinationBookContainer p {
-        flex-wrap: nowrap;
-    }
+  .destinationBookContainer p {
+    flex-wrap: nowrap;
+  }
 }
