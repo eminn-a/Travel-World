@@ -1,4 +1,4 @@
-import BlogCatalog from "../components/BlogsCatalog/BlogsCatalog";
+import BlogsCatalog from "../components/BlogsCatalog/BlogsCatalog";
 import Hero from "../components/Hero/Hero";
 import { heroData } from "../data/heroData";
 import { useQuery } from "@tanstack/react-query";
@@ -17,7 +17,7 @@ const BlogsPage = () => {
   return (
     <>
       <Hero {...heroData.blog} />
-      <BlogCatalog
+      <BlogsCatalog
         data={allBlogs}
         spinner={allBlogsLoading}
         error={allBlogsError}

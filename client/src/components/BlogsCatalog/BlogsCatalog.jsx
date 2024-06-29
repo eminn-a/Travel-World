@@ -3,7 +3,7 @@ import styles from "./BlogCatalogStyles.module.css";
 import Spinner from "../Shared/Spinner/Spinner";
 import { Link } from "react-router-dom";
 
-const BlogCatalog = ({ data, spinner, error }) => {
+const BlogsCatalog = ({ data, spinner, error }) => {
   return (
     <div className={styles.trip}>
       <h1>All Blogs!</h1>
@@ -19,4 +19,4 @@ const BlogCatalog = ({ data, spinner, error }) => {
   );
 };
 
-export default BlogCatalog;
+export default BlogsCatalog;
