@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
       setUserData(checkUser);
     }
   }
-  const adminId = "60f0cf0b-34b0-4abd-9769-8c42f830dffc";
+  const adminId = "66805ae2784f6d2069fbbdd0";
   return (
     <UserContext.Provider
       value={{ userData, setUserData, isAdmin: userData?._id === adminId }}
