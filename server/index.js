@@ -24,7 +24,7 @@ mongoose
 // );
 
 const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri = `mongodb+srv://${process.env.DB_USER}@trawel-world.gnfgv12.mongodb.net/?appName=Trawel-World`;
+const uri = `mongodb+srv://${process.env.DB_USER}@trawel-world.gnfgv12.mongodb.net/?retryWrites=true&w=majority&appName=Trawel-World`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
