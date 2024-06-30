@@ -14,7 +14,7 @@ app.use(routes);
 
 const uri = process.env.MONGO_URI;
 mongoose
-  .connect("mongodb://127.0.0.1:27017/destinations")
+  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("DB connecteed"))
   .catch((err) => console.log(err));
 
