@@ -51,4 +51,4 @@ async function run() {
 }
 run().catch(console.dir);
 
-module.exports = app;
+app.listen(5050, () => console.log("Server is listening at port 5050..."));
