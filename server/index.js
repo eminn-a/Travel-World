@@ -1,8 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("./routes");
 const { auth } = require("./middlewares/authMiddleware");
+const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const app = express();
 
@@ -11,6 +13,9 @@ app.use(express.json());
 app.use(cors());
 app.use(auth);
 app.use(routes);
+const user = process.env.DB_USER;
+
+const uri = `mongodb+srv://${user}@trawel-world.gnfgv12.mongodb.net/?retryWrites=true&w=majority&appName=Trawel-World`;
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -35,12 +40,8 @@ async function run() {
 }
 run().catch(console.dir);
 
-const user = process.env.DB_USER;
-
 mongoose
-  .connect(
-    `mongodb+srv://${user}@trawel-world.gnfgv12.mongodb.net/?retryWrites=true&w=majority&appName=Trawel-World`
-  )
+  .connect(`mongodb+srv://${user}@trawel-world.gnfgv12.mongodb.net/`)
   .then(() => console.log("DB connecteed"))
   .catch((err) => console.log(err));
 
