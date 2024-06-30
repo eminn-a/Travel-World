@@ -1,45 +1,23 @@
-// require("dotenv").config();
-// const express = require("express");
-// const mongoose = require("mongoose");
-// const cors = require("cors");
-// const routes = require("./routes");
-// const { auth } = require("./middlewares/authMiddleware");
-
-// const app = express();
-
-// app.use(express.urlencoded({ extended: false }));
-// app.use(express.json());
-// app.use(cors());
-// app.use(auth);
-// app.use(routes);
-
-// const uri = process.env.MONGO_URI;
-// mongoose
-//   .connect(uri)
-//   .then(() => console.log("DB connected"))
-//   .catch((err) => console.log(err));
-
-// // Export the app to be used as a serverless function
-// module.exports = (req, res) => {
-//   // Set up Vercel's serverless function handler for the Express app
-//   return new Promise((resolve, reject) => {
-//     // Attach the Express app to the serverless function handler
-//     const server = app.listen(() => {
-//       resolve(server);
-//     });
-//     server.on("error", (err) => {
-//       reject(err);
-//     });
-//   })(req, res);
-// };
 const express = require("express");
-
+const mongoose = require("mongoose");
+const cors = require("cors");
+const routes = require("./routes");
+const { auth } = require("./middlewares/authMiddleware");
+require("dotenv").config();
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(cors());
+app.use(auth);
+app.use(routes);
 
-module.exports = (req, res) => {
-  app(req, res);
-};
+const uri = process.env.MONGO_URI;
+mongoose
+  .connect("mongodb://127.0.0.1:27017/destinations")
+  .then(() => console.log("DB connecteed"))
+  .catch((err) => console.log(err));
+
+app.listen(3030, () =>
+  console.log("RESTful server is listening on port 3030...")
+);
