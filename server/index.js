@@ -19,6 +19,7 @@ mongoose
   .then(() => console.log("DB connected"))
   .catch((err) => console.log("DB connection error:", err));
 
-app.listen(3030, () =>
-  console.log("RESTful server is listening on port 3030...")
-);
+// app.listen(3030, () =>
+//   console.log("RESTful server is listening on port 3030...")
+// );
+module.exports = app;
