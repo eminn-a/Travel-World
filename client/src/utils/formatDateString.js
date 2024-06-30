@@ -1,4 +1,4 @@
-export default function formatDate(dateString) {
+export default function formatDateString(dateString) {
   const date = new Date(dateString);
   const month = date.toLocaleString("en-US", { month: "long" });
   const day = date.getDate();

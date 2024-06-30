@@ -8,6 +8,7 @@ import styles from "./DestinationCreateStyles.module.css";
 import { createFormSchema } from "../../validations/formValidation";
 import * as destinationServices from "../../services/destinationServices";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import formatFormDate from "../../utils/formatFormDate";
 
 const DestinationCreate = ({ editData }) => {
   const [imageFields, setImageFields] = useState([]);
@@ -41,7 +42,7 @@ const DestinationCreate = ({ editData }) => {
     defaultValues: editData
       ? {
           title: editData.title,
-          date: editData.date,
+          date: formatFormDate(editData.date),
           price: editData.price,
           description: editData.description,
           ...editData.images.reduce((acc, image, index) => {

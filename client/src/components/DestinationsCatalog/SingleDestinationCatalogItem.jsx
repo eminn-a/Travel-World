@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./DestinationsCatalogStyles.module.css";
-import formatDate from "../../utils/dateFormater";
+import formatDateString from "../../utils/formatDateString";
 
 const SingleDestinationCatalogItem = ({
   images,
@@ -24,7 +24,7 @@ const SingleDestinationCatalogItem = ({
           </div>
           <div>
             <i className="fa-regular fa-calendar"></i>
-            {formatDate(date)}
+            {formatDateString(date)}
           </div>
         </div>
         <p>{description}</p>

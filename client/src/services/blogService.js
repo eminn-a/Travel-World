@@ -3,7 +3,7 @@ import * as blogsServices from "./HTTPRequest";
 const endpoints = {
   all: "/data/blogs?sortBy=_createdOn%20des",
   getLatest: (number) => {
-    return `/data/blogs?sortBy=_createdOn%20des&pageSize=${number}`;
+    return `/data/blogs?limit=${number}`;
   },
   create: "/data/blogs",
   byId: "/data/blogs/",

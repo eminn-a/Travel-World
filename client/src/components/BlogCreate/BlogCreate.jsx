@@ -10,6 +10,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 //CREATE BLOG SERVICES
 import * as blogService from "../../services/blogService";
+import formatFormDate from "../../utils/formatFormDate";
 
 const BlogCreate = ({ editData }) => {
   const [imageFields, setImageFields] = useState([]);
@@ -44,7 +45,7 @@ const BlogCreate = ({ editData }) => {
       ? {
           title: editData.title,
           description: editData.description,
-          date: editData.date,
+          date: formatFormDate(editData.date),
           ...editData.images.reduce((acc, image, index) => {
             acc[`img${index + 1}`] = image;
             return acc;

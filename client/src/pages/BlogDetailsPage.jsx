@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import * as blogService from "../services/blogService";
 import Hero from "../components/Hero/Hero";
 import Spinner from "../components/Shared/Spinner/Spinner";
-import formatDate from "../utils/dateFormater";
+import formatDateString from "../utils/formatDateString";
 import BlogDetails from "../components/BlogDetails/BlogDetails";
 
 const BlogDetailsPage = () => {
@@ -53,7 +53,7 @@ const BlogDetailsPage = () => {
       <Hero
         img={blog?.images[0]}
         title={blog?.title}
-        btnName={formatDate(blog?.date)}
+        btnName={formatDateString(blog?.date)}
       />
       <BlogDetails data={blog} />
     </>

@@ -4,7 +4,7 @@ import DestinationDetails from "../components/DestinationDetails/DestinationDeta
 import * as destinationService from "../services/destinationServices";
 import Spinner from "../components/Shared/Spinner/Spinner";
 import { useQuery } from "@tanstack/react-query";
-import formatDate from "../utils/dateFormater";
+import formatDateString from "../utils/formatDateString";
 
 const SingleDestinationPage = () => {
   const { id } = useParams();
@@ -48,12 +48,14 @@ const SingleDestinationPage = () => {
     );
   }
 
+  console.log(destination);
+
   return (
     <>
       <Hero
         img={destination?.images[0]}
         title={destination?.title}
-        btnName={formatDate(destination?.date)}
+        btnName={formatDateString(destination?.date)}
       />
       <DestinationDetails {...destination} />
     </>

@@ -4,7 +4,7 @@ import Spinner from "../Shared/Spinner/Spinner";
 import ImageSlider from "../ImageSlider/ImageSlider";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/authContext";
-import formatDate from "../../utils/dateFormater";
+import formatDateString from "../../utils/formatDateString";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate, Link } from "react-router-dom";
 import * as destinationService from "../../services/destinationServices";
@@ -57,7 +57,8 @@ const SingleDestination = (data) => {
           <div>
             <h4>Journey Starts:</h4>
             <h3>
-              <i className="fa-regular fa-calendar"></i> {formatDate(data.date)}
+              <i className="fa-regular fa-calendar"></i>{" "}
+              {formatDateString(data.date)}
             </h3>
           </div>
         </div>

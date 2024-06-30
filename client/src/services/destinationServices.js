@@ -5,7 +5,7 @@ const baseUrl = "http://localhost:3030/data/destinations";
 const endpoints = {
   all: "/data/destinations?sortBy=_createdOn%20des",
   getLatest: (number) => {
-    return `/data/destinations?sortBy=_createdOn%20des&pageSize=${number}`;
+    return `/data/destinations?limit=${number}`;
   },
   create: "/data/destinations",
   byId: "/data/destinations/",

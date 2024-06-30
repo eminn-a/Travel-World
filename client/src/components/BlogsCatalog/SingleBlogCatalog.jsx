@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import formatDate from "../../utils/dateFormater";
+import formatDateString from "../../utils/formatDateString";
 import styles from "./BlogCatalogStyles.module.css";
 import textSlice from "../../utils/textSlicer";
 
@@ -23,7 +23,7 @@ const SingleBlogCatalog = ({
         <div className={styles.date}>
           <i>
             {" "}
-            <i className="fa-regular fa-calendar"></i> {formatDate(date)}
+            <i className="fa-regular fa-calendar"></i> {formatDateString(date)}
           </i>
         </div>
         <p>{textSlice(description)}</p>

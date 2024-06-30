@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const destinationSchema = new mongoose.Schema(
+const blogSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -8,10 +8,6 @@ const destinationSchema = new mongoose.Schema(
     },
     date: {
       type: Date,
-      required: true,
-    },
-    price: {
-      type: Number,
       required: true,
     },
     description: {
@@ -38,6 +34,6 @@ const destinationSchema = new mongoose.Schema(
   }
 );
 
-const Destination = mongoose.model("Destination", destinationSchema);
+const Blog = mongoose.model("Blogs", blogSchema);
 
-module.exports = Destination;
+module.exports = Blog;
