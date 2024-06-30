@@ -3,7 +3,13 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 exports.register = async (userData) => {
-  const user = User.create(userData);
+  const existingUser = await User.findOne({ email: userData.email });
+  if (existingUser) {
+    throw new Error("User with this email already exists");
+  }
+
+  const user = await User.create(userData);
+  console.log(user);
   const result = getAuthResult(user);
   return result;
 };
@@ -11,11 +17,11 @@ exports.register = async (userData) => {
 exports.login = async ({ email, password }) => {
   const user = await User.findOne({ email });
   if (!user) {
-    throw new Error("Invailid username or password");
+    throw new Error("Invailid email or password");
   }
   const isValid = await bcrypt.compare(password, user.password);
   if (!isValid) {
-    throw new Error("Invailid username or password");
+    throw new Error("Invailid email or password");
   }
 
   const result = getAuthResult(user);

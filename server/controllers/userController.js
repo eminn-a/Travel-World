@@ -7,9 +7,8 @@ router.post("/register", async (req, res) => {
     const result = await userManager.register(req.body);
     res.json(result);
   } catch (err) {
-    res.status(400).json({
-      message: "some err",
-    });
+    console.log(err.message);
+    res.status(400).json({ message: err.message });
   }
   res.end();
 });
@@ -19,9 +18,7 @@ router.post("/login", async (req, res) => {
     const result = await userManager.login(req.body);
     res.status(200).json(result);
   } catch (err) {
-    res.status(400).json({
-      message: err.mesage,
-    });
+    res.status(400).json({ message: err.message });
   }
 });
 
