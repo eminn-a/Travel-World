@@ -2,7 +2,7 @@ import toast from "react-hot-toast";
 
 import { clearUserData, getAccessToken } from "../utils/utils";
 
-const host = "https://travel-world-server-alpha.vercel.app";
+const host = "http://localhost:3030";
 
 const HTTPRequest = async (method, url, data) => {
   const options = {

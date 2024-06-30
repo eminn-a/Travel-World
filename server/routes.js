@@ -5,7 +5,7 @@ const destinationsController = require("./controllers/destinationsController");
 const blogController = require("./controllers/blogController");
 
 router.use("/users", userController);
-router.use("/destinations", destinationsController);
-router.use("/blogs", blogController);
+router.use("/data/destinations", destinationsController);
+router.use("/data/blogs", blogController);
 
 module.exports = router;
