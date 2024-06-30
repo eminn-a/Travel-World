@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -12,21 +11,6 @@ app.use(express.json());
 app.use(cors());
 app.use(auth);
 app.use(routes);
-
-// mongoose
-//   .connect("mongodb://127.0.0.1:27017/destinations")
-//   .then(() => console.log("DB connecteed"))
-//   .catch((err) => console.log(err));
-
-app.listen(3030, () =>
-  console.log("RESTful server is listening on port 3030...")
-);
-
-const user = process.env.DB_USER;
-console.log(user);
-
-const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri = `mongodb+srv://${user}@trawel-world.gnfgv12.mongodb.net/?retryWrites=true&w=majority&appName=Trawel-World`;
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -50,3 +34,16 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+const user = process.env.DB_USER;
+
+mongoose
+  .connect(
+    `mongodb+srv://${user}@trawel-world.gnfgv12.mongodb.net/?retryWrites=true&w=majority&appName=Trawel-World`
+  )
+  .then(() => console.log("DB connecteed"))
+  .catch((err) => console.log(err));
+
+app.listen(3030, () =>
+  console.log("RESTful server is listening on port 3030...")
+);
