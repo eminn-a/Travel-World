@@ -11,10 +11,10 @@ export const UserProvider = ({ children }) => {
       setUserData(checkUser);
     }
   }
-  const adminId = "66805ae2784f6d2069fbbdd0";
+  const adminEmail = "admin@abv.bg";
   return (
     <UserContext.Provider
-      value={{ userData, setUserData, isAdmin: userData?._id === adminId }}
+      value={{ userData, setUserData, isAdmin: userData?.email === adminEmail }}
     >
       {children}
     </UserContext.Provider>
