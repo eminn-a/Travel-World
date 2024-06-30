@@ -16,6 +16,11 @@ mongoose
   .connect("mongodb://127.0.0.1:27017/destinations")
   .then(() => console.log("DB connecteed"))
   .catch((err) => console.log(err));
-app.listen(3030, () =>
-  console.log("RESTful server is listening on port 3030...")
-);
+
+module.exports = (req, res) => {
+  app(req, res);
+};
+
+// app.listen(3030, () =>
+//   console.log("RESTful server is listening on port 3030...")
+// );
