@@ -18,6 +18,6 @@ mongoose
   .then(() => console.log("DB connecteed"))
   .catch((err) => console.log(err));
 
-app.listen(3030, () =>
-  console.log("RESTful server is listening on port 3030...")
-);
+const PORT = process.env.PORT || 3300;
+console.log(PORT);
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
