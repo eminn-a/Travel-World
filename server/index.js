@@ -1,32 +1,16 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const routes = require("./routes");
-const { auth } = require("./middlewares/authMiddleware");
-require("dotenv").config(); // Load environment variables from .env file
+const { MongoClient, ServerApiVersion } = require("mongodb");
+const databaseUser = process.env.DB_USER;
+const uri = `mongodb+srv://${databaseUser}@trawel-world.gnfgv12.mongodb.net/?retryWrites=true&w=majority&appName=Trawel-World`;
+
+const routes = require("./routes.js");
+const { auth } = require("./middlewares/authMiddleware.js");
 
 const app = express();
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(cors());
-app.use(auth);
-app.use(routes);
-
-// Connect to MongoDB Atlas
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("DB connected"))
-  .catch((err) => console.log("DB connection error:", err));
-
-// app.listen(3030, () =>
-//   console.log("RESTful server is listening on port 3030...")
-// );
-
-const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri = `mongodb+srv://${process.env.DB_USER}@trawel-world.gnfgv12.mongodb.net/?retryWrites=true&w=majority&appName=Trawel-World`;
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -34,7 +18,6 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   },
 });
-
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
@@ -50,5 +33,16 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+mongoose
+  .connect(`mongodb+srv://${databaseUser}@trawel-world.gnfgv12.mongodb.net/`)
+  .then(() => console.log("DB Connected"))
+  .catch((err) => console.log(err));
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(cors());
+app.use(auth);
+app.use(routes);
 
 app.listen(5050, () => console.log("Server is listening at port 5050..."));
