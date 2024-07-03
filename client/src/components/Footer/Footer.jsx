@@ -62,9 +62,9 @@ const Footer = () => {
           <h4>Newsletter</h4>
           <ul>
             <li>Sign Up for News</li>
-            <li>
+            {/* <li>
               <input type="email" placeholder=" Email" />
-            </li>
+            </li> */}
             <button className={styles.sbcrbBtn}>Subscribe</button>
           </ul>
         </div>
