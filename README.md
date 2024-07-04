@@ -1,10 +1,10 @@
-# Travel Agency Website
+# Travel-World
 
-Welcome to the Travel Agency Website project! This repository contains the source code and documentation for a web-based travel agency platform.
+Welcome to the Travel-World project! This repository contains the source code and documentation for a web-based travel agency platform.
 
 ## Live Demo
 
-Check out the live demo of the Travel Agency Website [here](https://travel-world-c12.web.app/).
+Check out the live demo of the Travel-World [here](https://travel-world-c12.web.app/).
 
 ## About
 
