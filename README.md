@@ -2,17 +2,9 @@
 
 Welcome to the Travel Agency Website project! This repository contains the source code and documentation for a web-based travel agency platform.
 
-## Table of Contents
+## Live Demo
 
-- [About](#about)
-- [Features](#features)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Live Demo](#live-demo)
+Check out the live demo of the Travel Agency Website [here](https://travel-world-c12.web.app/).
 
 ## About
 
@@ -21,9 +13,9 @@ The Travel Agency Website is a comprehensive platform that allows users to brows
 ## Features
 
 - **User Registration and Authentication**: Secure user signup and login functionalities.
-- **Search and Filter**: Users can search and filter travel packages based on destination, price, and duration.
 - **Booking System**: Users can book travel packages and receive confirmation.
-- **Admin Panel**: Admins can manage travel packages, bookings, and user information.
+- **Blog System**: Users can view blog posts related to travel packages and updates.
+- **Admin Panel**: Admins can manage travel packages, bookings, and blog information.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 
 ## Technologies
@@ -84,39 +76,57 @@ To run this project locally, follow these steps:
 1. Clone the repository
    ```bash
    git clone https://github.com/yourusername/travel-agency-website.git
+   ```
 2. Navigate to the project directory
+
    ```bash
    cd travel-agency-website
-   
+
+   ```
+
 Frontend Setup
 
 3. Navigate to the 'client' directory
    ```bash
    cd frontend
+   ```
 4. Install the dependencies
    ```bash
    npm install
+   ```
 5. Install the dependencies
    ```bash
    npm install
+   ```
 6. Start the development server
    ```bash
    npm run dev
+   ```
 
 Backend Setup
 
 7. Open a new terminal and navigate to the 'server' directory
    ```bash
    cd server
+   ```
 8. Install the dependencies
    ```bash
    npm install
-   
+   ```
 9. Create a .env file in the backend directory and add your environment variables (example below)
    ```bash
    PORT=5000
    MONGODB_URI=your_mongodb_uri
    JWT_SECRET=your_jwt_secret
-9. Start the backend server
-   ```bash
-    npm start
+   ```
+10. Start the backend server
+    ```bash
+     npm start
+    ```
+
+## Usage
+
+1. Open your browser and navigate to `http://localhost:3000` to access the frontend.
+2. Use the interface to browse travel packages, register an account, and make bookings.
+3. Check out the blog posts to stay updated on travel-related information.
+4. Admins can access the admin panel to manage travel packages, bookings, and blog posts.
