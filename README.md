@@ -8,7 +8,7 @@ Check out the live demo of the Travel-World [here](https://travel-world-c12.web.
 
 ## About
 
-The Travel-World is a comprehensive platform that allows users to browse, book, and manage travel packages. It offers a user-friendly interface for both travelers and administrators.
+Travel-World is a comprehensive platform that allows users to browse, book, and manage travel packages. It offers a user-friendly interface for both travelers and administrators.
 
 ## Features
 
@@ -88,7 +88,7 @@ Frontend Setup
 
 3. Navigate to the 'client' directory
    ```bash
-   cd frontend
+   cd client
    ```
 4. Install the dependencies
    ```bash
