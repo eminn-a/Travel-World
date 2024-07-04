@@ -8,7 +8,7 @@ Check out the live demo of the Travel-World [here](https://travel-world-c12.web.
 
 ## About
 
-The Travel Agency Website is a comprehensive platform that allows users to browse, book, and manage travel packages. It offers a user-friendly interface for both travelers and administrators.
+The Travel-World is a comprehensive platform that allows users to browse, book, and manage travel packages. It offers a user-friendly interface for both travelers and administrators.
 
 ## Features
 
@@ -94,32 +94,28 @@ Frontend Setup
    ```bash
    npm install
    ```
-5. Install the dependencies
-   ```bash
-   npm install
-   ```
-6. Start the development server
+5. Start the development server
    ```bash
    npm run dev
    ```
 
 Backend Setup
 
-7. Open a new terminal and navigate to the 'server' directory
+6. Open a new terminal and navigate to the 'server' directory
    ```bash
    cd server
    ```
-8. Install the dependencies
+7. Install the dependencies
    ```bash
    npm install
    ```
-9. Create a .env file in the backend directory and add your environment variables (example below)
+8. Create a .env file in the backend directory and add your environment variables (example below)
    ```bash
    PORT=5000
    MONGODB_URI=your_mongodb_uri
    JWT_SECRET=your_jwt_secret
    ```
-10. Start the backend server
+9. Start the backend server
     ```bash
      npm start
     ```
