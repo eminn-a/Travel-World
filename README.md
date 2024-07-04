@@ -84,3 +84,39 @@ To run this project locally, follow these steps:
 1. Clone the repository
    ```bash
    git clone https://github.com/yourusername/travel-agency-website.git
+2. Navigate to the project directory
+   ```bash
+   cd travel-agency-website
+   
+Frontend Setup
+
+3. Navigate to the 'client' directory
+   ```bash
+   cd frontend
+4. Install the dependencies
+   ```bash
+   npm install
+5. Install the dependencies
+   ```bash
+   npm install
+6. Start the development server
+   ```bash
+   npm run dev
+
+Backend Setup
+
+7. Open a new terminal and navigate to the 'server' directory
+   ```bash
+   cd server
+8. Install the dependencies
+   ```bash
+   npm install
+   
+9. Create a .env file in the backend directory and add your environment variables (example below)
+   ```bash
+   PORT=5000
+   MONGODB_URI=your_mongodb_uri
+   JWT_SECRET=your_jwt_secret
+9. Start the backend server
+   ```bash
+    npm start
