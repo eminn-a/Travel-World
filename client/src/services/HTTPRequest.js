@@ -2,7 +2,9 @@ import toast from "react-hot-toast";
 
 import { clearUserData, getAccessToken } from "../utils/utils";
 
-const host = "https://travel-world-astf.onrender.com";
+const host = "http://localhost:3030";
+
+// const host = "https://travel-world-astf.onrender.com";
 
 const HTTPRequest = async (method, url, data) => {
   const options = {

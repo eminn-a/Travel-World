@@ -18,7 +18,10 @@ export const getLatest = async (number) => {
   return result;
 };
 
-export const getAll = async () => {
+export const getAll = async (data) => {
+  if (data) {
+    console.log(data);
+  }
   const result = await destinationServices.get(endpoints.all);
   return Object.values(result);
 };
