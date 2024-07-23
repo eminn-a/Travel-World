@@ -1,3 +1,4 @@
+import DestinationFilter from "../DestinationFilter/DestinationFilter";
 import Spinner from "../Shared/Spinner/Spinner";
 import styles from "./DestinationsCatalogStyles.module.css";
 import SingleDestinationCatalogItem from "./SingleDestinationCatalogItem";
@@ -10,6 +11,7 @@ const DestinationsCatalog = ({ data, error, isLoading }) => {
         Discover unforgettable adventures and amazing memories we've made
         together!
       </p>
+      {/* <DestinationFilter /> */}
 
       {isLoading && <Spinner></Spinner>}
       <br />

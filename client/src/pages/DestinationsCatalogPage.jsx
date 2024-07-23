@@ -3,7 +3,6 @@ import { heroData } from "../data/heroData";
 import DestinationsCatalog from "../components/DestinationsCatalog/DestinationsCatalog";
 import { useQuery } from "@tanstack/react-query";
 import * as destinationService from "../services/destinationServices";
-import DestinationFilter from "../components/DestinationFilter/DestinationFilter";
 
 const DestinationsCatalogPage = () => {
   const {
@@ -18,7 +17,6 @@ const DestinationsCatalogPage = () => {
   return (
     <>
       <Hero {...heroData.catalog} />
-      <DestinationFilter />
       <DestinationsCatalog
         data={alldestinations}
         error={error}
