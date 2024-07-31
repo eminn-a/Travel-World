@@ -326,6 +326,8 @@ const AuthModal = ({ show, closeModal, setUser }) => {
                     <p
                       onClick={() => {
                         setRegistered(true);
+                        setShowPassword(false);
+                        setShowRePassword(false);
                         reset();
                       }}
                     >
@@ -340,6 +342,8 @@ const AuthModal = ({ show, closeModal, setUser }) => {
                     <p
                       onClick={() => {
                         setRegistered(false);
+                        setShowPassword(false);
+                        setShowRePassword(false);
                         reset();
                       }}
                     >
