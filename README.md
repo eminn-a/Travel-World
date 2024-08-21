@@ -5,6 +5,8 @@ Welcome to the Travel-World project! This repository contains the source code an
 ## Live Demo
 
 Check out the live demo of the Travel-World [here](https://travel-world-c12.web.app/).
+<a href="https://travel-world-c12.web.app/" target="_blank">Check out the live demo of the Travel-World here</a>
+
 
 ## About
 
