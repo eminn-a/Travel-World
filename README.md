@@ -7,9 +7,6 @@ Welcome to the Travel-World project! This repository contains the source code an
 Check out the live demo of the Travel-World [here](https://travel-world-c12.web.app/).
 
 
-<a href="https://travel-world-c12.web.app/" target="_blank">Check out the live demo of the Travel-World here</a>
-
-
 ## About
 
 Travel-World is a comprehensive platform that allows users to browse, book, and manage travel packages. It offers a user-friendly interface for both travelers and administrators.
