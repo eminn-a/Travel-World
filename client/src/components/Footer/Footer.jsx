@@ -71,7 +71,10 @@ const Footer = () => {
       </div>
       <h5 className={styles.rights}>
         <hr />
-        All rights reserved © 2024 Emin Apturaim
+        All rights reserved © 2024 Emin Apturaim{" "}
+        <a href="https://github.com/eminn-a" target="_blank">
+          <i className="fa-brands fa-github"></i>
+        </a>
       </h5>
     </div>
   );
