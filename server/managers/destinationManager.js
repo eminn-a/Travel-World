@@ -3,7 +3,7 @@ const Destination = require("../models/Destinations");
 exports.create = (destinationData) => Destination.create(destinationData);
 
 exports.getAll = (limit) => {
-  const query = Destination.find().sort({ createdAt: -1 });
+  const query = Destination.find().sort({ date: 1 });
   if (limit > 0) {
     query.limit(limit);
   }
