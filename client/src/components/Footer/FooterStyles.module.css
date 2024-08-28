@@ -28,7 +28,7 @@
   transition: 0.2s ease-in-out;
 }
 
-a i {
+.footerIcon {
   color: white;
   font-size: 15px;
 }
