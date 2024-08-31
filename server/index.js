@@ -14,7 +14,6 @@ app.use(routes);
 
 const uri = "mongodb://127.0.0.1:27017/destinations";
 const mongoDBURI = process.env.MONGO_URI || uri;
-console.log(mongoDBURI);
 mongoose
   .connect(mongoDBURI)
   .then(() => console.log("DB connected"))
