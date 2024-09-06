@@ -1,14 +1,13 @@
 const jwt = require("jsonwebtoken");
 
-// Use environment variable for secret key
-const SECRET_KEY = "default_secret_key";
+console.log("JWT_SECRET:", process.env.JWT_SECRET);
 
 exports.auth = (req, res, next) => {
   const token = req.header("x-Authorization");
 
   if (token) {
     try {
-      const decodedToken = jwt.verify(token, "SECRETSECRET");
+      const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
       req.user = decodedToken;
       next();
     } catch (error) {

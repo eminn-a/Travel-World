@@ -1,9 +1,11 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("./routes");
 const { auth } = require("./middlewares/authMiddleware");
-require("dotenv").config();
+
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
