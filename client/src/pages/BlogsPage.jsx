@@ -13,7 +13,6 @@ const BlogsPage = () => {
     queryKey: ["allBlogs"],
     queryFn: blogService.getAll,
   });
-  console.log(allBlogs);
   return (
     <>
       <Hero {...heroData.blog} />
