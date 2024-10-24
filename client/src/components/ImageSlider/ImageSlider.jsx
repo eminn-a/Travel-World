@@ -57,7 +57,6 @@ const ImageSlider = ({ images }) => {
               onClick={() => setImageIndex(index)}
               key={index + 1}
             >
-              {/* <img src={x} alt="" /> */}
               <i className="fa-solid fa-circle" aria-hidden></i>
             </button>
           ))}

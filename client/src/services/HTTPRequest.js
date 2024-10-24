@@ -39,8 +39,7 @@ const HTTPRequest = async (method, url, data) => {
       return response.json();
     }
   } catch (error) {
-    toast.error(error.message);
-    // throw error;
+    throw error;
   }
 };
 

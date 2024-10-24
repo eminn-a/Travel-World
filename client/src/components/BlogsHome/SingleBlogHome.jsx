@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
+
 import textSlice from "../../utils/textSlicer";
 import styles from "./HomeBlogsStyles.module.css";
-import { Link } from "react-router-dom";
 
 const SingleBlogHome = ({ images, title, description, _id }) => {
   return (

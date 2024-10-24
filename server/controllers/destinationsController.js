@@ -2,7 +2,7 @@ const router = require("express").Router();
 const destinationManager = require("../managers/destinationManager");
 
 router.post("/", async (req, res) => {
-  console.log(req);
+  console.log(req.user);
   try {
     const destination = await destinationManager.create({
       ...req.body,

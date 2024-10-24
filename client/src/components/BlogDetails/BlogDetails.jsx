@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import ImageSlider from "../ImageSlider/ImageSlider";
-import styles from "./BlogDetailsStyles.module.css";
-import { UserContext } from "../../contexts/authContext";
 import { Link, useNavigate } from "react-router-dom";
-import * as blogService from "../../services/blogService";
 import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
+
+import styles from "./BlogDetailsStyles.module.css";
+import { UserContext } from "../../contexts/authContext";
+import * as blogService from "../../services/blogService";
+import ImageSlider from "../ImageSlider/ImageSlider";
 
 const SingleBlog = ({ data }) => {
   const { isAdmin } = useContext(UserContext);

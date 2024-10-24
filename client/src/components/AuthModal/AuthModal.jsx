@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { loginValidation } from "../../validations/loginValidation";
+import toast from "react-hot-toast";
+import { useMutation } from "@tanstack/react-query";
+
 import styles from "./AuthModal.module.css";
 import { login, create } from "../../services/authServices";
 import { setUserData } from "../../utils/utils";
-import toast from "react-hot-toast";
-import { useMutation } from "@tanstack/react-query";
+import { loginValidation } from "../../validations/loginValidation";
 
 const AuthModal = ({ show, closeModal, setUser }) => {
   const [registered, setRegistered] = useState(false);

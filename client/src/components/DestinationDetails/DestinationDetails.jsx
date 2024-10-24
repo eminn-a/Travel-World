@@ -1,12 +1,12 @@
-import toast from "react-hot-toast";
-import styles from "./SingleDestinationStyles.module.css";
-import Spinner from "../Shared/Spinner/Spinner";
-import ImageSlider from "../ImageSlider/ImageSlider";
 import { useContext } from "react";
-import { UserContext } from "../../contexts/authContext";
-import formatDateString from "../../utils/formatDateString";
+import toast from "react-hot-toast";
+import ImageSlider from "../ImageSlider/ImageSlider";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate, Link } from "react-router-dom";
+
+import styles from "./SingleDestinationStyles.module.css";
+import { UserContext } from "../../contexts/authContext";
+import formatDateString from "../../utils/formatDateString";
 import * as destinationService from "../../services/destinationServices";
 
 const SingleDestination = (data) => {

@@ -3,12 +3,10 @@ import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState, useEffect } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import styles from "./BlogCreateStyles.module.css";
 import { createBlogSchema } from "../../validations/formValidation";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-
-//CREATE BLOG SERVICES
 import * as blogService from "../../services/blogService";
 import formatFormDate from "../../utils/formatFormDate";
 

@@ -1,5 +1,6 @@
-import styles from "./HeroStyles.module.css";
 import { Link } from "react-router-dom";
+
+import styles from "./HeroStyles.module.css";
 
 const Hero = ({ title, text, url, btnName, img, largeImg }) => {
   return (
@@ -9,14 +10,7 @@ const Hero = ({ title, text, url, btnName, img, largeImg }) => {
         <h1>{title}</h1>
         <p>{text}</p>
         {btnName && (
-          <Link
-            preventScrollReset={true}
-            to={url}
-            className={styles.show}
-            // onClick={() => {
-            //   toast.success("Success");
-            // }}
-          >
+          <Link preventScrollReset={true} to={url} className={styles.show}>
             {btnName}
           </Link>
         )}

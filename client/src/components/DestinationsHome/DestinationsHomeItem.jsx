@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import styles from "./DestinationsHomeStyles.module.css";
 import { Link } from "react-router-dom";
+import styles from "./DestinationsHomeStyles.module.css";
 
 const DestinationsHomeItem = ({ title, description, images, index, _id }) => {
   const [loadedImages, setLoadedImages] = useState([]);
