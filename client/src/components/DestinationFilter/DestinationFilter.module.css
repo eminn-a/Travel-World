@@ -1,0 +1,35 @@
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4em;
+}
+
+.inputWrapper {
+    min-width: 40%;
+    border-bottom: 2px solid #888080;
+    background-color: #efeff0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 3rem;
+    padding-left: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: #efeff0;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+input:focus {
+    outline: none;
+}
+
+.searchIcon {
+    padding-left: 2em;
+}
