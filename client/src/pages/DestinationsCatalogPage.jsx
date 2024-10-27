@@ -4,6 +4,7 @@ import DestinationsCatalog from "../components/DestinationsCatalog/DestinationsC
 import { useQuery } from "@tanstack/react-query";
 import * as destinationService from "../services/destinationServices";
 import DestinationFilter from "../components/DestinationFilter/DestinationFilter";
+import Pagination from "../components/Shared/Pagination/Pagination";
 
 const DestinationsCatalogPage = () => {
   const {
@@ -24,6 +25,7 @@ const DestinationsCatalogPage = () => {
         error={error}
         isLoading={isLoading}
       />
+      <Pagination />
     </>
   );
 };
