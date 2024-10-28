@@ -1,0 +1,17 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    font-weight: 800;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.pagination a i {
+    font-weight: 800;
+}
