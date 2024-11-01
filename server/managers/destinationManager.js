@@ -2,10 +2,10 @@ const Destination = require("../models/Destinations");
 
 exports.create = (destinationData) => Destination.create(destinationData);
 
-exports.getAll = (limit) => {
-  const query = Destination.find().sort({ date: 1 });
-  if (limit > 0) {
-    query.limit(limit);
+exports.getAll = (limit, skip) => {
+  let query = Comment.find().sort({ createdAt: -1 });
+  if (limit) {
+    query = query.limit(limit).skip(skip);
   }
   return query;
 };
@@ -17,3 +17,5 @@ exports.updateById = (destinationsId, destinationData) =>
 
 exports.delete = (destinationId) =>
   Destination.findByIdAndDelete(destinationId);
+
+exports.countAll = () => Destination.countDocuments();
