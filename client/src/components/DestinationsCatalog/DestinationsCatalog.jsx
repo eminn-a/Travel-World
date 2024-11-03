@@ -4,6 +4,8 @@ import styles from "./DestinationsCatalogStyles.module.css";
 import SingleDestinationCatalogItem from "./SingleDestinationCatalogItem";
 
 const DestinationsCatalog = ({ data, error, isLoading }) => {
+  console.log(data?.pages[0].destinations);
+  let destinations = data?.pages[0].destinations;
   return (
     <div className={styles.trip}>
       {/* <h1>Catalog items here</h1>
@@ -18,7 +20,7 @@ const DestinationsCatalog = ({ data, error, isLoading }) => {
       {error && <h2 className="errorMsg">Something went wrong!</h2>}
 
       <div className={styles.tripCardContainer}>
-        {data?.map((x) => (
+        {destinations?.map((x) => (
           <SingleDestinationCatalogItem key={x._id} {...x} />
         ))}
       </div>

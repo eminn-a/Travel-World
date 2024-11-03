@@ -5,6 +5,9 @@ const endpoints = {
   getLatest: (number) => {
     return `/data/destinations?limit=${number}`;
   },
+  getPage: (limit, page) => {
+    return `/data/destinations?limit=${limit}&page=${page}`;
+  },
   create: "/data/destinations",
   byId: "/data/destinations/",
   deleteById: "/data/destinations/",
@@ -16,9 +19,12 @@ export const getLatest = async (number) => {
   return result;
 };
 
-export const getAll = async (data) => {
-  if (data) {
-  }
+export const getPage = async (limit, page) => {
+  const result = await destinationServices.get(endpoints.getPage(limit, page));
+  return result;
+};
+
+export const getAll = async () => {
   const result = await destinationServices.get(endpoints.all);
   return Object.values(result);
 };

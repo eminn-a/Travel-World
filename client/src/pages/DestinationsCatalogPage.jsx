@@ -1,31 +1,50 @@
 import Hero from "../components/Hero/Hero";
 import { heroData } from "../data/heroData";
 import DestinationsCatalog from "../components/DestinationsCatalog/DestinationsCatalog";
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
 import * as destinationService from "../services/destinationServices";
 import DestinationFilter from "../components/DestinationFilter/DestinationFilter";
 import Pagination from "../components/Shared/Pagination/Pagination";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const DestinationsCatalogPage = () => {
+  const location = useLocation();
+  const queryClient = useQueryClient();
+
   const {
-    data: alldestinations,
+    data: destinationsPage,
     isLoading,
     error,
-  } = useQuery({
-    queryKey: ["alldestinations"],
-    queryFn: destinationService.getAll,
+    fetchNextPage,
+    hasNextPage,
+    refetch,
+  } = useInfiniteQuery({
+    queryKey: ["destinationsPage"],
+    queryFn: ({ pageParam = 1 }) => destinationService.getPage(5, pageParam),
+    getNextPageParam: (lastPage, allPages) => {
+      return lastPage.destinations.length < 5 ? undefined : allPages.length + 1;
+    },
+    retry: 1,
   });
+
+  useEffect(() => {
+    queryClient.resetQueries(["destinationsPage"]);
+    refetch();
+  }, [location.pathname, refetch, queryClient]);
 
   return (
     <>
       <Hero {...heroData.catalog} />
       <DestinationFilter />
       <DestinationsCatalog
-        data={alldestinations}
+        data={destinationsPage}
         error={error}
         isLoading={isLoading}
+        fetchNextPage={fetchNextPage}
+        hasNextPage={hasNextPage}
       />
-      <Pagination />
+      <Pagination fetchNextPage={fetchNextPage} hasNextPage={hasNextPage} />
     </>
   );
 };
