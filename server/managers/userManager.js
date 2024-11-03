@@ -42,3 +42,15 @@ function getAuthResult(user) {
   };
   return result;
 }
+
+exports.getSingleUser = async (userId) => {
+  const user = await User.findById(userId).select("-password");
+
+  if (!user) {
+    throw new ApiException("User not found!", 404);
+  }
+
+  // const clone = JSON.parse(JSON.stringify(user));
+
+  return user;
+};
