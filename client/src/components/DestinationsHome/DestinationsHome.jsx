@@ -10,7 +10,7 @@ const DestinationsHome = ({ data, spinner, error }) => {
 
       {spinner && <Spinner />}
 
-      {data?.map((x, index) => (
+      {data?.destinations.map((x, index) => (
         <DestinationsHomeItem {...x} index={index} key={x._id} />
       ))}
 

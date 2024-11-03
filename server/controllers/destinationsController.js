@@ -2,7 +2,6 @@ const router = require("express").Router();
 const destinationManager = require("../managers/destinationManager");
 
 router.post("/", async (req, res) => {
-  console.log(req.user);
   try {
     const destination = await destinationManager.create({
       ...req.body,
@@ -11,7 +10,6 @@ router.post("/", async (req, res) => {
 
     res.status(201).json(destination);
   } catch (error) {
-    console.log(error);
     res.status(400).json({
       message: "Destination not created",
     });
@@ -22,10 +20,9 @@ router.get("/", async (req, res) => {
   const { limit } = req.query;
   const page = Number(req.query.page);
   const startIndex = (page - 1) * limit;
-
   try {
-    total = await commentService.countAll();
-    destinations = await commentService.getAll(limit, startIndex);
+    total = await destinationManager.countAll();
+    destinations = await destinationManager.getAll(limit, startIndex);
 
     res.json({
       page,
