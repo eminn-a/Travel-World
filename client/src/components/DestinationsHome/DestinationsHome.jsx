@@ -3,7 +3,6 @@ import styles from "./DestinationsHomeStyles.module.css";
 import DestinationsHomeItem from "./DestinationsHomeItem";
 
 const DestinationsHome = ({ data, spinner, error }) => {
-  console.log(data);
   return (
     <div className={styles.destination}>
       <h1>Next Destinations!</h1>
