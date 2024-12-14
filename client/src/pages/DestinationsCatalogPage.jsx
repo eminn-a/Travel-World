@@ -17,8 +17,6 @@ const DestinationsCatalogPage = () => {
     queryFn: destinationService.getAll,
   });
 
-  console.log({ destinationsPage });
-
   return (
     <>
       <Hero {...heroData.catalog} />
