@@ -2,10 +2,10 @@ const Destination = require("../models/Destinations");
 
 exports.create = (destinationData) => Destination.create(destinationData);
 
-exports.getAll = (limit, skip) => {
-  let query = Destination.find().sort({ createdAt: -1 });
-  if (limit) {
-    query = query.limit(limit).skip(skip);
+exports.getAll = (limit) => {
+  const query = Destination.find().sort({ createdAt: -1 });
+  if (limit > 0) {
+    query.limit(limit);
   }
   return query;
 };

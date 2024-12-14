@@ -3,6 +3,7 @@ import styles from "./DestinationsHomeStyles.module.css";
 import DestinationsHomeItem from "./DestinationsHomeItem";
 
 const DestinationsHome = ({ data, spinner, error }) => {
+  console.log(data);
   return (
     <div className={styles.destination}>
       <h1>Next Destinations!</h1>
@@ -10,7 +11,7 @@ const DestinationsHome = ({ data, spinner, error }) => {
 
       {spinner && <Spinner />}
 
-      {data?.destinations.map((x, index) => (
+      {data?.map((x, index) => (
         <DestinationsHomeItem {...x} index={index} key={x._id} />
       ))}
 

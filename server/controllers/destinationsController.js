@@ -18,21 +18,14 @@ router.post("/", async (req, res) => {
 
 router.get("/", async (req, res) => {
   const { limit } = req.query;
-  const page = Number(req.query.page);
-  const startIndex = (page - 1) * limit;
   try {
-    total = await destinationManager.countAll();
-    destinations = await destinationManager.getAll(limit, startIndex);
-
-    res.json({
-      page,
-      limit,
-      total,
-      pages: Math.ceil(total / limit),
-      destinations,
-    });
+    const destinations = await destinationManager.getAll(limit);
+    res.status(200).json(destinations);
   } catch (error) {
-    res.status(400).json({ message: "Грешка коментари!" });
+    console.error(error);
+    res.status(400).json({
+      message: "Failed to retrieve destinations",
+    });
   }
 });
 

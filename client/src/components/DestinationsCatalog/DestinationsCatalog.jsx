@@ -5,7 +5,6 @@ import SingleDestinationCatalogItem from "./SingleDestinationCatalogItem";
 
 const DestinationsCatalog = ({ data, error, isLoading }) => {
   // let destinations = data?.pages[0].destinations;
-  console.log(data);
   return (
     <div className={styles.trip}>
       {/* <h1>Catalog items here</h1>

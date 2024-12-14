@@ -26,6 +26,7 @@ export const getPage = async (limit, page) => {
 
 export const getAll = async () => {
   const result = await destinationServices.get(endpoints.all);
+  console.log(result);
   return Object.values(result);
 };
 
