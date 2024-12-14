@@ -1,7 +1,6 @@
 import BlogsCatalog from "../components/BlogsCatalog/BlogsCatalog";
 import Hero from "../components/Hero/Hero";
 import { heroData } from "../data/heroData";
-import { useQuery } from "@tanstack/react-query";
 import * as blogService from "./../services/blogService";
 
 const BlogsPage = () => {
