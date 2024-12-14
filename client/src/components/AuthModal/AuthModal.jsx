@@ -37,6 +37,9 @@ const AuthModal = ({ show, closeModal, setUser }) => {
       setRegistered(false);
       toast.success(`Hello, ${user.email}`);
     },
+    onError: (error) => {
+      toast.error(error.message);
+    },
   });
 
   const createUserMutation = useMutation({
@@ -50,6 +53,9 @@ const AuthModal = ({ show, closeModal, setUser }) => {
       }
       setRegistered(false);
       toast.success(`Hello, ${user.email}`);
+    },
+    onError: (error) => {
+      toast.error(error.message);
     },
   });
 

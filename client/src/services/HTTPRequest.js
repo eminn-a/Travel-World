@@ -39,7 +39,8 @@ const HTTPRequest = async (method, url, data) => {
       return response.json();
     }
   } catch (error) {
-    throw error;
+    console.log(error);
+    throw new Error(error.message);
   }
 };
 
